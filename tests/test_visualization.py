@@ -62,6 +62,21 @@ class VisualizationDataTests(unittest.TestCase):
                 self.assertGreaterEqual(unit["bedrooms"], {2: 1, 3: 2, 4: 2, 5: 2, 6: 3, 7: 3, 8: 4, 9: 4, 10: 4}[int(unit["role"])])
             self.assertLessEqual(combo["total"], 3500)
 
+    def test_unified_options_are_valid(self) -> None:
+        items = self.data.get("options") or []
+        self.assertGreater(len(items), 0)
+        for option in items:
+            roles = [int(unit["role"]) for unit in option["units"]]
+            self.assertGreaterEqual(len(roles), 2)
+            self.assertLessEqual(len(roles), 4)
+            self.assertEqual(sum(roles), 12)
+            self.assertEqual(option["split"], "+".join(str(role) for role in roles))
+            self.assertIn(option["provider"], {"Airbnb", "Booking", "Mix"})
+            self.assertLessEqual(option["total"], 3500)
+            self.assertGreaterEqual(option["total_bedrooms"], 5)
+            ids = [unit["id"] for unit in option["units"]]
+            self.assertEqual(len(ids), len(set(ids)))
+
     def test_best_options_are_valid(self) -> None:
         items = self.data.get("best_options") or []
         self.assertEqual(len(items), len(self.data["resorts"]))

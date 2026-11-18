@@ -631,6 +631,83 @@ def build_multi_pairs() -> list[dict[str, Any]]:
     return result
 
 
+def build_unified_options(
+    pairs: list[dict[str, Any]],
+    multi: list[dict[str, Any]],
+    booking_local: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    raw: list[dict[str, Any]] = []
+    for item in pairs:
+        raw.append(
+            {
+                **item,
+                "area": item["resort"],
+                "split": "+".join(unit["role"] for unit in item["units"]),
+                "max_unit_km": item.get("distance_units_km"),
+            }
+        )
+    raw.extend(multi)
+    for item in booking_local:
+        raw.append(
+            {
+                **item,
+                "resort": item["area"],
+                "split": "+".join(unit["role"] for unit in item["units"]),
+                "max_unit_km": None,
+                "max_resort_km": None,
+            }
+        )
+
+    by_key: dict[tuple[str, ...], dict[str, Any]] = {}
+    for item in raw:
+        units = item.get("units") or []
+        if not units:
+            continue
+        area = item.get("area") or item.get("resort")
+        if not area:
+            continue
+        areas = {unit.get("resort") or area for unit in units}
+        area = item.get("resort") or item.get("area") or next(iter(areas))
+        point = RESORTS.get(area, {}).get("points", [{}])[0]
+        for unit in units:
+            unit.setdefault("id", f"booking:{unit.get('url')}:{unit.get('title')}:{unit.get('role')}")
+            unit.setdefault("resort", area)
+            unit.setdefault("resort_point", point)
+            unit.setdefault("provider", item.get("provider", "Airbnb"))
+        providers = {unit.get("provider", "Airbnb") for unit in units}
+        provider = "Airbnb" if providers == {"Airbnb"} else "Booking" if providers == {"Booking"} else "Mix"
+        split = item.get("split") or "+".join(unit["role"] for unit in units)
+        total = item["total"]
+        max_resort = item.get("max_resort_km")
+        max_unit = item.get("max_unit_km", item.get("distance_units_km"))
+        key = tuple(sorted(unit["id"] for unit in units))
+        if key in by_key and by_key[key]["total"] <= total:
+            continue
+        by_key[key] = {
+            "id": "",
+            "area": area,
+            "split": split,
+            "provider": provider,
+            "total": total,
+            "czk_per_person": item.get("czk_per_person", round(total * 25 / 12)),
+            "total_bedrooms": sum(unit["bedrooms"] for unit in units),
+            "max_resort_km": max_resort,
+            "max_unit_km": max_unit,
+            "check_in": item.get("check_in", "2027-01-30"),
+            "check_out": item.get("check_out", "2027-02-03"),
+            "nights": 4,
+            "units": units,
+            "score": total
+            + (max_resort if max_resort is not None else 25) * 25
+            + (max_unit if max_unit is not None else 25) * 5,
+        }
+    result = list(by_key.values())
+    result.sort(key=lambda option: option["score"])
+    for index, option in enumerate(result, start=1):
+        option["id"] = f"o{index:04d}"
+    return result
+
+
 def build_best_options() -> list[dict[str, Any]]:
     def option_score(item: dict[str, Any]) -> float:
         unit_distance = item.get("max_unit_km", item.get("distance_units_km"))
@@ -847,6 +924,8 @@ def main() -> int:
     global pairs_all, multi_pairs_all
     pairs_all = pairs
     multi_pairs_all = build_multi_pairs()
+    booking_local_all = build_local_booking_pairs()
+    unified_options = build_unified_options(pairs, multi_pairs_all, booking_local_all)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "assumptions": {
@@ -865,9 +944,10 @@ def main() -> int:
         "resorts": RESORTS,
         "pairs": pairs,
         "provisional": build_provisional(),
-        "booking_local": build_local_booking_pairs(),
+        "booking_local": booking_local_all,
         "multi_pairs": multi_pairs_all,
         "best_options": build_best_options(),
+        "options": unified_options,
     }
     (OUT / "pairs.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (OUT / "pairs.js").write_text(
