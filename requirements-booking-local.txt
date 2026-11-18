@@ -1,0 +1,2 @@
+# Lokální Booking přes skutečný (headful) Chromium; vyžaduje displej nebo Xvfb.
+viajante[browser]

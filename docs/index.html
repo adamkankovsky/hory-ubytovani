@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hory: dvojice ubytování 7 + 5</title>
+  <meta name="description" content="Statická vizualizace dvojic ubytování pro 7 a 5 osob v rakouských lyžařských střediscích.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Statická vizualizace · data k 18. 11. 2026</p>
+      <h1>Ubytování pro 12 osob</h1>
+      <p class="lead">Dvojice i trojice/čtveřice samostatných objektů do cca 3 000 € celkem, každý do cca 30 minut od areálu. Zobrazené jsou i varianty mírně nad limit. Děti a postýlky se do kapacity nepočítají.</p>
+      <div class="hero-chips">
+        <span>30. 1.–3. 2. 2027</span>
+        <span>4 noci</span>
+        <span>2–4 jednotky</span>
+        <span>3BR/2BR minimum</span>
+        <span>cíl 5 000 Kč/os.</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="notice">
+      <strong>Jak číst data:</strong> ceny jsou součet cen za obě jednotky na 4 noci (Airbnb; u Booking search cena + daně). Vzdálenosti jsou vzdušnou čarou, nikoli doba jízdy. Booking je zastoupen ověřenou variantou Park apartman a třemi mixy Airbnb + Booking ve Schladmingu; další Booking kombinace byly nad limit nebo neměly 3BR/2BR. Oranžová cena znamená mírně nad 3 000 €. U vybraných dvojic je potřeba ověřit simultánní dostupnost, daně a možnost postýlek.
+    </section>
+
+    <section class="best-panel">
+      <div class="panel-heading">
+        <h2>Nejlepší volby podle střediska</h2>
+        <p>Nejlepší 2jednotková a 3+ jednotková varianta podle ceny, vzdálenosti od areálu a vzdálenosti mezi jednotkami.</p>
+      </div>
+      <div id="bestTable" class="table-wrap"></div>
+    </section>
+
+    <section class="controls" aria-label="Filtry">
+      <div class="control">
+        <label for="resort">Středisko</label>
+        <select id="resort"></select>
+      </div>
+      <div class="control">
+        <label for="provider">Poskytovatel</label>
+        <select id="provider">
+          <option value="all">Všichni</option>
+          <option value="Airbnb">Airbnb</option>
+          <option value="Booking">Booking</option>
+          <option value="Mix">Mix (Airbnb + Booking)</option>
+        </select>
+      </div>
+      <div class="control control-range">
+        <label for="budget">Max. cena celkem <output id="budgetOut">3 500 €</output></label>
+        <input id="budget" type="range" min="1000" max="3500" step="100" value="3500">
+        <div class="range-hint"><span>1 000 €</span><span>3 500 €</span></div>
+      </div>
+      <div class="control control-range">
+        <label for="maxResort">Max. vzdálenost od areálu <output id="maxResortOut">25 km</output></label>
+        <input id="maxResort" type="range" min="5" max="25" step="1" value="25">
+        <div class="range-hint"><span>5 km</span><span>25 km</span></div>
+      </div>
+      <div class="control control-range">
+        <label for="maxUnits">Max. vzdálenost mezi ubytováními <output id="maxUnitsOut">60 km</output></label>
+        <input id="maxUnits" type="range" min="0" max="60" step="1" value="60">
+        <div class="range-hint"><span>0 km</span><span>60 km</span></div>
+      </div>
+      <div class="control">
+        <label for="sort">Řadit</label>
+        <select id="sort">
+          <option value="price">Podle ceny</option>
+          <option value="resort">Podle vzdálenosti od areálu</option>
+          <option value="units">Podle vzdálenosti od sebe</option>
+        </select>
+      </div>
+      <div class="control control-check">
+        <label><input id="only5k" type="checkbox"> Jen do 5 000 Kč/os.</label>
+        <button id="reset" type="button" class="button-secondary">Zrušit filtry</button>
+      </div>
+      <div class="quick-actions">
+        <button type="button" data-budget="3000">Cíl 3 000 €</button>
+        <button type="button" data-budget="2400">5 000 Kč/os. (cca 2 400 €)</button>
+      </div>
+    </section>
+
+    <section class="quality-controls" aria-label="Filtr podle recenzí">
+      <div class="control-range">
+        <label for="minRating">Min. hodnocení <output id="minRatingOut">0 / 5</output></label>
+        <input id="minRating" type="range" min="0" max="5" step="0.1" value="0">
+        <div class="range-hint"><span>0</span><span>5</span></div>
+      </div>
+      <div class="control-range">
+        <label for="minReviews">Min. počet recenzí <output id="minReviewsOut">0</output></label>
+        <input id="minReviews" type="range" min="0" max="100" step="5" value="0">
+        <div class="range-hint"><span>0</span><span>100</span></div>
+      </div>
+      <div class="control-check">
+        <label><input id="requireReviews" type="checkbox"> Jen ubytování s hodnocením</label>
+      </div>
+    </section>
+
+    <p class="result-line" id="resultCount"></p>
+
+    <section class="top-grid">
+      <div class="map-panel">
+        <div class="panel-heading">
+          <h2>Mapa dvojice</h2>
+          <p>Vybraná dvojice, areál a vzdálenosti. Kroužek je přibližně 25 km / 30 minut.</p>
+        </div>
+        <div id="map" aria-label="Mapa ubytování a střediska"></div>
+        <div class="map-legend" id="mapLegend"></div>
+      </div>
+
+      <aside class="detail-panel" id="detailPanel" aria-live="polite"></aside>
+    </section>
+
+    <section class="chart-panel">
+      <div class="panel-heading">
+        <h2>Cena vs. vzdálenost od areálu</h2>
+        <p>Každý bod je jedna dvojice. Kliknutím na bod se dvojice vybere.</p>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="chart" aria-label="Graf ceny a vzdálenosti"></canvas>
+      </div>
+    </section>
+
+    <section>
+      <div class="panel-heading cards-heading">
+        <h2>Varianty</h2>
+        <p>Kliknutím na kartu zobrazíte detail a mapu.</p>
+      </div>
+      <div id="cards" class="cards-grid"></div>
+      <div id="empty" class="empty-state" hidden></div>
+    </section>
+
+    <section class="provisional-panel">
+      <div class="panel-heading">
+        <h2>Orientační nabídky z trivaga</h2>
+        <p>Doplňkové nabídky z trivaga pro nová střediska. Počty ložnic nejsou z trivaga ověřené; ber jako tip, ne jako potvrzenou kombinaci. U Katschbergu, Hochkönigu a Nassfeldu už máme i ověřená Airbnb data v hlavní sadě.</p>
+      </div>
+      <div id="provisionalTable" class="table-wrap"></div>
+    </section>
+
+    <section class="provisional-panel multi-panel">
+      <div class="panel-heading">
+        <h2>Další rozdělení 12 osob</h2>
+        <p>Dvě až čtyři samostatné jednotky, vždy s dodržením ložnic podle velikosti skupiny. Ceny jsou za 4 noci a jde o Airbnb lokální data.</p>
+      </div>
+      <div class="multi-controls">
+        <div><label for="multiArea">Středisko</label><select id="multiArea"></select></div>
+        <div><label for="multiSplit">Rozdělení</label><select id="multiSplit"></select></div>
+        <div><label for="multiProvider">Poskytovatel</label><select id="multiProvider"><option value="all">Všichni</option><option value="Airbnb">Airbnb</option><option value="Booking">Booking</option><option value="Mix">Mix</option></select></div>
+      </div>
+      <div id="multiTable" class="table-wrap"></div>
+    </section>
+
+    <section class="provisional-panel">
+      <div class="panel-heading">
+        <h2>Booking lokálně (headful prohlížeč)</h2>
+        <p>Ověřené 3BR/2BR nabídky z lokálního Booking hledání. Ceny jsou za 4 noci; vzdálenost zatím není v datech.</p>
+      </div>
+      <div id="bookingLocalTable" class="table-wrap"></div>
+    </section>
+
+    <section class="resort-info">
+      <h2>Nová střediska</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Středisko</th><th>Autem z Brna</th><th>Km</th><th>Skipas 5 dní</th><th>Poznámka</th></tr></thead>
+          <tbody>
+            <tr><td>Katschberg–Aineck</td><td>4¾–5 h</td><td>430</td><td>282 €</td><td>regionální LUNGO, i Obertauern/Fanningberg/Grosseck–Speiereck</td></tr>
+            <tr><td>Obertauern</td><td>cca 5 h</td><td>455</td><td>274 €</td><td>vysoká poloha cca 1 630–2 313 m</td></tr>
+            <tr><td>Hochkönig</td><td>5–5½ h</td><td>—</td><td>320 € na pokladně / online podle termínu</td><td>Mühlbach, Dienten, Maria Alm; Königstour</td></tr>
+            <tr><td>Nassfeld</td><td>5½–6 h</td><td>540</td><td>278 €</td><td>velký propojený areál</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="method">
+      <h2>Metodika a omezení</h2>
+      <ul>
+        <li>Data pocházejí z Airbnb přes Apify, hledání pro 7 a 5 dospělých zvlášť, termín 30. 1.–3. 2. 2027.</li>
+        <li>Zahrnuté jsou pouze celé objekty (<code>Entire home/apt</code>), 7 osob s alespoň 3 ložnicemi, 5 osob s alespoň 2 ložnicemi.</li>
+        <li>Vzdálenost od areálu je nejbližší vzdálenost k jednomu z center areálu, vzdušnou čarou. Nejde o dobu jízdy.</li>
+        <li>Ceny jsou orientační a mohou se změnit; nejde o rezervaci ani potvrzení dostupnosti.</li>
+        <li>Zobrazeno je maximálně 30 nejlevnějších Airbnb dvojic pro každé středisko; Booking varianta je doplněna zvlášť.</li>
+        <li>Booking je zastoupen jen tam, kde jsme měli ověřené 3BR/2BR jednotky pod limitem. Ostatní Booking kombinace byly dražší nebo neměly potřebný počet ložnic. Trivago/Wego nejsou zahrnuté, protože u nich nemáme ověřené počty ložnic.</li>
+        <li><strong>Mix</strong> znamená jedna jednotka Airbnb a jedna Booking. Mixy jsou zatím jen ve Schladmingu, protože Booking data pro Murau se nepodařilo stáhnout kvůli měsíčnímu limitu Apify.</li>
+        <li>Nová střediska Katschberg, Obertauern, Hochkönig a Nassfeld byla hledaná lokálním <code>pyairbnb</code> bez API klíče. Obertauern nemá v tomto termínu použitelnou dvojici 3BR/2BR do limitu.</li>
+        <li>Tabulka <strong>Další rozdělení 12 osob</strong> obsahuje 2–4 jednotky. Každá jednotka musí mít alespoň 1–4 ložnice podle velikosti skupiny (2 osoby = 1, 3–5 = 2, 6–7 = 3, 8–10 = 4); celkem alespoň 5 ložnic.</li>
+        <li><strong>Filtr recenzí</strong> vyžaduje, aby všechny jednotky ve variantě měly dostatečné hodnocení a počet recenzí. Booking hodnocení 0–10 se převádí na 0–5; trivago hodnocení neuvádí, proto ho filtr při zapnutí skryje.</li>
+        <li>Datová sada je v <code>docs/data/pairs.json</code>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Statická stránka pro GitHub Pages. Data a zdrojové skripty jsou součástí repozitáře.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="data/pairs.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

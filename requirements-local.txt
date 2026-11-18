@@ -1,0 +1,2 @@
+# Lokální Airbnb hledání bez API klíče (unofficial, může být blokováno)
+pyairbnb
