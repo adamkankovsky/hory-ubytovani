@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import itertools
 import json
 import math
@@ -685,6 +686,7 @@ def build_unified_options(
             continue
         by_key[key] = {
             "id": "",
+            "share": hashlib.sha1("|".join(sorted(unit["id"] for unit in units)).encode("utf-8")).hexdigest()[:12],
             "area": area,
             "split": split,
             "provider": provider,

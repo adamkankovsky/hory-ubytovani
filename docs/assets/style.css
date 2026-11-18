@@ -652,3 +652,11 @@ td a { font-weight: 650; }
 @media (max-width: 680px) {
   .quality-controls { grid-template-columns: 1fr; }
 }
+
+.share-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}

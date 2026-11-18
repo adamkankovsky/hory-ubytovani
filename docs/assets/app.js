@@ -44,7 +44,44 @@
     .replaceAll("'", "&#039;");
 
   const optionById = new Map(options.map((option) => [option.id, option]));
+  const optionByShare = new Map(options.filter((option) => option.share).map((option) => [option.share, option]));
   const colorFor = (area) => (resorts[area] && resorts[area].color) || "#0f766e";
+
+  const optionFromLocation = () => {
+    const params = new URLSearchParams(window.location.search);
+    const share = params.get("share");
+    if (share && optionByShare.has(share)) return optionByShare.get(share);
+    const id = params.get("option");
+    if (id && optionById.has(id)) return optionById.get(id);
+    return null;
+  };
+
+  const shareUrlFor = (option) => {
+    if (!option) return window.location.href;
+    const url = new URL(window.location.href);
+    if (option.share) {
+      url.searchParams.set("share", option.share);
+      url.searchParams.delete("option");
+    } else {
+      url.searchParams.set("option", option.id);
+    }
+    url.hash = "";
+    return url.toString();
+  };
+
+  const syncShareUrl = (option) => {
+    const url = new URL(window.location.href);
+    if (option && option.share) {
+      url.searchParams.set("share", option.share);
+      url.searchParams.delete("option");
+    } else if (option) {
+      url.searchParams.set("option", option.id);
+    } else {
+      url.searchParams.delete("share");
+      url.searchParams.delete("option");
+    }
+    window.history.replaceState(null, "", url);
+  };
 
   const normalizeRating = (unit) => {
     if (unit.rating == null) return null;
@@ -150,6 +187,10 @@
       </div>
       <div class="detail-units">${option.units.map(unitRow).join("")}</div>
       ${missingCoords ? "<p class='detail-meta' style='margin-top:12px'>Booking u některých jednotek neuvádí souřadnice; mapa je proto neukáže a vzdálenost může být „—“.</p>" : ""}
+      <div class="share-row">
+        <button type="button" id="copyOptionLink">Kopírovat odkaz na kombinaci</button>
+        <span id="copyFeedback" class="unit-meta"></span>
+      </div>
       <p class="detail-meta" style="margin-top:12px">Ověřit simultánní dostupnost, daně a konečnou cenu.</p>`;
   }
 
@@ -414,11 +455,28 @@
     chart.update();
   }
 
+  function attachDetailActions(option) {
+    const button = $("copyOptionLink");
+    const feedback = $("copyFeedback");
+    if (!button) return;
+    button.addEventListener("click", async () => {
+      const url = shareUrlFor(option);
+      try {
+        await navigator.clipboard.writeText(url);
+        if (feedback) feedback.textContent = "Odkaz zkopírován.";
+      } catch (error) {
+        window.prompt("Zkopíruj odkaz na kombinaci:", url);
+      }
+    });
+  }
+
   function selectOption(id) {
     if (!optionById.has(id)) return;
     state.selectedId = id;
     const option = optionById.get(id);
     $("detailPanel").innerHTML = detailHtml(option);
+    attachDetailActions(option);
+    syncShareUrl(option);
     document.querySelectorAll(".pair-card").forEach((card) => {
       card.classList.toggle("selected", card.dataset.id === id);
     });
@@ -435,6 +493,8 @@
     }
     const selected = state.selectedId ? optionById.get(state.selectedId) : null;
     $("detailPanel").innerHTML = detailHtml(selected);
+    attachDetailActions(selected);
+    syncShareUrl(selected);
     const airbnb = list.filter((option) => option.provider === "Airbnb").length;
     const booking = list.filter((option) => option.provider === "Booking").length;
     const mix = list.filter((option) => option.provider === "Mix").length;
@@ -567,6 +627,44 @@
   }
 
   initControls();
+
+  const sharedOption = optionFromLocation();
+  if (sharedOption) {
+    state.selectedId = sharedOption.id;
+    state.resort = "all";
+    state.provider = "all";
+    state.split = "all";
+    state.budget = 3500;
+    state.maxResort = 25;
+    state.maxUnits = 60;
+    state.minRating = 0;
+    state.minReviews = 0;
+    state.requireReviews = false;
+    state.only5k = false;
+    state.sort = "recommended";
+    $("resort").value = "all";
+    $("provider").value = "all";
+    $("split").value = "all";
+    $("budget").value = "3500";
+    $("budgetOut").textContent = formatEur(3500);
+    $("maxResort").value = "25";
+    $("maxResortOut").textContent = formatKm(25);
+    $("maxUnits").value = "60";
+    $("maxUnitsOut").textContent = formatKm(60);
+    $("minRating").value = "0";
+    $("minRatingOut").textContent = "0 / 5";
+    $("minReviews").value = "0";
+    $("minReviewsOut").textContent = "0";
+    $("requireReviews").checked = false;
+    $("only5k").checked = false;
+    $("sort").value = "recommended";
+  }
+
+  window.addEventListener("popstate", () => {
+    const option = optionFromLocation();
+    if (option) selectOption(option.id);
+  });
+
   initMap();
   initChart();
   render();

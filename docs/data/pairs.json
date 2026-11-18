@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T19:32:53+00:00",
+  "generated_at": "2026-11-18T19:44:56+00:00",
   "assumptions": {
     "check_in": "2027-01-30",
     "check_out": "2027-02-03",
@@ -28555,6 +28555,7 @@
   "options": [
     {
       "id": "o0001",
+      "share": "b30f59ee798f",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -28620,6 +28621,7 @@
     },
     {
       "id": "o0002",
+      "share": "7ecf3195a002",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -28685,6 +28687,7 @@
     },
     {
       "id": "o0003",
+      "share": "84a0b19e4652",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -28750,6 +28753,7 @@
     },
     {
       "id": "o0004",
+      "share": "50457f9d85eb",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -28815,6 +28819,7 @@
     },
     {
       "id": "o0005",
+      "share": "75102a8a267d",
       "area": "Nassfeld",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -28904,6 +28909,7 @@
     },
     {
       "id": "o0006",
+      "share": "7ab1c0fbd2dd",
       "area": "Nassfeld",
       "split": "5+5+2",
       "provider": "Mix",
@@ -28993,6 +28999,7 @@
     },
     {
       "id": "o0007",
+      "share": "c58917675c8f",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29058,6 +29065,7 @@
     },
     {
       "id": "o0008",
+      "share": "0af41e790d7f",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29123,6 +29131,7 @@
     },
     {
       "id": "o0009",
+      "share": "2e029ab4f3b0",
       "area": "Kreischberg + Lachtal",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -29212,6 +29221,7 @@
     },
     {
       "id": "o0010",
+      "share": "e133b7c08a4e",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29277,6 +29287,7 @@
     },
     {
       "id": "o0011",
+      "share": "acf327f2fe8c",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29342,6 +29353,7 @@
     },
     {
       "id": "o0012",
+      "share": "bd14c3357568",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29407,6 +29419,7 @@
     },
     {
       "id": "o0013",
+      "share": "67f716b9c826",
       "area": "Nassfeld",
       "split": "4+4+4",
       "provider": "Airbnb",
@@ -29496,6 +29509,7 @@
     },
     {
       "id": "o0014",
+      "share": "fe5ee5c4621b",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29561,6 +29575,7 @@
     },
     {
       "id": "o0015",
+      "share": "36c0581d85dd",
       "area": "Kreischberg + Lachtal",
       "split": "8+4",
       "provider": "Airbnb",
@@ -29626,6 +29641,7 @@
     },
     {
       "id": "o0016",
+      "share": "81da763b35bc",
       "area": "Nassfeld",
       "split": "6+4+2",
       "provider": "Mix",
@@ -29715,6 +29731,7 @@
     },
     {
       "id": "o0017",
+      "share": "94002fa2ade6",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29780,6 +29797,7 @@
     },
     {
       "id": "o0018",
+      "share": "b9736cbe7e75",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29845,6 +29863,7 @@
     },
     {
       "id": "o0019",
+      "share": "1f05e5eb3dde",
       "area": "Nassfeld",
       "split": "6+3+3",
       "provider": "Airbnb",
@@ -29934,6 +29953,7 @@
     },
     {
       "id": "o0020",
+      "share": "4e01ecdcbccf",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -29999,6 +30019,7 @@
     },
     {
       "id": "o0021",
+      "share": "42e38baca2b4",
       "area": "Nassfeld",
       "split": "6+4+2",
       "provider": "Mix",
@@ -30088,6 +30109,7 @@
     },
     {
       "id": "o0022",
+      "share": "cfd5cb47d6e5",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -30153,6 +30175,7 @@
     },
     {
       "id": "o0023",
+      "share": "8f8c2102b3ed",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -30218,6 +30241,7 @@
     },
     {
       "id": "o0024",
+      "share": "b0035570986f",
       "area": "Kreischberg + Lachtal",
       "split": "5+5+2",
       "provider": "Airbnb",
@@ -30307,6 +30331,7 @@
     },
     {
       "id": "o0025",
+      "share": "2ed29394dc80",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -30372,6 +30397,7 @@
     },
     {
       "id": "o0026",
+      "share": "c8957dea02fd",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -30437,6 +30463,7 @@
     },
     {
       "id": "o0027",
+      "share": "c2a74ee08784",
       "area": "Obertauern",
       "split": "5+4+3",
       "provider": "Booking",
@@ -30526,6 +30553,7 @@
     },
     {
       "id": "o0028",
+      "share": "1d3330a32e3f",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -30591,6 +30619,7 @@
     },
     {
       "id": "o0029",
+      "share": "fae9937f9414",
       "area": "Kreischberg + Lachtal",
       "split": "6+6",
       "provider": "Airbnb",
@@ -30656,6 +30685,7 @@
     },
     {
       "id": "o0030",
+      "share": "0ceb3039e195",
       "area": "Nassfeld",
       "split": "6+6",
       "provider": "Mix",
@@ -30721,6 +30751,7 @@
     },
     {
       "id": "o0031",
+      "share": "38004d69e84a",
       "area": "Obertauern",
       "split": "5+4+3",
       "provider": "Booking",
@@ -30810,6 +30841,7 @@
     },
     {
       "id": "o0032",
+      "share": "98efb215c206",
       "area": "Tauplitz / Schneebären",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -30899,6 +30931,7 @@
     },
     {
       "id": "o0033",
+      "share": "7d771560f34d",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -30964,6 +30997,7 @@
     },
     {
       "id": "o0034",
+      "share": "90ef2603f490",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31029,6 +31063,7 @@
     },
     {
       "id": "o0035",
+      "share": "1a6e7faf8b79",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31094,6 +31129,7 @@
     },
     {
       "id": "o0036",
+      "share": "15d60963d020",
       "area": "Kreischberg + Lachtal",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -31183,6 +31219,7 @@
     },
     {
       "id": "o0037",
+      "share": "b8e01bf089a9",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31248,6 +31285,7 @@
     },
     {
       "id": "o0038",
+      "share": "78ad05d576e7",
       "area": "Kreischberg + Lachtal",
       "split": "10+2",
       "provider": "Airbnb",
@@ -31313,6 +31351,7 @@
     },
     {
       "id": "o0039",
+      "share": "05d2326ae8f2",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31378,6 +31417,7 @@
     },
     {
       "id": "o0040",
+      "share": "406445cb4a80",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31443,6 +31483,7 @@
     },
     {
       "id": "o0041",
+      "share": "119b1202b628",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31508,6 +31549,7 @@
     },
     {
       "id": "o0042",
+      "share": "eee54ed1f4a7",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31573,6 +31615,7 @@
     },
     {
       "id": "o0043",
+      "share": "fc25b2f064a1",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31638,6 +31681,7 @@
     },
     {
       "id": "o0044",
+      "share": "8d1bf4053e36",
       "area": "Kreischberg + Lachtal",
       "split": "8+2+2",
       "provider": "Airbnb",
@@ -31727,6 +31771,7 @@
     },
     {
       "id": "o0045",
+      "share": "8725fc73266e",
       "area": "Tauplitz / Schneebären",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -31816,6 +31861,7 @@
     },
     {
       "id": "o0046",
+      "share": "baf54565908a",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31881,6 +31927,7 @@
     },
     {
       "id": "o0047",
+      "share": "3adbae389d60",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -31946,6 +31993,7 @@
     },
     {
       "id": "o0048",
+      "share": "a5c92b0289cb",
       "area": "Kreischberg + Lachtal",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -32035,6 +32083,7 @@
     },
     {
       "id": "o0049",
+      "share": "8f3702e2a7fa",
       "area": "Kreischberg + Lachtal",
       "split": "9+3",
       "provider": "Airbnb",
@@ -32100,6 +32149,7 @@
     },
     {
       "id": "o0050",
+      "share": "c518cd97eaa5",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32165,6 +32215,7 @@
     },
     {
       "id": "o0051",
+      "share": "fd6f18a9c9a2",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32230,6 +32281,7 @@
     },
     {
       "id": "o0052",
+      "share": "2c19f250c6c0",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32295,6 +32347,7 @@
     },
     {
       "id": "o0053",
+      "share": "56879cc90216",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32360,6 +32413,7 @@
     },
     {
       "id": "o0054",
+      "share": "8697cac57ad6",
       "area": "Katschberg – Aineck",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -32449,6 +32503,7 @@
     },
     {
       "id": "o0055",
+      "share": "a3199496910a",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32514,6 +32569,7 @@
     },
     {
       "id": "o0056",
+      "share": "56ddbf26c438",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32579,6 +32635,7 @@
     },
     {
       "id": "o0057",
+      "share": "58924f273e26",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32644,6 +32701,7 @@
     },
     {
       "id": "o0058",
+      "share": "0b441627a713",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32709,6 +32767,7 @@
     },
     {
       "id": "o0059",
+      "share": "d3eaf80715be",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32774,6 +32833,7 @@
     },
     {
       "id": "o0060",
+      "share": "2ab919059afc",
       "area": "Nassfeld",
       "split": "7+3+2",
       "provider": "Mix",
@@ -32863,6 +32923,7 @@
     },
     {
       "id": "o0061",
+      "share": "73d2144a0bdc",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32928,6 +32989,7 @@
     },
     {
       "id": "o0062",
+      "share": "79063e1d0185",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -32993,6 +33055,7 @@
     },
     {
       "id": "o0063",
+      "share": "6962188e5433",
       "area": "Katschberg – Aineck",
       "split": "5+5+2",
       "provider": "Mix",
@@ -33082,6 +33145,7 @@
     },
     {
       "id": "o0064",
+      "share": "823132a9207a",
       "area": "Kreischberg + Lachtal",
       "split": "10+2",
       "provider": "Airbnb",
@@ -33147,6 +33211,7 @@
     },
     {
       "id": "o0065",
+      "share": "4441648adde1",
       "area": "Nassfeld",
       "split": "7+3+2",
       "provider": "Mix",
@@ -33236,6 +33301,7 @@
     },
     {
       "id": "o0066",
+      "share": "5df3fb00262a",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -33301,6 +33367,7 @@
     },
     {
       "id": "o0067",
+      "share": "88d6d6ba2e1e",
       "area": "Kreischberg + Lachtal",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -33390,6 +33457,7 @@
     },
     {
       "id": "o0068",
+      "share": "a77fa8601620",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -33455,6 +33523,7 @@
     },
     {
       "id": "o0069",
+      "share": "de33209ef2e1",
       "area": "Hochkönig",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -33544,6 +33613,7 @@
     },
     {
       "id": "o0070",
+      "share": "fd99d13a4f31",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -33609,6 +33679,7 @@
     },
     {
       "id": "o0071",
+      "share": "95ff77c7f474",
       "area": "Tauplitz / Schneebären",
       "split": "5+5+2",
       "provider": "Airbnb",
@@ -33698,6 +33769,7 @@
     },
     {
       "id": "o0072",
+      "share": "486ee7261891",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -33763,6 +33835,7 @@
     },
     {
       "id": "o0073",
+      "share": "8de6e877361f",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -33828,6 +33901,7 @@
     },
     {
       "id": "o0074",
+      "share": "acb368d40587",
       "area": "Katschberg – Aineck",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -33917,6 +33991,7 @@
     },
     {
       "id": "o0075",
+      "share": "19b21b5b30cc",
       "area": "Obertauern",
       "split": "5+5+2",
       "provider": "Booking",
@@ -34006,6 +34081,7 @@
     },
     {
       "id": "o0076",
+      "share": "191a90b8f35e",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34071,6 +34147,7 @@
     },
     {
       "id": "o0077",
+      "share": "399816cbcda1",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34136,6 +34213,7 @@
     },
     {
       "id": "o0078",
+      "share": "05b42b7ee748",
       "area": "Katschberg – Aineck",
       "split": "5+4+3",
       "provider": "Mix",
@@ -34225,6 +34303,7 @@
     },
     {
       "id": "o0079",
+      "share": "4a50aa877c4a",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34290,6 +34369,7 @@
     },
     {
       "id": "o0080",
+      "share": "8596aac1e2bf",
       "area": "Kreischberg + Lachtal",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -34379,6 +34459,7 @@
     },
     {
       "id": "o0081",
+      "share": "d5497c871c0e",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34444,6 +34525,7 @@
     },
     {
       "id": "o0082",
+      "share": "350d9aaf1a80",
       "area": "Katschberg – Aineck",
       "split": "5+4+3",
       "provider": "Mix",
@@ -34533,6 +34615,7 @@
     },
     {
       "id": "o0083",
+      "share": "473d93289671",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34598,6 +34681,7 @@
     },
     {
       "id": "o0084",
+      "share": "ef635a525ace",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34663,6 +34747,7 @@
     },
     {
       "id": "o0085",
+      "share": "bdec32b724e1",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34728,6 +34813,7 @@
     },
     {
       "id": "o0086",
+      "share": "b464a218ff77",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34793,6 +34879,7 @@
     },
     {
       "id": "o0087",
+      "share": "8e6d7b333ed0",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34858,6 +34945,7 @@
     },
     {
       "id": "o0088",
+      "share": "f4fad0806aac",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34923,6 +35011,7 @@
     },
     {
       "id": "o0089",
+      "share": "a4dee2b976fc",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -34988,6 +35077,7 @@
     },
     {
       "id": "o0090",
+      "share": "2ff601f81651",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35053,6 +35143,7 @@
     },
     {
       "id": "o0091",
+      "share": "4b12f5d2b44b",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35118,6 +35209,7 @@
     },
     {
       "id": "o0092",
+      "share": "a4126ed6aa8f",
       "area": "Dachstein West",
       "split": "8+4",
       "provider": "Airbnb",
@@ -35183,6 +35275,7 @@
     },
     {
       "id": "o0093",
+      "share": "e3ee79afc9af",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35248,6 +35341,7 @@
     },
     {
       "id": "o0094",
+      "share": "7eac4c9b6143",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35313,6 +35407,7 @@
     },
     {
       "id": "o0095",
+      "share": "d11207fa19a6",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35378,6 +35473,7 @@
     },
     {
       "id": "o0096",
+      "share": "69039e212d3a",
       "area": "Kreischberg + Lachtal",
       "split": "6+3+3",
       "provider": "Airbnb",
@@ -35467,6 +35563,7 @@
     },
     {
       "id": "o0097",
+      "share": "4af2a376619e",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35532,6 +35629,7 @@
     },
     {
       "id": "o0098",
+      "share": "7f0bc240e4ed",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35597,6 +35695,7 @@
     },
     {
       "id": "o0099",
+      "share": "70ae135876bf",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35662,6 +35761,7 @@
     },
     {
       "id": "o0100",
+      "share": "0d544c558ab9",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35727,6 +35827,7 @@
     },
     {
       "id": "o0101",
+      "share": "09be4a4bc4c4",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Airbnb",
@@ -35792,6 +35893,7 @@
     },
     {
       "id": "o0102",
+      "share": "acd0facea96e",
       "area": "Tauplitz / Schneebären",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -35881,6 +35983,7 @@
     },
     {
       "id": "o0103",
+      "share": "7e734f227aeb",
       "area": "Hochkönig",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -35970,6 +36073,7 @@
     },
     {
       "id": "o0104",
+      "share": "c6a0990f3247",
       "area": "Katschberg – Aineck",
       "split": "4+4+4",
       "provider": "Mix",
@@ -36059,6 +36163,7 @@
     },
     {
       "id": "o0105",
+      "share": "51e532a2f823",
       "area": "Dachstein West",
       "split": "4+4+4",
       "provider": "Airbnb",
@@ -36148,6 +36253,7 @@
     },
     {
       "id": "o0106",
+      "share": "18bf8890b2f4",
       "area": "Dachstein West",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -36237,6 +36343,7 @@
     },
     {
       "id": "o0107",
+      "share": "8912c2520486",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -36302,6 +36409,7 @@
     },
     {
       "id": "o0108",
+      "share": "b5ab5b824e6c",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -36367,6 +36475,7 @@
     },
     {
       "id": "o0109",
+      "share": "7fea07209a50",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -36432,6 +36541,7 @@
     },
     {
       "id": "o0110",
+      "share": "a8ac799b812f",
       "area": "Tauplitz / Schneebären",
       "split": "6+6",
       "provider": "Airbnb",
@@ -36497,6 +36607,7 @@
     },
     {
       "id": "o0111",
+      "share": "709349fae49e",
       "area": "Nassfeld",
       "split": "10+2",
       "provider": "Airbnb",
@@ -36562,6 +36673,7 @@
     },
     {
       "id": "o0112",
+      "share": "40a228c9f32b",
       "area": "Dachstein West",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -36651,6 +36763,7 @@
     },
     {
       "id": "o0113",
+      "share": "6c4e83d8e15c",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -36716,6 +36829,7 @@
     },
     {
       "id": "o0114",
+      "share": "908e28a90364",
       "area": "Tauplitz / Schneebären",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -36805,6 +36919,7 @@
     },
     {
       "id": "o0115",
+      "share": "0bf0e9e61717",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -36870,6 +36985,7 @@
     },
     {
       "id": "o0116",
+      "share": "09807cd6621e",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Airbnb",
@@ -36935,6 +37051,7 @@
     },
     {
       "id": "o0117",
+      "share": "123909756dd7",
       "area": "Obertauern",
       "split": "4+4+4",
       "provider": "Booking",
@@ -37024,6 +37141,7 @@
     },
     {
       "id": "o0118",
+      "share": "48ebf7d1ca63",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37089,6 +37207,7 @@
     },
     {
       "id": "o0119",
+      "share": "e4a94502d0d6",
       "area": "Nassfeld",
       "split": "3+3+3+3",
       "provider": "Airbnb",
@@ -37202,6 +37321,7 @@
     },
     {
       "id": "o0120",
+      "share": "d7c37d5934f9",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37267,6 +37387,7 @@
     },
     {
       "id": "o0121",
+      "share": "5fd118e8c16d",
       "area": "Nassfeld",
       "split": "10+2",
       "provider": "Mix",
@@ -37332,6 +37453,7 @@
     },
     {
       "id": "o0122",
+      "share": "7326149865ef",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37397,6 +37519,7 @@
     },
     {
       "id": "o0123",
+      "share": "e2bb79b47f61",
       "area": "Dachstein West",
       "split": "8+4",
       "provider": "Airbnb",
@@ -37462,6 +37585,7 @@
     },
     {
       "id": "o0124",
+      "share": "3b75bb1b4ced",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37527,6 +37651,7 @@
     },
     {
       "id": "o0125",
+      "share": "68230e8b42a3",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37592,6 +37717,7 @@
     },
     {
       "id": "o0126",
+      "share": "6cb6599a593a",
       "area": "Dachstein West",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -37681,6 +37807,7 @@
     },
     {
       "id": "o0127",
+      "share": "e76a97246671",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37746,6 +37873,7 @@
     },
     {
       "id": "o0128",
+      "share": "596c49dbc6d8",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37811,6 +37939,7 @@
     },
     {
       "id": "o0129",
+      "share": "2c010ede5977",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -37876,6 +38005,7 @@
     },
     {
       "id": "o0130",
+      "share": "d96f51ba5c7b",
       "area": "Tauplitz / Schneebären",
       "split": "6+3+3",
       "provider": "Airbnb",
@@ -37965,6 +38095,7 @@
     },
     {
       "id": "o0131",
+      "share": "b6364c47173e",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Booking",
@@ -38020,6 +38151,7 @@
     },
     {
       "id": "o0132",
+      "share": "915b4c2c253c",
       "area": "Hochkönig",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -38109,6 +38241,7 @@
     },
     {
       "id": "o0133",
+      "share": "621daf97259d",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38174,6 +38307,7 @@
     },
     {
       "id": "o0134",
+      "share": "df07d8af5094",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38239,6 +38373,7 @@
     },
     {
       "id": "o0135",
+      "share": "088486c46232",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38304,6 +38439,7 @@
     },
     {
       "id": "o0136",
+      "share": "6a0e9ebfac9f",
       "area": "Nassfeld",
       "split": "8+2+2",
       "provider": "Mix",
@@ -38393,6 +38529,7 @@
     },
     {
       "id": "o0137",
+      "share": "99bf1b1f196a",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38458,6 +38595,7 @@
     },
     {
       "id": "o0138",
+      "share": "f600a0a34a22",
       "area": "Hochkönig",
       "split": "5+4+3",
       "provider": "Airbnb",
@@ -38547,6 +38685,7 @@
     },
     {
       "id": "o0139",
+      "share": "cb04421b0a1f",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38612,6 +38751,7 @@
     },
     {
       "id": "o0140",
+      "share": "2b5a4b03b66b",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38677,6 +38817,7 @@
     },
     {
       "id": "o0141",
+      "share": "e63866cb8788",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38742,6 +38883,7 @@
     },
     {
       "id": "o0142",
+      "share": "e22fa3316412",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -38807,6 +38949,7 @@
     },
     {
       "id": "o0143",
+      "share": "b997983ad19b",
       "area": "Katschberg – Aineck",
       "split": "6+6",
       "provider": "Airbnb",
@@ -38872,6 +39015,7 @@
     },
     {
       "id": "o0144",
+      "share": "9d5b5d38281e",
       "area": "Dachstein West",
       "split": "5+5+2",
       "provider": "Airbnb",
@@ -38961,6 +39105,7 @@
     },
     {
       "id": "o0145",
+      "share": "147ac88824b7",
       "area": "Tauplitz / Schneebären",
       "split": "3+3+3+3",
       "provider": "Airbnb",
@@ -39074,6 +39219,7 @@
     },
     {
       "id": "o0146",
+      "share": "4b8e4492fd96",
       "area": "Tauplitz / Schneebären",
       "split": "10+2",
       "provider": "Airbnb",
@@ -39139,6 +39285,7 @@
     },
     {
       "id": "o0147",
+      "share": "5ec12382faab",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -39204,6 +39351,7 @@
     },
     {
       "id": "o0148",
+      "share": "4d4d07ddb9bc",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -39269,6 +39417,7 @@
     },
     {
       "id": "o0149",
+      "share": "fd54a261e1cb",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -39334,6 +39483,7 @@
     },
     {
       "id": "o0150",
+      "share": "bfcc418c4834",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -39399,6 +39549,7 @@
     },
     {
       "id": "o0151",
+      "share": "e82767b5bdcc",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -39464,6 +39615,7 @@
     },
     {
       "id": "o0152",
+      "share": "4ace48f24514",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -39529,6 +39681,7 @@
     },
     {
       "id": "o0153",
+      "share": "2e7a36101302",
       "area": "Hochkönig",
       "split": "6+3+3",
       "provider": "Airbnb",
@@ -39618,6 +39771,7 @@
     },
     {
       "id": "o0154",
+      "share": "5d561908bdc8",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Booking",
@@ -39673,6 +39827,7 @@
     },
     {
       "id": "o0155",
+      "share": "c35a139f0726",
       "area": "Dachstein West",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -39762,6 +39917,7 @@
     },
     {
       "id": "o0156",
+      "share": "0f9f8bd667fb",
       "area": "Tauplitz / Schneebären",
       "split": "10+2",
       "provider": "Airbnb",
@@ -39827,6 +39983,7 @@
     },
     {
       "id": "o0157",
+      "share": "139941748540",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -39892,6 +40049,7 @@
     },
     {
       "id": "o0158",
+      "share": "d9f90d4b679b",
       "area": "Tauplitz / Schneebären",
       "split": "8+4",
       "provider": "Airbnb",
@@ -39957,6 +40115,7 @@
     },
     {
       "id": "o0159",
+      "share": "64359e30856c",
       "area": "Katschberg – Aineck",
       "split": "8+4",
       "provider": "Airbnb",
@@ -40022,6 +40181,7 @@
     },
     {
       "id": "o0160",
+      "share": "15ed34b12917",
       "area": "Dachstein West",
       "split": "8+2+2",
       "provider": "Airbnb",
@@ -40111,6 +40271,7 @@
     },
     {
       "id": "o0161",
+      "share": "91407467b6d0",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Booking",
@@ -40166,6 +40327,7 @@
     },
     {
       "id": "o0162",
+      "share": "81743351d71e",
       "area": "Hochkönig",
       "split": "4+4+4",
       "provider": "Mix",
@@ -40255,6 +40417,7 @@
     },
     {
       "id": "o0163",
+      "share": "996ff93cc3c2",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40320,6 +40483,7 @@
     },
     {
       "id": "o0164",
+      "share": "6d819b104c01",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40385,6 +40549,7 @@
     },
     {
       "id": "o0165",
+      "share": "1d9eeef2c04a",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40450,6 +40615,7 @@
     },
     {
       "id": "o0166",
+      "share": "4912e61415e8",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40515,6 +40681,7 @@
     },
     {
       "id": "o0167",
+      "share": "06263b15f2d6",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Booking",
@@ -40570,6 +40737,7 @@
     },
     {
       "id": "o0168",
+      "share": "56be2b7ec52c",
       "area": "Dachstein West",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -40659,6 +40827,7 @@
     },
     {
       "id": "o0169",
+      "share": "23fe4ec97013",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40724,6 +40893,7 @@
     },
     {
       "id": "o0170",
+      "share": "cedaa59f0c34",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40789,6 +40959,7 @@
     },
     {
       "id": "o0171",
+      "share": "e3e7499e6642",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40854,6 +41025,7 @@
     },
     {
       "id": "o0172",
+      "share": "a5739892bf24",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40919,6 +41091,7 @@
     },
     {
       "id": "o0173",
+      "share": "8dcd81c155c5",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -40984,6 +41157,7 @@
     },
     {
       "id": "o0174",
+      "share": "d900822c5f3d",
       "area": "Hochkönig",
       "split": "6+6",
       "provider": "Airbnb",
@@ -41049,6 +41223,7 @@
     },
     {
       "id": "o0175",
+      "share": "757337094545",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41114,6 +41289,7 @@
     },
     {
       "id": "o0176",
+      "share": "3e2d7f0665db",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41179,6 +41355,7 @@
     },
     {
       "id": "o0177",
+      "share": "b640d34a501b",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41244,6 +41421,7 @@
     },
     {
       "id": "o0178",
+      "share": "09acf8721efc",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41309,6 +41487,7 @@
     },
     {
       "id": "o0179",
+      "share": "f68214e233f8",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41374,6 +41553,7 @@
     },
     {
       "id": "o0180",
+      "share": "01058ab6cda6",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41439,6 +41619,7 @@
     },
     {
       "id": "o0181",
+      "share": "7363fb5eb317",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41504,6 +41685,7 @@
     },
     {
       "id": "o0182",
+      "share": "046398fc263b",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41569,6 +41751,7 @@
     },
     {
       "id": "o0183",
+      "share": "289fa7b9e1d3",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41634,6 +41817,7 @@
     },
     {
       "id": "o0184",
+      "share": "c81a9827bfa0",
       "area": "Dachstein West",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -41723,6 +41907,7 @@
     },
     {
       "id": "o0185",
+      "share": "6db97ab6d6ce",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41788,6 +41973,7 @@
     },
     {
       "id": "o0186",
+      "share": "a9630a12cae5",
       "area": "Dachstein West",
       "split": "6+3+3",
       "provider": "Airbnb",
@@ -41877,6 +42063,7 @@
     },
     {
       "id": "o0187",
+      "share": "566e37158741",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -41942,6 +42129,7 @@
     },
     {
       "id": "o0188",
+      "share": "caeed2ad8492",
       "area": "Katschberg – Aineck",
       "split": "8+2+2",
       "provider": "Airbnb",
@@ -42031,6 +42219,7 @@
     },
     {
       "id": "o0189",
+      "share": "94b614d39a16",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42096,6 +42285,7 @@
     },
     {
       "id": "o0190",
+      "share": "cfbb9a55500f",
       "area": "Tauplitz / Schneebären",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -42185,6 +42375,7 @@
     },
     {
       "id": "o0191",
+      "share": "4b335cfd6a77",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42250,6 +42441,7 @@
     },
     {
       "id": "o0192",
+      "share": "9e3e5c71da88",
       "area": "Nassfeld",
       "split": "7+5",
       "provider": "Booking",
@@ -42305,6 +42497,7 @@
     },
     {
       "id": "o0193",
+      "share": "612d1ea79723",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42370,6 +42563,7 @@
     },
     {
       "id": "o0194",
+      "share": "5f5362cd920d",
       "area": "Tauplitz / Schneebären",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -42459,6 +42653,7 @@
     },
     {
       "id": "o0195",
+      "share": "766d18d02f06",
       "area": "Katschberg – Aineck",
       "split": "6+3+3",
       "provider": "Mix",
@@ -42548,6 +42743,7 @@
     },
     {
       "id": "o0196",
+      "share": "376e6341ece6",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42613,6 +42809,7 @@
     },
     {
       "id": "o0197",
+      "share": "1d1b3ac04dcb",
       "area": "Dachstein West",
       "split": "3+3+3+3",
       "provider": "Airbnb",
@@ -42726,6 +42923,7 @@
     },
     {
       "id": "o0198",
+      "share": "84f495d76046",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42791,6 +42989,7 @@
     },
     {
       "id": "o0199",
+      "share": "0d4c1ee16503",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42856,6 +43055,7 @@
     },
     {
       "id": "o0200",
+      "share": "2e601ba8b180",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42921,6 +43121,7 @@
     },
     {
       "id": "o0201",
+      "share": "dfb542873203",
       "area": "Dachstein West",
       "split": "7+5",
       "provider": "Airbnb",
@@ -42986,6 +43187,7 @@
     },
     {
       "id": "o0202",
+      "share": "dc1f35ad63ef",
       "area": "Dachstein West",
       "split": "9+3",
       "provider": "Airbnb",
@@ -43051,6 +43253,7 @@
     },
     {
       "id": "o0203",
+      "share": "9dda3c4b447f",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43116,6 +43319,7 @@
     },
     {
       "id": "o0204",
+      "share": "1b9990677e93",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43181,6 +43385,7 @@
     },
     {
       "id": "o0205",
+      "share": "3208c56b33e9",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43246,6 +43451,7 @@
     },
     {
       "id": "o0206",
+      "share": "74fa908dca48",
       "area": "Katschberg – Aineck",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -43335,6 +43541,7 @@
     },
     {
       "id": "o0207",
+      "share": "5e4edcc6d01f",
       "area": "Schladming 4 Berge",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -43424,6 +43631,7 @@
     },
     {
       "id": "o0208",
+      "share": "99ce047cef40",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43489,6 +43697,7 @@
     },
     {
       "id": "o0209",
+      "share": "21aaa5cf84a0",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43554,6 +43763,7 @@
     },
     {
       "id": "o0210",
+      "share": "e634baef1999",
       "area": "Hochkönig",
       "split": "5+5+2",
       "provider": "Airbnb",
@@ -43643,6 +43853,7 @@
     },
     {
       "id": "o0211",
+      "share": "7eab675dd304",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43708,6 +43919,7 @@
     },
     {
       "id": "o0212",
+      "share": "172a117f5c77",
       "area": "Katschberg – Aineck",
       "split": "3+3+3+3",
       "provider": "Mix",
@@ -43821,6 +44033,7 @@
     },
     {
       "id": "o0213",
+      "share": "12b628a34295",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43886,6 +44099,7 @@
     },
     {
       "id": "o0214",
+      "share": "30dd66497bf3",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -43951,6 +44165,7 @@
     },
     {
       "id": "o0215",
+      "share": "b707e1e765de",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44016,6 +44231,7 @@
     },
     {
       "id": "o0216",
+      "share": "ab9f931a3098",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44081,6 +44297,7 @@
     },
     {
       "id": "o0217",
+      "share": "03fa34f03928",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44146,6 +44363,7 @@
     },
     {
       "id": "o0218",
+      "share": "cfd34f05bc67",
       "area": "Obertauern",
       "split": "3+3+3+3",
       "provider": "Booking",
@@ -44259,6 +44477,7 @@
     },
     {
       "id": "o0219",
+      "share": "814d2d0aea47",
       "area": "Katschberg – Aineck",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -44348,6 +44567,7 @@
     },
     {
       "id": "o0220",
+      "share": "f35cb04ce2da",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44413,6 +44633,7 @@
     },
     {
       "id": "o0221",
+      "share": "10f6f702a8f5",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44478,6 +44699,7 @@
     },
     {
       "id": "o0222",
+      "share": "b1a84fa5d002",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44543,6 +44765,7 @@
     },
     {
       "id": "o0223",
+      "share": "37a465f62abf",
       "area": "Schladming 4 Berge",
       "split": "4+4+4",
       "provider": "Airbnb",
@@ -44632,6 +44855,7 @@
     },
     {
       "id": "o0224",
+      "share": "bd08a07776fa",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44697,6 +44921,7 @@
     },
     {
       "id": "o0225",
+      "share": "ae770c36787a",
       "area": "Kreischberg + Lachtal",
       "split": "3+3+3+3",
       "provider": "Airbnb",
@@ -44810,6 +45035,7 @@
     },
     {
       "id": "o0226",
+      "share": "cd1cd5db6f84",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -44875,6 +45101,7 @@
     },
     {
       "id": "o0227",
+      "share": "754ea4694567",
       "area": "Tauplitz / Schneebären",
       "split": "8+2+2",
       "provider": "Airbnb",
@@ -44964,6 +45191,7 @@
     },
     {
       "id": "o0228",
+      "share": "29a0f3d19624",
       "area": "Hochkönig",
       "split": "8+4",
       "provider": "Airbnb",
@@ -45029,6 +45257,7 @@
     },
     {
       "id": "o0229",
+      "share": "3bd6e6673c1c",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45094,6 +45323,7 @@
     },
     {
       "id": "o0230",
+      "share": "50e1b92ac9ef",
       "area": "Schladming 4 Berge",
       "split": "6+4+2",
       "provider": "Airbnb",
@@ -45183,6 +45413,7 @@
     },
     {
       "id": "o0231",
+      "share": "1b686d0f747f",
       "area": "Dachstein West",
       "split": "10+2",
       "provider": "Airbnb",
@@ -45248,6 +45479,7 @@
     },
     {
       "id": "o0232",
+      "share": "47614a5e2c76",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45313,6 +45545,7 @@
     },
     {
       "id": "o0233",
+      "share": "7b74a2c9aec0",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45378,6 +45611,7 @@
     },
     {
       "id": "o0234",
+      "share": "04f3f3c90528",
       "area": "Schladming 4 Berge",
       "split": "5+5+2",
       "provider": "Airbnb",
@@ -45467,6 +45701,7 @@
     },
     {
       "id": "o0235",
+      "share": "729211a7f829",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45532,6 +45767,7 @@
     },
     {
       "id": "o0236",
+      "share": "ebe70dbe3f4e",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45597,6 +45833,7 @@
     },
     {
       "id": "o0237",
+      "share": "d15292447631",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45662,6 +45899,7 @@
     },
     {
       "id": "o0238",
+      "share": "592b90012fd8",
       "area": "Obertauern",
       "split": "7+5",
       "provider": "Booking",
@@ -45717,6 +45955,7 @@
     },
     {
       "id": "o0239",
+      "share": "e030c369c11f",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45782,6 +46021,7 @@
     },
     {
       "id": "o0240",
+      "share": "102d506ac389",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45847,6 +46087,7 @@
     },
     {
       "id": "o0241",
+      "share": "5a6310789189",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45912,6 +46153,7 @@
     },
     {
       "id": "o0242",
+      "share": "f1f45b88c8b4",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -45977,6 +46219,7 @@
     },
     {
       "id": "o0243",
+      "share": "ce5664b920c2",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46042,6 +46285,7 @@
     },
     {
       "id": "o0244",
+      "share": "c9c92bfe1f94",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46107,6 +46351,7 @@
     },
     {
       "id": "o0245",
+      "share": "69c549ee840d",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Booking",
@@ -46162,6 +46407,7 @@
     },
     {
       "id": "o0246",
+      "share": "ed39dd111d4e",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46227,6 +46473,7 @@
     },
     {
       "id": "o0247",
+      "share": "45c6a1f9c2e9",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46292,6 +46539,7 @@
     },
     {
       "id": "o0248",
+      "share": "5e6b266e894f",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46357,6 +46605,7 @@
     },
     {
       "id": "o0249",
+      "share": "d2cae073dd59",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Booking",
@@ -46412,6 +46661,7 @@
     },
     {
       "id": "o0250",
+      "share": "b442c205a1e7",
       "area": "Katschberg – Aineck",
       "split": "9+3",
       "provider": "Mix",
@@ -46477,6 +46727,7 @@
     },
     {
       "id": "o0251",
+      "share": "b3895f919a85",
       "area": "Hochkönig",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -46566,6 +46817,7 @@
     },
     {
       "id": "o0252",
+      "share": "34813f8e1a47",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46631,6 +46883,7 @@
     },
     {
       "id": "o0253",
+      "share": "7fb76eee993b",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46696,6 +46949,7 @@
     },
     {
       "id": "o0254",
+      "share": "6ddaecd3348b",
       "area": "Hochkönig",
       "split": "8+4",
       "provider": "Mix",
@@ -46761,6 +47015,7 @@
     },
     {
       "id": "o0255",
+      "share": "20f573dedd99",
       "area": "Hochkönig",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -46850,6 +47105,7 @@
     },
     {
       "id": "o0256",
+      "share": "02174f39e9f4",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -46915,6 +47171,7 @@
     },
     {
       "id": "o0257",
+      "share": "14ccc492b33a",
       "area": "Dachstein West",
       "split": "10+2",
       "provider": "Airbnb",
@@ -46980,6 +47237,7 @@
     },
     {
       "id": "o0258",
+      "share": "0c1ae9180885",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47045,6 +47303,7 @@
     },
     {
       "id": "o0259",
+      "share": "a0b39659e1af",
       "area": "Hochkönig",
       "split": "9+3",
       "provider": "Airbnb",
@@ -47110,6 +47369,7 @@
     },
     {
       "id": "o0260",
+      "share": "56d97fe1253f",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47175,6 +47435,7 @@
     },
     {
       "id": "o0261",
+      "share": "85e5ed05e5f6",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47240,6 +47501,7 @@
     },
     {
       "id": "o0262",
+      "share": "a51f8f55d341",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47305,6 +47567,7 @@
     },
     {
       "id": "o0263",
+      "share": "00a5f0ca6748",
       "area": "Tauplitz / Schneebären",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47370,6 +47633,7 @@
     },
     {
       "id": "o0264",
+      "share": "56addd7710f8",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47435,6 +47699,7 @@
     },
     {
       "id": "o0265",
+      "share": "e8ad8cd3d481",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47500,6 +47765,7 @@
     },
     {
       "id": "o0266",
+      "share": "68de081b665e",
       "area": "Dachstein West",
       "split": "9+3",
       "provider": "Airbnb",
@@ -47565,6 +47831,7 @@
     },
     {
       "id": "o0267",
+      "share": "fd2d15adaf86",
       "area": "Hochkönig",
       "split": "8+2+2",
       "provider": "Airbnb",
@@ -47654,6 +47921,7 @@
     },
     {
       "id": "o0268",
+      "share": "cd77853967b8",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47719,6 +47987,7 @@
     },
     {
       "id": "o0269",
+      "share": "80bcf89bb4a5",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47784,6 +48053,7 @@
     },
     {
       "id": "o0270",
+      "share": "9b62db2d05d0",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Booking",
@@ -47839,6 +48109,7 @@
     },
     {
       "id": "o0271",
+      "share": "0292f191ad8e",
       "area": "Hochkönig",
       "split": "9+3",
       "provider": "Airbnb",
@@ -47904,6 +48175,7 @@
     },
     {
       "id": "o0272",
+      "share": "2c61d5b9e6b0",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -47969,6 +48241,7 @@
     },
     {
       "id": "o0273",
+      "share": "6932e406e55f",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Booking",
@@ -48024,6 +48297,7 @@
     },
     {
       "id": "o0274",
+      "share": "9c7f437ace00",
       "area": "Schladming 4 Berge",
       "split": "10+2",
       "provider": "Airbnb",
@@ -48089,6 +48363,7 @@
     },
     {
       "id": "o0275",
+      "share": "bc2602d80faa",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48154,6 +48429,7 @@
     },
     {
       "id": "o0276",
+      "share": "1df3ddfc0be7",
       "area": "Hochkönig",
       "split": "3+3+3+3",
       "provider": "Mix",
@@ -48267,6 +48543,7 @@
     },
     {
       "id": "o0277",
+      "share": "76233df3f1d7",
       "area": "Obertauern",
       "split": "7+5",
       "provider": "Booking",
@@ -48322,6 +48599,7 @@
     },
     {
       "id": "o0278",
+      "share": "8c8a2f629518",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48387,6 +48665,7 @@
     },
     {
       "id": "o0279",
+      "share": "8ce83d879849",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Booking",
@@ -48442,6 +48721,7 @@
     },
     {
       "id": "o0280",
+      "share": "5888d5990a48",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48507,6 +48787,7 @@
     },
     {
       "id": "o0281",
+      "share": "93978236f99d",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48572,6 +48853,7 @@
     },
     {
       "id": "o0282",
+      "share": "63eefca4b08a",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48637,6 +48919,7 @@
     },
     {
       "id": "o0283",
+      "share": "3dc3d020916d",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48702,6 +48985,7 @@
     },
     {
       "id": "o0284",
+      "share": "b4f4ecae6de1",
       "area": "Katschberg – Aineck",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48767,6 +49051,7 @@
     },
     {
       "id": "o0285",
+      "share": "5122ff3a43f4",
       "area": "Obertauern",
       "split": "7+5",
       "provider": "Booking",
@@ -48822,6 +49107,7 @@
     },
     {
       "id": "o0286",
+      "share": "6644e569c708",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -48887,6 +49173,7 @@
     },
     {
       "id": "o0287",
+      "share": "0bec968bc599",
       "area": "Obertauern",
       "split": "8+4",
       "provider": "Booking",
@@ -48952,6 +49239,7 @@
     },
     {
       "id": "o0288",
+      "share": "16d94092f896",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -49017,6 +49305,7 @@
     },
     {
       "id": "o0289",
+      "share": "12dec4088d6f",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -49082,6 +49371,7 @@
     },
     {
       "id": "o0290",
+      "share": "207d89459fcc",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Airbnb",
@@ -49147,6 +49437,7 @@
     },
     {
       "id": "o0291",
+      "share": "47e45a60ba53",
       "area": "Schladming 4 Berge",
       "split": "6+3+3",
       "provider": "Airbnb",
@@ -49236,6 +49527,7 @@
     },
     {
       "id": "o0292",
+      "share": "75a4e4b433ca",
       "area": "Schladming 4 Berge",
       "split": "8+4",
       "provider": "Airbnb",
@@ -49301,6 +49593,7 @@
     },
     {
       "id": "o0293",
+      "share": "cdef6d265350",
       "area": "Obertauern",
       "split": "7+5",
       "provider": "Booking",
@@ -49356,6 +49649,7 @@
     },
     {
       "id": "o0294",
+      "share": "b8bf112737f9",
       "area": "Obertauern",
       "split": "8+4",
       "provider": "Booking",
@@ -49421,6 +49715,7 @@
     },
     {
       "id": "o0295",
+      "share": "0a1efa5ce22a",
       "area": "Schladming 4 Berge",
       "split": "6+6",
       "provider": "Airbnb",
@@ -49486,6 +49781,7 @@
     },
     {
       "id": "o0296",
+      "share": "f89b3f1b2453",
       "area": "Kreischberg + Lachtal",
       "split": "7+5",
       "provider": "Booking",
@@ -49551,6 +49847,7 @@
     },
     {
       "id": "o0297",
+      "share": "9ec3d0f0ff54",
       "area": "Obertauern",
       "split": "7+3+2",
       "provider": "Booking",
@@ -49640,6 +49937,7 @@
     },
     {
       "id": "o0298",
+      "share": "e88d8e5d0f91",
       "area": "Obertauern",
       "split": "7+3+2",
       "provider": "Booking",
@@ -49729,6 +50027,7 @@
     },
     {
       "id": "o0299",
+      "share": "326a58498387",
       "area": "Schladming 4 Berge",
       "split": "10+2",
       "provider": "Airbnb",
@@ -49794,6 +50093,7 @@
     },
     {
       "id": "o0300",
+      "share": "0d168a59be02",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Booking",
@@ -49849,6 +50149,7 @@
     },
     {
       "id": "o0301",
+      "share": "2d9b3a0044a3",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Booking",
@@ -49904,6 +50205,7 @@
     },
     {
       "id": "o0302",
+      "share": "e0d1229eb97e",
       "area": "Hochkönig",
       "split": "10+2",
       "provider": "Airbnb",
@@ -49969,6 +50271,7 @@
     },
     {
       "id": "o0303",
+      "share": "1e44b138ee52",
       "area": "Schladming 4 Berge",
       "split": "9+3",
       "provider": "Airbnb",
@@ -50034,6 +50337,7 @@
     },
     {
       "id": "o0304",
+      "share": "224bc2468e83",
       "area": "Obertauern",
       "split": "7+5",
       "provider": "Booking",
@@ -50089,6 +50393,7 @@
     },
     {
       "id": "o0305",
+      "share": "e831fc53a37e",
       "area": "Schladming 4 Berge",
       "split": "8+4",
       "provider": "Airbnb",
@@ -50154,6 +50459,7 @@
     },
     {
       "id": "o0306",
+      "share": "df7830f9c4a5",
       "area": "Hochkönig",
       "split": "10+2",
       "provider": "Airbnb",
@@ -50219,6 +50525,7 @@
     },
     {
       "id": "o0307",
+      "share": "95e2a4ebb3f5",
       "area": "Schladming 4 Berge",
       "split": "7+5",
       "provider": "Airbnb",
@@ -50284,6 +50591,7 @@
     },
     {
       "id": "o0308",
+      "share": "5ae00cf44595",
       "area": "Obertauern",
       "split": "8+2+2",
       "provider": "Booking",
@@ -50373,6 +50681,7 @@
     },
     {
       "id": "o0309",
+      "share": "7bd004cb4d46",
       "area": "Schladming 4 Berge",
       "split": "7+5",
       "provider": "Airbnb",
@@ -50438,6 +50747,7 @@
     },
     {
       "id": "o0310",
+      "share": "6dbc0959212f",
       "area": "Schladming 4 Berge",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -50527,6 +50837,7 @@
     },
     {
       "id": "o0311",
+      "share": "edab21b8f10c",
       "area": "Schladming 4 Berge",
       "split": "8+2+2",
       "provider": "Airbnb",
@@ -50616,6 +50927,7 @@
     },
     {
       "id": "o0312",
+      "share": "12682f1c2947",
       "area": "Schladming 4 Berge",
       "split": "7+3+2",
       "provider": "Airbnb",
@@ -50705,6 +51017,7 @@
     },
     {
       "id": "o0313",
+      "share": "2706b9e90a61",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Booking",
@@ -50760,6 +51073,7 @@
     },
     {
       "id": "o0314",
+      "share": "1c40d227c25f",
       "area": "Schladming 4 Berge",
       "split": "7+5",
       "provider": "Airbnb",
@@ -50825,6 +51139,7 @@
     },
     {
       "id": "o0315",
+      "share": "ab859c88ad37",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Booking",
@@ -50880,6 +51195,7 @@
     },
     {
       "id": "o0316",
+      "share": "bceeeb010f9d",
       "area": "Hochkönig",
       "split": "7+5",
       "provider": "Booking",
