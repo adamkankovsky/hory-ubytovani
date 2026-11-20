@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
@@ -14,10 +15,14 @@ AREAS = {
     "obertauern": [(47.2490, 13.5580)],
     "hochkoenig": [(47.4060, 12.9030), (47.3830, 12.9990), (47.3830, 13.0500)],
     "nassfeld": [(46.5660, 13.2760), (46.6270, 13.3670)],
-    "schladming": [(47.3940, 13.6880), (47.3830, 13.6830), (47.3860, 13.6130), (47.4070, 13.7670)],
+    "schladming": [(47.3940, 13.6880), (47.3830, 13.6830), (47.3860, 13.6130), (47.4070, 13.7670), (47.4210, 13.6550)],
     "tauplitz": [(47.5580, 14.0480)],
     "kreischberg": [(47.1170, 14.1830), (47.2500, 14.2830)],
     "dachstein_west": [(47.5840, 13.5350), (47.5140, 13.4330), (47.5910, 13.4660)],
+    "lofer": [(47.5853, 12.6929), (47.5642, 12.7058)],
+    "saalbach": [(47.3910, 12.6350), (47.3770, 12.5950), (47.4390, 12.7490), (47.4270, 12.8480)],
+    "gastein": [(47.1710, 13.1050), (47.1160, 13.1350), (47.0470, 13.0170)],
+    "lungau": [(47.0980, 13.6190), (47.1330, 13.6780)],
 }
 
 ROLES = {
@@ -43,9 +48,14 @@ STAYS = {
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Lokální Airbnb hledání.")
+    parser.add_argument("--areas", default="", help="Čárkami oddělený seznam oblastí (výchozí vše).")
+    args = parser.parse_args()
+    selected = [item.strip() for item in args.areas.split(",") if item.strip()] or list(AREAS)
     OUT.mkdir(parents=True, exist_ok=True)
     padding = 0.25
-    for area, points in AREAS.items():
+    for area in selected:
+        points = AREAS[area]
         lats = [point[0] for point in points]
         lngs = [point[1] for point in points]
         bounds = {

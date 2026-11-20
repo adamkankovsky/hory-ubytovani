@@ -11,6 +11,7 @@ souborech kombinací.
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import sys
@@ -25,6 +26,7 @@ from local_units import LOCAL_AIRBNB, RESORTS, distance_km  # noqa: E402
 COMBOS = ROOT / "data" / "trip_search" / "combos_2027-02-01"
 COMBOS_WIDE = ROOT / "data" / "trip_search" / "combos_2027-02-01_wide"
 OUT = ROOT / "docs" / "data"
+DEFAULT_MAX_TOTAL = 3500
 
 
 STAYS = {
@@ -191,12 +193,22 @@ def select_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     )
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Staví vizualizaci ubytování pro 10 osob.")
+    parser.add_argument(
+        "--max-total",
+        type=float,
+        default=DEFAULT_MAX_TOTAL,
+        help="Vyřadit varianty dražší než tato částka (výchozí 3500 €).",
+    )
+    args = parser.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     images = load_airbnb_images()
     options: list[dict[str, Any]] = []
     for stay, stay_info in STAYS.items():
         grouped: dict[str, list[dict[str, Any]]] = {}
         for item in load_items(stay):
+            if item["total"] > args.max_total:
+                continue
             grouped.setdefault(item["area"], []).append(item)
         for area, items in grouped.items():
             for item in select_items(items):
@@ -221,7 +233,7 @@ def main() -> int:
             "max_unit_km_supported": 50,
             "price_note": "Ceny jsou za celý pobyt podle data hledání; mohou se změnit.",
             "distance_note": "Vzdálenost k lanovce je silniční trasa (OSRM, auto); vzdálenost mezi jednotkami je vzdušnou čarou. V základu 15 km po silnici a 10 km mezi jednotkami, v UI lze rozšířit.",
-            "budget_total": 3000,
+            "budget_total": args.max_total,
             "budget_czk_per_person": 5000,
             "czk_per_eur": CZK_PER_EUR,
             "options_per_area": LIMIT_PER_AREA,

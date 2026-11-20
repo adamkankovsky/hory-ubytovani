@@ -6,7 +6,7 @@
   <title>Hory: ubytování pro 10 osob</title>
   <meta name="description" content="Statická vizualizace ubytování pro 10 osob v rakouských lyžařských střediscích.">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="assets/style.css?v=20261120k">
+  <link rel="stylesheet" href="assets/style.css?v=20261120m">
 </head>
 <body>
   <header class="hero">
@@ -27,7 +27,7 @@
 
   <main class="page">
     <section class="notice">
-      <strong>Jak číst data:</strong> ceny jsou za všechny jednotky dané varianty na 4 noci (nebo 5 nocí u přepnutého termínu). Vzdálenost k lanovce je silniční trasa (auto) podle OSRM, nikoli doba jízdy; vzdálenost mezi jednotkami je také silniční trasa (auto). Booking často neuvádí souřadnice ani počet recenzí; u Booking se vzdálenost bere z textu nabídky, takže nemusí odpovídat vzdálenosti k lanovce. Ověřte simultánní dostupnost a konečnou cenu.
+      <strong>Jak číst data:</strong> ceny jsou za všechny jednotky dané varianty na 4 noci (nebo 5 nocí u přepnutého termínu). Vzdálenost k lanovce je silniční trasa (auto) podle OSRM, nikoli doba jízdy; vzdálenost mezi jednotkami je také silniční trasa (auto). Do výběru jdou jen varianty do 3 500 € celkem. Booking často neuvádí souřadnice ani počet recenzí; u Booking se vzdálenost bere z textu nabídky, takže nemusí odpovídat vzdálenosti k lanovce. Ověřte simultánní dostupnost a konečnou cenu.
     </section>
 
     <section class="controls" aria-label="Filtry">
@@ -63,8 +63,8 @@
       </div>
       <div class="control control-range">
         <label for="budget">Max. cena celkem <output id="budgetOut">3 000 €</output></label>
-        <input id="budget" type="range" min="1000" max="5000" step="100" value="3000">
-        <div class="range-hint"><span>1 000 €</span><span>5 000 €</span></div>
+        <input id="budget" type="range" min="1000" max="3500" step="100" value="3000">
+        <div class="range-hint"><span>1 000 €</span><span>3 500 €</span></div>
       </div>
       <div class="control control-range">
         <label for="maxResort">Max. po silnici k lanovce <output id="maxResortOut">15 km</output></label>
@@ -93,7 +93,7 @@
       <div class="quick-actions">
         <button type="button" data-budget="3000">Cíl 3 000 €</button>
         <button type="button" data-budget="2000">5 000 Kč/os. (cca 2 000 €)</button>
-        <button type="button" data-budget="5000">Zobrazit i do 5 000 €</button>
+        <button type="button" data-budget="3500">Zobrazit i do 3 500 €</button>
         <button id="reset" type="button" class="button-secondary">Zrušit filtry</button>
       </div>
     </section>
@@ -138,6 +138,7 @@
         <li>Střediska lze vybírat po jednom pomocí zaškrtávátek; „Všechna“ zapne nebo vypne celý výběr.</li>
         <li>Vzdálenost se počítá jako silniční trasa k nejbližší nástupní (dolní) stanici lanovky (OSRM); lanovky a jejich dolní stanice jsou z OpenStreetMap.</li>
         <li>Filtr recenzí vyžaduje, aby všechny jednotky měly dostatečné hodnocení a počet recenzí. Booking 0–10 se převádí na 0–5.</li>
+        <li>Varianty nad 3 500 € celkem se vůbec nezobrazují, aby přehled zůstal rozumně velký.</li>
         <li>Ceny jsou orientační a mohou se změnit; nejde o rezervaci ani potvrzení dostupnosti.</li>
         <li>Booking často neposkytuje souřadnice; takové jednotky nejsou na mapě a vzdálenost mezi dvěma Booking jednotkami se nepočítá.</li>
       </ul>
@@ -148,7 +149,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-  <script src="data/pairs.js?v=20261120k"></script>
-  <script src="assets/app.js?v=20261120k"></script>
+  <script src="data/pairs.js?v=20261120m"></script>
+  <script src="assets/app.js?v=20261120m"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 from datetime import date
 from pathlib import Path
@@ -20,6 +21,10 @@ AREAS = {
     "kreischberg": ("Murau, Austria", 47.1110, 14.1690),
     "tauplitz": ("Bad Mitterndorf, Austria", 47.5550, 14.0830),
     "dachstein_west": ("Gosau, Austria", 47.5840, 13.5350),
+    "lofer": ("Lofer, Austria", 47.5853, 12.6929),
+    "saalbach": ("Saalbach-Hinterglemm, Austria", 47.3910, 12.6350),
+    "gastein": ("Bad Hofgastein, Austria", 47.1710, 13.1050),
+    "lungau": ("Sankt Michael im Lungau, Austria", 47.0980, 13.6190),
 }
 
 # Celý objekt pro 10 osob + menší jednotky pro páry do 10 osob
@@ -65,12 +70,17 @@ def _start_headful(self) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Lokální Booking hledání.")
+    parser.add_argument("--areas", default="", help="Čárkami oddělený seznam oblastí (výchozí vše).")
+    args = parser.parse_args()
+    selected = [item.strip() for item in args.areas.split(",") if item.strip()] or list(AREAS)
     if not browser_module.playwright_available():
         print("Chybí Playwright. Nainstaluj: pip install 'viajante[browser]' && playwright install chromium")
         return 2
     browser_module.ChromiumSession._start = _start_headful
     OUT.mkdir(parents=True, exist_ok=True)
-    for key, (location, lat, lng) in AREAS.items():
+    for key in selected:
+        location, lat, lng = AREAS[key]
         for adults, rooms in OCCUPANCIES:
             for label, (check_in, check_out) in STAYS.items():
                 report = viajante.search_hotels(

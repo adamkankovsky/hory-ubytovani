@@ -51,6 +51,10 @@ BOOKING_AREAS = {
     "kreischberg": "Kreischberg + Lachtal",
     "tauplitz": "Tauplitz / Schneebären",
     "dachstein_west": "Dachstein West",
+    "lofer": "Almenwelt Lofer",
+    "saalbach": "Skicircus Saalbach",
+    "gastein": "Gastein",
+    "lungau": "Lungau",
 }
 
 STAYS = {

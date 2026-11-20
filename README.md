@@ -193,7 +193,8 @@ python scripts/combine_units.py --max-resort-km 25 --max-unit-km 50 \
 python scripts/build_visualization.py
 ```
 
-Na stránku jde pro každé středisko a termín sada celých objektů, dvojic a trojic:
+Na stránku jde pro každé středisko a termín sada celých objektů, dvojic a trojic
+(jen do 3 500 € celkem):
 40 dvojic základního filtru (≤ 15 km po silnici, ≤ 10 km mezi jednotkami),
 20 trojic a další varianty pro rozšířený filtr až do 25/50 km; plná data zůstávají v `data/trip_search/combos_2027-02-01/`
 a `combos_2027-02-01_wide/`. Stránka má přepínač 4 noci (1. 2. – 5. 2.) /
@@ -224,7 +225,10 @@ python scripts/build_visualization.py
 ```
 
 Skript ukládá výsledky do `data/trip_search/local_airbnb/` a vizualizace je bere
-při dalším buildu. Hledá celý objekt pro 10 osob (minimum 4 ložnice) i menší
+při dalším buildu. Pokrývá 12 areálů: Schladming (včetně Ramsau), Tauplitz,
+Almenwelt Lofer, Hochkönig, Dachstein West, Skicircus Saalbach, Lungau,
+Gastein, Obertauern, Nassfeld, Katschberg a Kreischberg/Lachtal. Nové oblasti
+lze dohledat přes `--areas lofer,saalbach,gastein,lungau`. Hledá celý objekt pro 10 osob (minimum 4 ložnice) i menší
 jednotky pro 2–8 osob, ze kterých jde skládat páry do 10 osob, v termínu
 1. 2. – 5. 2. 2027 (4 noci) a navíc variantu 1. 2. – 6. 2. 2027 (5 nocí),
 protože u části objektů vyjde celkově levněji; tato varianta se ukládá jako

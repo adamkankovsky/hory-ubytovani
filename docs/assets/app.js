@@ -693,7 +693,7 @@
   if (sharedOption) {
     const sharedResort = Math.min(25, Math.max(15, Math.ceil(sharedOption.max_resort_km || 0)));
     const sharedUnits = Math.min(50, Math.max(10, Math.ceil(sharedOption.max_unit_km || 0)));
-    const sharedBudget = Math.min(5000, Math.max(3000, Math.ceil(sharedOption.total / 100) * 100));
+    const sharedBudget = Math.min(3500, Math.max(3000, Math.ceil(sharedOption.total / 100) * 100));
     state.selectedId = sharedOption.id;
     state.stay = sharedOption.stay || "4n";
     state.provider = "all";
