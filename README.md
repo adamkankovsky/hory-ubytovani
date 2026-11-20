@@ -174,19 +174,31 @@ Testy nepotřebují API klíč. Pokrývají klasifikaci rozsahu, seskupení, ded
 výpočet kreditů a HTTP klienta včetně async `202` → `jobId` proti lokálnímu
 mock serveru.
 
-## Vizualizace dvojic
+## Vizualizace pro 10 osob
 
 Statická stránka je v `docs/` a je připravená pro GitHub Pages:
 
-- `docs/index.html` — karty dvojic, mapa, filtr a graf ceny vs. vzdálenost.
+- `docs/index.html` — karty variant, mapa, filtry a graf ceny vs. vzdálenost.
 - `docs/assets/` — CSS a JavaScript.
 - `docs/data/pairs.js` — vygenerovaná data (načítají se přímo, bez serveru).
 
-Data se generují z raw Airbnb odpovědí:
+Data se generují z kombinací pro 10 osob (základ 15/10 km i širší sada pro UI):
 
 ```bash
+python scripts/route_distances.py        # silniční vzdálenosti k lanovkám (OSRM)
+python scripts/route_pair_distances.py   # silniční vzdálenosti mezi jednotkami
+python scripts/combine_units.py
+python scripts/combine_units.py --max-resort-km 25 --max-unit-km 50 \
+  --max-pairs 150 --out data/trip_search/combos_2027-02-01_wide
 python scripts/build_visualization.py
 ```
+
+Na stránku jde pro každé středisko a termín 40 variant základního filtru
+(≤ 15 km od areálu, ≤ 10 km mezi jednotkami) a 30 dalších variant pro rozšířený
+filtr až do 25/50 km; plná data zůstávají v `data/trip_search/combos_2027-02-01/`
+a `combos_2027-02-01_wide/`. Stránka má přepínač 4 noci (1. 2. – 5. 2.) /
+5 nocí (1. 2. – 6. 2.), chipy pro výběr více středisek a posuvníky vzdáleností
+s výchozími hodnotami 15/10 km.
 
 Lokálně:
 
@@ -212,8 +224,11 @@ python scripts/build_visualization.py
 ```
 
 Skript ukládá výsledky do `data/trip_search/local_airbnb/` a vizualizace je bere
-při dalším buildu. Hledá obsazení 2–10 osob s minimem ložnic podle velikosti
-skupiny; stránka z toho skládá dvojice, trojice i čtveřice pro 12 osob.
+při dalším buildu. Hledá celý objekt pro 10 osob (minimum 4 ložnice) i menší
+jednotky pro 2–8 osob, ze kterých jde skládat páry do 10 osob, v termínu
+1. 2. – 5. 2. 2027 (4 noci) a navíc variantu 1. 2. – 6. 2. 2027 (5 nocí),
+protože u části objektů vyjde celkově levněji; tato varianta se ukládá jako
+`*_N_5n.json`.
 
 ## Lokální Booking přes skutečný prohlížeč
 
@@ -230,8 +245,44 @@ python scripts/search_local_booking.py
 python scripts/build_visualization.py
 ```
 
-Skript dočasně přepne `viajante` na `headless=False`, provede hledání pro 7 osob
-(3 pokoje) a 5 osob (2 pokoje), uloží JSON reporty do
-`data/trip_search/local_booking/`. Ceny jsou za celý pobyt; vzdálenost od areálu
-Booking v kartách neuvádí. Jde o neoficiální scraping, Booking může session
-nebo přístup kdykoli zablokovat.
+Skript dočasně přepne `viajante` na `headless=False`, provede hledání pro 10 osob
+(4 pokoje) i menší obsazenosti 2–8 osob v termínu 1. 2. – 5. 2. 2027 (4 noci)
+a navíc pro 1. 2. – 6. 2. 2027 (5 nocí, uloženo jako `*_N_5n.json`), a uloží
+JSON reporty do `data/trip_search/local_booking/`. Ceny jsou za celý pobyt;
+vzdálenost od areálu Booking v kartách neuvádí. Jde o neoficiální scraping,
+Booking může session nebo přístup kdykoli zablokovat.
+
+## Kombinace pro 10 osob
+
+Dvojice menších jednotek (4+6, 5+5, 3+7, 2+8) se skládají z výstupů obou
+lokálních hledačů:
+
+```bash
+python scripts/combine_units.py
+```
+
+Skript páruje jen jednotky ve stejném středisku a ve výchozím nastavení dodržuje:
+
+- každá jednotka max. **15 km po silnici k nejbližší nástupní stanici lanovky** (`--max-resort-km`),
+- jednotky ve dvojici max. **10 km od sebe po silnici** (`--max-unit-km`).
+
+Nástupní stanice lanovek jsou v `scripts/local_units.py` (OpenStreetMap, Overpass;
+dolní konec lanovky se určuje podle nadmořské výšky z EU-DEM). Silniční
+vzdálenosti k lanovkám počítá `scripts/route_distances.py` a vzdálenosti mezi
+jednotkami `scripts/route_pair_distances.py` přes OSRM; oboje se cachuje do
+`data/trip_search/road_distances.json` a `road_pair_distances.json`;
+počítá se vzdálenost k nejbližší z nich, ne k vrcholovým stanicím. U Booking
+souřadnice chybí, proto se používá vzdálenost „X km from“ z detailu nabídky; vzdálenost mezi dvěma Booking jednotkami spočítat nelze, a takové
+dvojice se ve výchozím nastavení vyřazují. Přepínač `--allow-unknown-distance`
+je ponechá s příznakem `distance_unknown`.
+
+Ceny jsou za celý pobyt a výsledky se ukládají do
+`data/trip_search/combos_2027-02-01/` (`combos_4n.json`, `combos_5n.json`,
+`combos.json`) spolu s celými objekty pro 10 osob, aby šly ceny rovnou porovnat.
+Pro vizualizaci se navíc generuje širší sada s `--max-resort-km 25
+--max-unit-km 50 --out data/trip_search/combos_2027-02-01_wide`, ze které
+stránka bere varianty nad rámec základního filtru.
+Ve výchozím nastavení se ukládají všechny dvojice, které projdou filtrem
+(`--max-pairs N` je omezí na N nejlevnějších na středisko). Dvojice má příznak
+`same_building`, pokud jsou obě jednotky do 200 m od sebe, takže jde poznat
+kombinaci dvou apartmánů v jednom domě.

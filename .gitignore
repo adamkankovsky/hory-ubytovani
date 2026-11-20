@@ -1,4 +1,6 @@
 .venv/
+.venv-local/
+.venv-booking/
 .env
 __pycache__/
 *.pyc

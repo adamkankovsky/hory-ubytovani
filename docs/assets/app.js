@@ -9,15 +9,17 @@
 
   const options = DATA.options || [];
   const resorts = DATA.resorts || {};
+  const stays = DATA.stays || {};
   const resortNames = Object.keys(resorts);
   const state = {
-    resort: "all",
+    stay: "4n",
+    resorts: new Set(resortNames),
     provider: "all",
     split: "all",
     sort: "recommended",
     budget: 3000,
-    maxResort: 25,
-    maxUnits: 60,
+    maxResort: 15,
+    maxUnits: 10,
     minRating: 0,
     minReviews: 0,
     requireReviews: false,
@@ -116,12 +118,13 @@
 
   function filteredOptions() {
     const result = options.filter((option) => {
-      if (state.resort !== "all" && option.area !== state.resort) return false;
+      if (state.stay !== "all" && option.stay !== state.stay) return false;
+      if (!state.resorts.has(option.area)) return false;
       if (state.provider !== "all" && option.provider !== state.provider) return false;
       if (state.split !== "all" && option.split !== state.split) return false;
       if (option.total > state.budget) return false;
       if (state.maxResort < 25 && (option.max_resort_km == null || option.max_resort_km > state.maxResort)) return false;
-      if (state.maxUnits < 60 && (option.max_unit_km == null || option.max_unit_km > state.maxUnits)) return false;
+      if (state.maxUnits < 50 && (option.max_unit_km == null || option.max_unit_km > state.maxUnits)) return false;
       if (state.only5k && option.czk_per_person > 5000) return false;
       if (!reviewPass(option.units)) return false;
       return true;
@@ -157,7 +160,7 @@
           <span class="unit-role">${escapeHtml(unit.role)} osob</span>
           <h3 class="unit-title" title="${escapeHtml(unit.title)}">${escapeHtml(unit.title)}</h3>
           <div class="unit-meta">${unit.bedrooms} ložnice · ${formatEur(unit.price)} · ${escapeHtml(ratingLabel(unit))}</div>
-          <div class="unit-meta">${escapeHtml(unit.location || "")} · ${formatKm(unit.resort_km)} od areálu</div>
+          <div class="unit-meta">${escapeHtml(unit.location || "")} · ${formatKm(unit.resort_km)} po silnici k lanovce</div>
           <div class="unit-links"><a href="${escapeHtml(unit.url)}" target="_blank" rel="noopener">Otevřít nabídku</a></div>
         </div>
       </div>`;
@@ -168,21 +171,22 @@
       return "<h2>Žádná varianta</h2><p class='detail-meta'>Pro zvolené filtry není výsledek.</p>";
     }
     const missingCoords = option.units.some((unit) => unit.lat == null || unit.lng == null);
-    const budgetClass = option.total <= 2400 ? "budget-ok" : option.total <= 3000 ? "budget-ok" : "budget-over";
+    const budgetClass = option.total <= 3000 ? "budget-ok" : "budget-over";
     return `
       <div class="card-top" style="justify-content:flex-start">
         <span class="badge" style="--resort-color:${colorFor(option.area)}">${escapeHtml(option.area)}</span>
         <span class="provider-tag">${escapeHtml(option.provider)}</span>
+        <span class="provider-tag">${escapeHtml((stays[option.stay] || {}).label || option.stay)}</span>
       </div>
       <h2>${formatEur(option.total)} celkem</h2>
-      <div class="detail-meta">${escapeHtml(option.split)} · ${formatDate(option.check_in)} → ${formatDate(option.check_out)} · ${option.nights} noci · ${option.units.length} jednotky</div>
+      <div class="detail-meta">${escapeHtml(option.split)} · ${formatDate(option.check_in)} → ${formatDate(option.check_out)} · ${option.nights} noci · ${option.units.length === 1 ? "1 jednotka" : `${option.units.length} jednotky`}</div>
       <div class="detail-total">
         <div><strong>${formatEur(option.total)}</strong><span>za všechny jednotky</span></div>
-        <div class="${budgetClass}">${formatCzk(option.czk_per_person)} / os.<br><small>${option.total <= 3000 ? "do 3 000 €" : "mírně nad 3 000 €"}</small></div>
+        <div class="${budgetClass}">${formatCzk(option.czk_per_person)} / os.<br><small>${option.total <= 3000 ? "do 3 000 €" : "nad 3 000 €"}</small></div>
       </div>
       <div class="detail-metrics">
-        <div class="metric"><span>Max. od areálu</span><strong>${formatKm(option.max_resort_km)}</strong></div>
-        <div class="metric"><span>Max. mezi jednotkami</span><strong>${formatKm(option.max_unit_km)}</strong></div>
+        <div class="metric"><span>Max. po silnici k lanovce</span><strong>${formatKm(option.max_resort_km)}</strong></div>
+        <div class="metric"><span>Max. po silnici mezi jednotkami</span><strong>${formatKm(option.max_unit_km)}</strong></div>
         <div class="metric"><span>Ložnic celkem</span><strong>${option.total_bedrooms}</strong></div>
       </div>
       <div class="detail-units">${option.units.map(unitRow).join("")}</div>
@@ -215,9 +219,10 @@
             </div>`).join("")}
         </div>
         <div class="card-foot">
-          <span><strong>${option.units.length}</strong> jednotky</span>
-          <span>od sebe <strong>${formatKm(option.max_unit_km)}</strong></span>
-          <span>areál <strong>${formatKm(option.max_resort_km)}</strong></span>
+          <span><strong>${option.units.length}</strong> ${option.units.length === 1 ? "jednotka" : "jednotky"}</span>
+          <span><strong>${option.nights}</strong> noci</span>
+          <span>od sebe (auto) <strong>${formatKm(option.max_unit_km)}</strong></span>
+          <span>lanovka <strong>${formatKm(option.max_resort_km)}</strong></span>
           <span><strong>${formatCzk(option.czk_per_person)}</strong> / os.</span>
         </div>
       </article>`;
@@ -229,7 +234,7 @@
     cards.innerHTML = list.map(cardHtml).join("");
     if (!list.length) {
       empty.hidden = false;
-      empty.textContent = "Pro zvolené filtry není žádná varianta. Zvyš rozpočet, vzdálenosti nebo sniž požadavky na recenze.";
+      empty.textContent = "Pro zvolené filtry není žádná varianta. Zkontroluj vybraná střediska, zvyš rozpočet nebo povol větší vzdálenosti.";
     } else {
       empty.hidden = true;
       empty.textContent = "";
@@ -275,17 +280,17 @@
     selectionLayer = L.layerGroup().addTo(map);
 
     for (const [name, resort] of Object.entries(resorts)) {
-      for (const point of resort.points) {
-        L.circleMarker([point.lat, point.lng], {
-          radius: 7,
-          color: "#ffffff",
-          weight: 2,
-          fillColor: resort.color,
-          fillOpacity: 0.95,
-        })
-          .bindTooltip(`${escapeHtml(name)} · ${escapeHtml(point.name)}`, { direction: "top" })
-          .addTo(resortLayer);
-      }
+      const center = resort.center || (resort.points || [])[0];
+      if (!center) continue;
+      L.circleMarker([center.lat, center.lng], {
+        radius: 7,
+        color: "#ffffff",
+        weight: 2,
+        fillColor: resort.color,
+        fillOpacity: 0.95,
+      })
+        .bindTooltip(`${escapeHtml(name)} · ${escapeHtml(center.name || "")}`, { direction: "top" })
+        .addTo(resortLayer);
     }
     $("mapLegend").innerHTML = Object.entries(resorts)
       .map(([name, resort]) => `<span><span class="legend-dot" style="background:${resort.color}"></span>${escapeHtml(name)}</span>`)
@@ -313,6 +318,18 @@
         map.setView([point.lat, point.lng], 10);
       }
       return;
+    }
+
+    for (const lift of (resorts[option.area] || {}).points || []) {
+      L.circleMarker([lift.lat, lift.lng], {
+        radius: 3,
+        color,
+        weight: 1,
+        fillColor: "#ffffff",
+        fillOpacity: 0.9,
+      })
+        .bindTooltip(`lanovka ${escapeHtml(lift.name)}`, { direction: "top" })
+        .addTo(selectionLayer);
     }
 
     for (const unit of coordUnits) {
@@ -344,7 +361,7 @@
           opacity: 0.6,
           dashArray: "7 6",
         }).addTo(selectionLayer);
-        distanceLabel(coordUnits[i], point, `areál ${formatKm(coordUnits[i].resort_km)}`);
+        distanceLabel(coordUnits[i], point, `po silnici ${formatKm(coordUnits[i].resort_km)}`);
       }
     }
 
@@ -356,7 +373,7 @@
 
     for (const point of resortPoints.values()) {
       L.circle([point.lat, point.lng], {
-        radius: 25000,
+        radius: state.maxResort * 1000,
         color,
         weight: 1.5,
         opacity: 0.45,
@@ -388,7 +405,7 @@
         animation: false,
         interaction: { mode: "nearest", intersect: true },
         scales: {
-          x: { title: { display: true, text: "Max. vzdálenost od areálu (km)" }, min: 0, max: 26, grid: { color: "rgba(19,34,56,0.07)" } },
+          x: { title: { display: true, text: "Max. vzdálenost od lanovky po silnici (km)" }, min: 0, max: 26, grid: { color: "rgba(19,34,56,0.07)" } },
           y: { title: { display: true, text: "Celková cena (€)" }, beginAtZero: false, suggestedMin: 500, grid: { color: "rgba(19,34,56,0.07)" } },
         },
         plugins: {
@@ -434,9 +451,9 @@
       });
     }
     datasets.push({
-      label: "5 000 Kč/os. (cca 2 400 €)",
+      label: "5 000 Kč/os. (2 000 €)",
       type: "line",
-      data: [{ x: 0, y: 2400, budgetLine: true, label: "5 000 Kč/os. (cca 2 400 €)" }, { x: 25, y: 2400, budgetLine: true, label: "5 000 Kč/os. (cca 2 400 €)" }],
+      data: [{ x: 0, y: 2000, budgetLine: true, label: "5 000 Kč/os. (2 000 €)" }, { x: 25, y: 2000, budgetLine: true, label: "5 000 Kč/os. (2 000 €)" }],
       borderColor: "#0f766e",
       borderDash: [6, 6],
       borderWidth: 1.5,
@@ -505,13 +522,54 @@
   }
 
   function initControls() {
-    const resortSelect = $("resort");
-    resortSelect.innerHTML = `<option value="all">Všechna střediska</option>` +
-      resortNames.map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join("");
-    resortSelect.addEventListener("change", () => {
-      state.resort = resortSelect.value;
+    const staySelect = $("stay");
+    const stayKeys = Object.keys(stays);
+    staySelect.innerHTML = stayKeys
+      .map((key) => `<option value="${escapeHtml(key)}">${escapeHtml(stays[key].label || key)}</option>`)
+      .join("");
+    staySelect.value = state.stay;
+    staySelect.addEventListener("change", () => {
+      state.stay = staySelect.value;
       render();
     });
+
+    const resortChips = $("resortChips");
+    resortChips.innerHTML =
+      `<button type="button" class="resort-chip resort-chip--all" data-all="1" aria-pressed="true"><span class="dot"></span>Všechna</button>` +
+      resortNames
+        .map(
+          (name) =>
+            `<button type="button" class="resort-chip" data-resort="${escapeHtml(name)}" aria-pressed="true" style="--chip-color:${resorts[name].color}"><span class="dot"></span>${escapeHtml(name)}</button>`
+        )
+        .join("");
+    const allChip = resortChips.querySelector(".resort-chip[data-all]");
+    const resortChipEls = () => [...resortChips.querySelectorAll(".resort-chip[data-resort]")];
+    const syncResortChips = () => {
+      const chips = resortChipEls();
+      const selected = chips.filter((chip) => chip.getAttribute("aria-pressed") === "true").length;
+      const all = selected === chips.length;
+      allChip.setAttribute("aria-pressed", all ? "true" : "false");
+      $("resortSummary").textContent = all ? "(všechna)" : `(${selected} z ${chips.length})`;
+    };
+    resortChips.addEventListener("click", (event) => {
+      const chip = event.target.closest(".resort-chip");
+      if (!chip) return;
+      if (chip === allChip) {
+        const turnOn = allChip.getAttribute("aria-pressed") !== "true";
+        resortChipEls().forEach((item) => item.setAttribute("aria-pressed", turnOn ? "true" : "false"));
+      } else {
+        const pressed = chip.getAttribute("aria-pressed") === "true";
+        chip.setAttribute("aria-pressed", pressed ? "false" : "true");
+      }
+      state.resorts = new Set(
+        resortChipEls()
+          .filter((item) => item.getAttribute("aria-pressed") === "true")
+          .map((item) => item.dataset.resort)
+      );
+      syncResortChips();
+      render();
+    });
+    syncResortChips();
 
     const splitSelect = $("split");
     const splits = [...new Set(options.map((option) => option.split))].sort((a, b) => a.split("+").length - b.split("+").length || a.localeCompare(b));
@@ -595,26 +653,29 @@
     });
 
     $("reset").addEventListener("click", () => {
-      state.resort = "all";
+      state.stay = "4n";
       state.provider = "all";
       state.split = "all";
       state.budget = 3000;
-      state.maxResort = 25;
-      state.maxUnits = 60;
+      state.maxResort = 15;
+      state.maxUnits = 10;
       state.minRating = 0;
       state.minReviews = 0;
       state.requireReviews = false;
       state.only5k = false;
       state.sort = "recommended";
-      resortSelect.value = "all";
+      staySelect.value = "4n";
+      resortChipEls().forEach((chip) => chip.setAttribute("aria-pressed", "true"));
+      state.resorts = new Set(resortNames);
+      syncResortChips();
       splitSelect.value = "all";
       $("provider").value = "all";
       budget.value = "3000";
       budgetOut.textContent = formatEur(3000);
-      maxResort.value = "25";
-      maxResortOut.textContent = formatKm(25);
-      maxUnits.value = "60";
-      maxUnitsOut.textContent = formatKm(60);
+      maxResort.value = "15";
+      maxResortOut.textContent = formatKm(15);
+      maxUnits.value = "10";
+      maxUnitsOut.textContent = formatKm(10);
       minRating.value = "0";
       minRatingOut.textContent = "0 / 5";
       minReviews.value = "0";
@@ -630,27 +691,30 @@
 
   const sharedOption = optionFromLocation();
   if (sharedOption) {
+    const sharedResort = Math.min(25, Math.max(15, Math.ceil(sharedOption.max_resort_km || 0)));
+    const sharedUnits = Math.min(50, Math.max(10, Math.ceil(sharedOption.max_unit_km || 0)));
+    const sharedBudget = Math.min(5000, Math.max(3000, Math.ceil(sharedOption.total / 100) * 100));
     state.selectedId = sharedOption.id;
-    state.resort = "all";
+    state.stay = sharedOption.stay || "4n";
     state.provider = "all";
     state.split = "all";
-    state.budget = 3500;
-    state.maxResort = 25;
-    state.maxUnits = 60;
+    state.budget = sharedBudget;
+    state.maxResort = sharedResort;
+    state.maxUnits = sharedUnits;
     state.minRating = 0;
     state.minReviews = 0;
     state.requireReviews = false;
     state.only5k = false;
     state.sort = "recommended";
-    $("resort").value = "all";
+    $("stay").value = state.stay;
     $("provider").value = "all";
     $("split").value = "all";
-    $("budget").value = "3500";
-    $("budgetOut").textContent = formatEur(3500);
-    $("maxResort").value = "25";
-    $("maxResortOut").textContent = formatKm(25);
-    $("maxUnits").value = "60";
-    $("maxUnitsOut").textContent = formatKm(60);
+    $("budget").value = String(sharedBudget);
+    $("budgetOut").textContent = formatEur(sharedBudget);
+    $("maxResort").value = String(sharedResort);
+    $("maxResortOut").textContent = formatKm(sharedResort);
+    $("maxUnits").value = String(sharedUnits);
+    $("maxUnitsOut").textContent = formatKm(sharedUnits);
     $("minRating").value = "0";
     $("minRatingOut").textContent = "0 / 5";
     $("minReviews").value = "0";

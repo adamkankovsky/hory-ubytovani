@@ -22,6 +22,26 @@ AREAS = {
     "dachstein_west": ("Gosau, Austria", 47.5840, 13.5350),
 }
 
+# Celý objekt pro 10 osob + menší jednotky pro páry do 10 osob
+# (4+6, 5+5, 3+7, 2+8). Kombinace skládá scripts/combine_units.py.
+OCCUPANCIES = (
+    (10, 4),
+    (2, 1),
+    (3, 2),
+    (4, 2),
+    (5, 2),
+    (6, 3),
+    (7, 3),
+    (8, 4),
+)
+
+# Primární termín je 4 noci (1. 2. – 5. 2.). Varianta s jedním dnem navíc
+# (5 nocí) se hledá taky, protože u některých objektů vyjde celkově levněji.
+STAYS = {
+    "4n": (date(2027, 2, 1), date(2027, 2, 5)),
+    "5n": (date(2027, 2, 1), date(2027, 2, 6)),
+}
+
 
 def _start_headful(self) -> None:
     playwright = browser_module._sync_playwright().start()
@@ -51,29 +71,32 @@ def main() -> int:
     browser_module.ChromiumSession._start = _start_headful
     OUT.mkdir(parents=True, exist_ok=True)
     for key, (location, lat, lng) in AREAS.items():
-        for adults, rooms in ((7, 3), (5, 2)):
-            report = viajante.search_hotels(
-                [
-                    viajante.HotelQuery(
-                        location=location,
-                        check_in=date(2027, 1, 30),
-                        check_out=date(2027, 2, 3),
-                        adults=adults,
-                        rooms=rooms,
-                        free_cancellation=False,
-                    )
-                ],
-                source="booking",
-                top=20,
-                currency="EUR",
-                near=(lat, lng),
-            )
-            path = OUT / f"{key}_{adults}.json"
-            path.write_text(
-                json.dumps(report.to_dict(), ensure_ascii=False, indent=2),
-                encoding="utf-8",
-            )
-            print(f"{key} {adults} adults: {path}")
+        for adults, rooms in OCCUPANCIES:
+            for label, (check_in, check_out) in STAYS.items():
+                report = viajante.search_hotels(
+                    [
+                        viajante.HotelQuery(
+                            location=location,
+                            check_in=check_in,
+                            check_out=check_out,
+                            adults=adults,
+                            rooms=rooms,
+                            free_cancellation=False,
+                        )
+                    ],
+                    source="booking",
+                    top=20,
+                    currency="EUR",
+                    near=(lat, lng),
+                )
+                # 4n varianta zůstává v původním názvu, aby ji vizualizace našla.
+                suffix = "" if label == "4n" else f"_{label}"
+                path = OUT / f"{key}_{adults}{suffix}.json"
+                path.write_text(
+                    json.dumps(report.to_dict(), ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
+                print(f"{key} {adults} adults {check_in}–{check_out}: {path}")
     return 0
 
 
