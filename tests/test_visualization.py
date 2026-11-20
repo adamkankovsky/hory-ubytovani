@@ -6,6 +6,8 @@ from pathlib import Path
 
 ROLE_BEDROOMS = {2: 1, 3: 2, 4: 2, 5: 2, 6: 3, 7: 3, 8: 4, 10: 4}
 PAIR_SPLITS = {"4+6", "5+5", "3+7", "2+8"}
+TRIPLE_SPLITS = {"3+3+4", "2+4+4", "2+3+5", "2+2+6"}
+SPLITS = PAIR_SPLITS | TRIPLE_SPLITS
 ADULTS = 10
 MAX_RESORT_KM = 15.0
 MAX_UNIT_KM = 10.0
@@ -45,8 +47,8 @@ class VisualizationDataTests(unittest.TestCase):
             if option["split"] == "celý objekt":
                 self.assertEqual(roles, [str(ADULTS)])
             else:
-                self.assertIn(option["split"], PAIR_SPLITS)
-                self.assertEqual(len(roles), 2)
+                self.assertIn(option["split"], SPLITS)
+                self.assertEqual(len(roles), option["split"].count("+") + 1)
                 self.assertEqual(sum(int(role) for role in roles), ADULTS)
                 self.assertEqual(option["split"], "+".join(roles))
 
@@ -82,6 +84,12 @@ class VisualizationDataTests(unittest.TestCase):
             total = sum(unit["price"] for unit in option["units"])
             self.assertLessEqual(abs(total - option["total"]), 0.01)
             self.assertEqual(option["czk_per_person"], round(option["total"] * 25 / ADULTS))
+
+    def test_triples_are_present(self) -> None:
+        triples = [option for option in self.data["options"] if len(option["units"]) == 3]
+        self.assertGreater(len(triples), 0)
+        for option in triples:
+            self.assertIn(option["split"], TRIPLE_SPLITS)
 
     def test_providers_are_represented(self) -> None:
         providers = {option["provider"] for option in self.data["options"]}

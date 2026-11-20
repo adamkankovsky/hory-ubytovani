@@ -48,7 +48,11 @@ NEAR_RESORT_KM = 15.0
 NEAR_UNIT_KM = 10.0
 LIMIT_NEAR = 40
 LIMIT_FAR = 30
-LIMIT_PER_AREA = LIMIT_NEAR + LIMIT_FAR
+TRIPLE_NEAR = 20
+TRIPLE_FAR = 10
+WHOLE_NEAR = 15
+WHOLE_FAR = 5
+LIMIT_PER_AREA = LIMIT_NEAR + LIMIT_FAR + TRIPLE_NEAR + TRIPLE_FAR + WHOLE_NEAR + WHOLE_FAR
 
 
 def nearest_point(area: str, lat: float | None, lng: float | None) -> dict[str, Any]:
@@ -148,6 +152,7 @@ def load_items(stay: str) -> list[dict[str, Any]]:
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
         items.extend(data["pairs"])
+        items.extend(data.get("triples") or [])
         items.extend(data["whole"])
     return items
 
@@ -172,10 +177,18 @@ def select_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
             continue
         seen.add(key)
         unique.append(item)
-    near = sorted((item for item in unique if is_near(item)), key=option_score)[:LIMIT_NEAR]
-    far = sorted((item for item in unique if not is_near(item)), key=option_score)[:LIMIT_FAR]
-    return near + far
 
+    def split_bucket(count: int, near_limit: int, far_limit: int) -> list[dict[str, Any]]:
+        pool = [item for item in unique if len(item["units"]) == count]
+        near = sorted((item for item in pool if is_near(item)), key=option_score)[:near_limit]
+        far = sorted((item for item in pool if not is_near(item)), key=option_score)[:far_limit]
+        return near + far
+
+    return (
+        split_bucket(1, WHOLE_NEAR, WHOLE_FAR)
+        + split_bucket(2, LIMIT_NEAR, LIMIT_FAR)
+        + split_bucket(3, TRIPLE_NEAR, TRIPLE_FAR)
+    )
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
@@ -200,7 +213,7 @@ def main() -> int:
             "check_out": STAYS["4n"]["check_out"],
             "nights": STAYS["4n"]["nights"],
             "adults": ADULTS,
-            "split": "10 (celý objekt) nebo dvojice 4+6, 5+5, 3+7, 2+8",
+            "split": "10 (celý objekt), dvojice 4+6, 5+5, 3+7, 2+8 nebo trojice 3+3+4, 2+4+4, 2+3+5, 2+2+6",
             "bedrooms": "u dvojic alespoň 2–4 ložnice podle velikosti jednotky",
             "max_resort_km": NEAR_RESORT_KM,
             "max_unit_km": NEAR_UNIT_KM,

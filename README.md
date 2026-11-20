@@ -193,9 +193,9 @@ python scripts/combine_units.py --max-resort-km 25 --max-unit-km 50 \
 python scripts/build_visualization.py
 ```
 
-Na stránku jde pro každé středisko a termín 40 variant základního filtru
-(≤ 15 km od areálu, ≤ 10 km mezi jednotkami) a 30 dalších variant pro rozšířený
-filtr až do 25/50 km; plná data zůstávají v `data/trip_search/combos_2027-02-01/`
+Na stránku jde pro každé středisko a termín sada celých objektů, dvojic a trojic:
+40 dvojic základního filtru (≤ 15 km po silnici, ≤ 10 km mezi jednotkami),
+20 trojic a další varianty pro rozšířený filtr až do 25/50 km; plná data zůstávají v `data/trip_search/combos_2027-02-01/`
 a `combos_2027-02-01_wide/`. Stránka má přepínač 4 noci (1. 2. – 5. 2.) /
 5 nocí (1. 2. – 6. 2.), chipy pro výběr více středisek a posuvníky vzdáleností
 s výchozími hodnotami 15/10 km.
@@ -254,8 +254,8 @@ Booking může session nebo přístup kdykoli zablokovat.
 
 ## Kombinace pro 10 osob
 
-Dvojice menších jednotek (4+6, 5+5, 3+7, 2+8) se skládají z výstupů obou
-lokálních hledačů:
+Dvojice (4+6, 5+5, 3+7, 2+8) i trojice (3+3+4, 2+4+4, 2+3+5, 2+2+6)
+menších jednotek se skládají z výstupů obou lokálních hledačů:
 
 ```bash
 python scripts/combine_units.py

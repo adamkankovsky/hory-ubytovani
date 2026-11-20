@@ -35,6 +35,8 @@ from local_units import (  # noqa: E402
 )
 
 PAIRS = [(4, 6), (5, 5), (3, 7), (2, 8)]
+TRIPLES = [(3, 3, 4), (2, 4, 4), (2, 3, 5), (2, 2, 6)]
+TRIPLE_CANDIDATES = 25
 WHOLE_ROLE = 10
 MAX_RESORT_KM = 15.0
 MAX_UNIT_KM = 10.0
@@ -287,6 +289,87 @@ def build_pairs(
     return result
 
 
+def build_triples(
+    resort: str,
+    grouped: dict[str, list[dict[str, Any]]],
+    label: str,
+    nights: int,
+    *,
+    max_resort_km: float,
+    max_unit_km: float,
+    allow_unknown: bool,
+) -> list[dict[str, Any]]:
+    result = []
+    seen: set[tuple[str, ...]] = set()
+    for pattern in TRIPLES:
+        lists = []
+        for role in pattern:
+            units = grouped.get(str(role), [])
+            ranked = sorted(
+                units,
+                key=lambda unit: unit["price"] + (unit.get("resort_km") or 20) * 20,
+            )
+            lists.append(ranked[:TRIPLE_CANDIDATES])
+        for combo in product(*lists):
+            ids = [unit["id"] for unit in combo]
+            if len(set(ids)) < len(combo):
+                continue
+            if not all(within_resort(unit, max_resort_km, allow_unknown) for unit in combo):
+                continue
+            key = tuple(sorted(ids))
+            if key in seen:
+                continue
+            distances = []
+            crows = []
+            road_flags = []
+            allowed = True
+            for left_index, right_index in ((0, 1), (0, 2), (1, 2)):
+                left, right = combo[left_index], combo[right_index]
+                crow = unit_distance(left, right)
+                road = road_distance(left, right)
+                distance = road if road is not None else crow
+                if distance is None:
+                    if not allow_unknown:
+                        allowed = False
+                        break
+                    continue
+                if distance > max_unit_km:
+                    allowed = False
+                    break
+                distances.append(distance)
+                crows.append(crow)
+                road_flags.append(road is not None)
+            if not allowed or not distances:
+                continue
+            seen.add(key)
+            total = sum(unit["price"] for unit in combo)
+            providers = {unit["provider"] for unit in combo}
+            resort_kms = [unit.get("resort_km") for unit in combo]
+            max_resort = (
+                round(max(resort_kms), 2) if all(value is not None for value in resort_kms) else None
+            )
+            result.append(
+                {
+                    "area": resort,
+                    "split": "+".join(str(role) for role in pattern),
+                    "provider": "Airbnb" if providers == {"Airbnb"} else "Booking" if providers == {"Booking"} else "Mix",
+                    "stay": label,
+                    "nights": nights,
+                    "total": round(total, 2),
+                    "per_person_night": round(total / nights / 10, 2),
+                    "total_bedrooms": sum(unit["bedrooms"] for unit in combo),
+                    "max_unit_km": round(max(distances), 2),
+                    "max_resort_km": max_resort,
+                    "distance_unknown": False,
+                    "distance_mode": "road" if all(road_flags) else "crow",
+                    "same_building": all(crow is not None and crow <= SAME_BUILDING_KM for crow in crows),
+                    "units": [compact(unit) for unit in combo],
+                }
+            )
+    result.sort(key=lambda item: item["total"])
+    return result
+
+
 def build_whole(
     resort: str,
     grouped: dict[str, list[dict[str, Any]]],
@@ -360,6 +443,12 @@ def main() -> int:
         help="Kolik nejlevnějších dvojic uložit na středisko (0 = všechny).",
     )
     parser.add_argument(
+        "--max-triples",
+        type=int,
+        default=150,
+        help="Kolik nejlevnějších trojic uložit na středisko (0 = všechny).",
+    )
+    parser.add_argument(
         "--max-resort-km",
         type=float,
         default=MAX_RESORT_KM,
@@ -385,8 +474,20 @@ def main() -> int:
         suffix = stay["suffix"]
         grouped = collect_units(suffix)
         pairs: list[dict[str, Any]] = []
+        triples: list[dict[str, Any]] = []
         whole: list[dict[str, Any]] = []
         for resort, roles in grouped.items():
+            triples.extend(
+                build_triples(
+                    resort,
+                    roles,
+                    label,
+                    stay["nights"],
+                    max_resort_km=args.max_resort_km,
+                    max_unit_km=args.max_unit_km,
+                    allow_unknown=args.allow_unknown_distance,
+                )
+            )
             pairs.extend(
                 build_pairs(
                     resort,
@@ -409,10 +510,14 @@ def main() -> int:
                 )
             )
         pairs.sort(key=lambda item: (item["area"], item["total"]))
+        triples.sort(key=lambda item: (item["area"], item["total"]))
         whole.sort(key=lambda item: (item["area"], item["total"]))
         pairs = cap_per_area(pairs, args.max_pairs)
+        triples = cap_per_area(triples, args.max_triples)
         for index, item in enumerate(pairs, start=1):
             item["id"] = f"{label}-p{index:04d}"
+        for index, item in enumerate(triples, start=1):
+            item["id"] = f"{label}-t{index:04d}"
         for index, item in enumerate(whole, start=1):
             item["id"] = f"{label}-w{index:04d}"
         payload[label] = {
@@ -423,6 +528,7 @@ def main() -> int:
                 "allow_unknown_distance": args.allow_unknown_distance,
             },
             "pairs": pairs,
+            "triples": triples,
             "whole": whole,
         }
         (out_dir / f"combos_{label}.json").write_text(
@@ -435,7 +541,7 @@ def main() -> int:
             f"do {args.max_unit_km:g} km"
             + ("" if args.allow_unknown_distance else ", jen známé vzdálenosti")
         )
-        print(f"Dvojice: {len(pairs)}, celé objekty: {len(whole)}")
+        print(f"Dvojice: {len(pairs)}, trojice: {len(triples)}, celé objekty: {len(whole)}")
         areas = sorted({item["area"] for item in pairs} | {item["area"] for item in whole})
         for area in areas:
             area_pairs = [item for item in pairs if item["area"] == area][:2]
