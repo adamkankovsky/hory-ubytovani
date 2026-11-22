@@ -185,6 +185,7 @@ Statická stránka je v `docs/` a je připravená pro GitHub Pages:
 Data se generují z kombinací pro 10 osob (základ 15/10 km i širší sada pro UI):
 
 ```bash
+python scripts/enrich_booking.py         # fotky a souřadnice Booking nemovitostí
 python scripts/route_distances.py        # silniční vzdálenosti k lanovkám (OSRM)
 python scripts/route_pair_distances.py   # silniční vzdálenosti mezi jednotkami
 python scripts/combine_units.py
@@ -272,8 +273,10 @@ Skript páruje jen jednotky ve stejném středisku a ve výchozím nastavení do
 
 Nástupní stanice lanovek jsou v `scripts/local_units.py` (OpenStreetMap, Overpass;
 dolní konec lanovky se určuje podle nadmořské výšky z EU-DEM). Silniční
-vzdálenosti k lanovkám počítá `scripts/route_distances.py` a vzdálenosti mezi
-jednotkami `scripts/route_pair_distances.py` přes OSRM; oboje se cachuje do
+Booking nemovitostem doplňuje fotku a souřadnice `scripts/enrich_booking.py`
+(ze stránek výsledků, cachuje se do `booking_enrichment.json`). Vzdálenosti
+k lanovkám počítá `scripts/route_distances.py` a vzdálenosti mezi jednotkami
+`scripts/route_pair_distances.py` přes OSRM; oboje se cachuje do
 `data/trip_search/road_distances.json` a `road_pair_distances.json`;
 počítá se vzdálenost k nejbližší z nich, ne k vrcholovým stanicím. U Booking
 souřadnice chybí, proto se používá vzdálenost „X km from“ z detailu nabídky; vzdálenost mezi dvěma Booking jednotkami spočítat nelze, a takové

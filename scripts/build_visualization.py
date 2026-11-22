@@ -98,7 +98,7 @@ def map_unit(unit: dict[str, Any], area: str, images: dict[str, str]) -> dict[st
         "resort": area,
         "resort_point": point,
         "resort_km": unit.get("resort_km"),
-        "image": images.get(str(unit.get("id"))) if provider == "Airbnb" else None,
+        "image": unit.get("image") or (images.get(str(unit.get("id"))) if provider == "Airbnb" else None),
         "rating": rating,
         "reviews": reviews,
         "location": unit.get("location"),

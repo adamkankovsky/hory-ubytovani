@@ -22,6 +22,7 @@ from local_units import (  # noqa: E402
     RESORTS,
     ROLE_BEDROOMS,
     distance_km,
+    load_booking_role,
     nearest_resort,
     parse_local_airbnb_unit,
 )
@@ -41,6 +42,12 @@ def load_units() -> dict[str, dict]:
                 if unit is None or unit["id"] in units:
                     continue
                 units[unit["id"]] = unit
+    for role in sorted(ROLE_BEDROOMS):
+        for resort_units in load_booking_role(role, "").values():
+            for unit in resort_units:
+                if unit.get("lat") is None or unit.get("lng") is None:
+                    continue
+                units.setdefault(unit["id"], unit)
     return units
 
 

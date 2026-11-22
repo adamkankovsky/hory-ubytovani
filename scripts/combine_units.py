@@ -26,11 +26,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from local_units import (  # noqa: E402
     LOCAL_AIRBNB,
-    LOCAL_BOOKING,
     RESORTS,
-    ROLE_BEDROOMS,
     distance_km,
-    nearest_resort,
+    load_booking_role,
     parse_local_airbnb_unit,
 )
 
@@ -41,21 +39,6 @@ WHOLE_ROLE = 10
 MAX_RESORT_KM = 15.0
 MAX_UNIT_KM = 10.0
 SAME_BUILDING_KM = 0.2
-
-BOOKING_AREAS = {
-    "katschberg": "Katschberg – Aineck",
-    "obertauern": "Obertauern",
-    "hochkoenig": "Hochkönig",
-    "nassfeld": "Nassfeld",
-    "schladming": "Schladming 4 Berge",
-    "kreischberg": "Kreischberg + Lachtal",
-    "tauplitz": "Tauplitz / Schneebären",
-    "dachstein_west": "Dachstein West",
-    "lofer": "Almenwelt Lofer",
-    "saalbach": "Skicircus Saalbach",
-    "gastein": "Gastein",
-    "lungau": "Lungau",
-}
 
 STAYS = {
     "4n": {"check_in": "2027-02-01", "check_out": "2027-02-05", "nights": 4, "suffix": ""},
@@ -86,72 +69,7 @@ def load_airbnb(role: int, suffix: str) -> dict[str, list[dict[str, Any]]]:
             unit = parse_local_airbnb_unit(item, role)
             if unit is None:
                 continue
-            road = ROAD.get(unit["id"])
-            if road:
-                lift = next(
-                    (
-                        point
-                        for point in RESORTS[unit["resort"]]["points"]
-                        if point["name"] == road["lift"]
-                    ),
-                    None,
-                )
-                unit["resort_km"] = road["km"]
-                unit["distance_mode"] = "road"
-                if lift is not None:
-                    unit["resort_point"] = lift
             grouped.setdefault(unit["resort"], []).append(unit)
-    return grouped
-
-
-def load_booking(role: int, suffix: str) -> dict[str, list[dict[str, Any]]]:
-    grouped: dict[str, list[dict[str, Any]]] = {}
-    for key, resort in BOOKING_AREAS.items():
-        path = LOCAL_BOOKING / f"{key}_{role}{suffix}.json"
-        if not path.exists():
-            continue
-        report = json.loads(path.read_text(encoding="utf-8"))
-        query = (report.get("queries") or [{}])[0]
-        for offer in query.get("offers") or []:
-            price = offer.get("total_price")
-            bedrooms = offer.get("bedrooms") or 0
-            if not price or bedrooms < ROLE_BEDROOMS[role]:
-                continue
-            title = offer.get("title") or "Booking"
-            url = offer.get("link")
-            if not url:
-                continue
-            lat = offer.get("latitude")
-            lng = offer.get("longitude")
-            resort_km = None
-            if lat is not None and lng is not None:
-                _name, _point, resort_km = nearest_resort(float(lat), float(lng))
-            else:
-                match = re.search(r"([\d.]+)\s*km from", str(offer.get("details") or ""))
-                if match:
-                    resort_km = float(match.group(1))
-            grouped.setdefault(resort, []).append(
-                {
-                    "provider": "Booking",
-                    "role": str(role),
-                    "id": f"booking:{url}:{title}:{role}",
-                    "title": title,
-                    "url": url,
-                    "price": float(price),
-                    "capacity": role,
-                    "bedrooms": bedrooms,
-                    "lat": lat,
-                    "lng": lng,
-                    "resort": resort,
-                    "resort_point": None,
-                    "resort_km": None if resort_km is None else round(resort_km, 2),
-                    "rating": offer.get("rating_score"),
-                    "reviews": offer.get("review_count"),
-                    "location": offer.get("address"),
-                    "address": offer.get("address"),
-                    "lodging_kind": offer.get("lodging_kind"),
-                }
-            )
     return grouped
 
 
@@ -159,8 +77,10 @@ def collect_units(suffix: str) -> dict[str, dict[str, list[dict[str, Any]]]]:
     roles = sorted({WHOLE_ROLE, *(role for pair in PAIRS for role in pair)})
     grouped: dict[str, dict[str, list[dict[str, Any]]]] = {}
     for role in roles:
-        for loader in (load_airbnb, load_booking):
+        for loader in (load_airbnb, load_booking_role):
             for resort, units in loader(role, suffix).items():
+                for unit in units:
+                    apply_road(unit)
                 grouped.setdefault(resort, {}).setdefault(str(role), []).extend(units)
     for resort in grouped:
         for role, units in grouped[resort].items():
@@ -186,6 +106,7 @@ def compact(unit: dict[str, Any]) -> dict[str, Any]:
         "reviews": unit.get("reviews"),
         "location": unit.get("location"),
         "lodging_kind": unit.get("lodging_kind"),
+        "image": unit.get("image"),
     }
 
 
@@ -212,6 +133,24 @@ def load_pair_distances() -> dict[str, dict[str, Any]]:
 
 
 PAIR_DISTANCES = load_pair_distances()
+
+
+def apply_road(unit: dict[str, Any]) -> None:
+    road = ROAD.get(unit["id"])
+    if not road:
+        return
+    unit["resort_km"] = road["km"]
+    unit["distance_mode"] = "road"
+    lift = next(
+        (
+            point
+            for point in RESORTS[unit["resort"]]["points"]
+            if point["name"] == road["lift"]
+        ),
+        None,
+    )
+    if lift is not None:
+        unit["resort_point"] = lift
 
 
 def road_distance(left: dict[str, Any], right: dict[str, Any]) -> float | None:

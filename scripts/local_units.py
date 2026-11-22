@@ -1,6 +1,7 @@
 """Společné helpery pro lokální hledače a skládání kombinací."""
 from __future__ import annotations
 
+import json
 import math
 import re
 from pathlib import Path
@@ -9,6 +10,22 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 LOCAL_AIRBNB = ROOT / "data" / "trip_search" / "local_airbnb"
 LOCAL_BOOKING = ROOT / "data" / "trip_search" / "local_booking"
+BOOKING_ENRICHMENT = ROOT / "data" / "trip_search" / "booking_enrichment.json"
+
+BOOKING_AREAS = {
+    "katschberg": "Katschberg – Aineck",
+    "obertauern": "Obertauern",
+    "hochkoenig": "Hochkönig",
+    "nassfeld": "Nassfeld",
+    "schladming": "Schladming 4 Berge",
+    "kreischberg": "Kreischberg + Lachtal",
+    "tauplitz": "Tauplitz / Schneebären",
+    "dachstein_west": "Dachstein West",
+    "lofer": "Almenwelt Lofer",
+    "saalbach": "Skicircus Saalbach",
+    "gastein": "Gastein",
+    "lungau": "Lungau",
+}
 
 # Minimální počet ložnic pro jednotku dané velikosti (počet osob).
 ROLE_BEDROOMS = {2: 1, 3: 2, 4: 2, 5: 2, 6: 3, 7: 3, 8: 4, 10: 4}
@@ -383,3 +400,80 @@ def parse_local_airbnb_unit(item: dict[str, Any], role: int) -> dict[str, Any] |
         "location": title,
         "type": "Airbnb (local)",
     }
+
+
+def load_booking_enrichment() -> dict[str, dict[str, Any]]:
+    if not BOOKING_ENRICHMENT.exists():
+        return {}
+    try:
+        data = json.loads(BOOKING_ENRICHMENT.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return data.get("hotels") or {}
+
+
+BOOKING_ENRICHMENT_DATA = load_booking_enrichment()
+
+
+def parse_booking_offer(
+    offer: dict[str, Any], role: int, area_key: str
+) -> dict[str, Any] | None:
+    price = offer.get("total_price")
+    bedrooms = offer.get("bedrooms") or 0
+    url = offer.get("link")
+    if not price or not url or bedrooms < ROLE_BEDROOMS[role]:
+        return None
+    title = offer.get("title") or "Booking"
+    enrichment = BOOKING_ENRICHMENT_DATA.get(url) or {}
+    lat = offer.get("latitude")
+    lng = offer.get("longitude")
+    if lat is None or lng is None:
+        lat, lng = enrichment.get("lat"), enrichment.get("lng")
+    resort_km = None
+    resort_point = None
+    if lat is not None and lng is not None:
+        resort_name, resort_point, resort_km = nearest_resort(float(lat), float(lng))
+        if resort_km > 25:
+            return None
+    else:
+        resort_name = BOOKING_AREAS[area_key]
+        match = re.search(r"([\d.]+)\s*km from", str(offer.get("details") or ""))
+        if match:
+            resort_km = float(match.group(1))
+    return {
+        "provider": "Booking",
+        "role": str(role),
+        "id": f"booking:{url}:{title}:{role}",
+        "title": title,
+        "url": url,
+        "price": float(price),
+        "capacity": role,
+        "bedrooms": bedrooms,
+        "lat": None if lat is None else float(lat),
+        "lng": None if lng is None else float(lng),
+        "resort": resort_name,
+        "resort_point": resort_point,
+        "resort_km": None if resort_km is None else round(resort_km, 2),
+        "image": enrichment.get("image"),
+        "rating": offer.get("rating_score"),
+        "reviews": offer.get("review_count"),
+        "location": offer.get("address"),
+        "address": offer.get("address"),
+        "lodging_kind": offer.get("lodging_kind"),
+        "type": "Booking local",
+    }
+
+
+def load_booking_role(role: int, suffix: str) -> dict[str, list[dict[str, Any]]]:
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for key in BOOKING_AREAS:
+        path = LOCAL_BOOKING / f"{key}_{role}{suffix}.json"
+        if not path.exists():
+            continue
+        report = json.loads(path.read_text(encoding="utf-8"))
+        for offer in (report.get("queries") or [{}])[0].get("offers") or []:
+            unit = parse_booking_offer(offer, role, key)
+            if unit is None:
+                continue
+            grouped.setdefault(unit["resort"], []).append(unit)
+    return grouped
