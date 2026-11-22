@@ -286,6 +286,8 @@ je ponechá s příznakem `distance_unknown`.
 Ceny jsou za celý pobyt a výsledky se ukládají do
 `data/trip_search/combos_2027-02-01/` (`combos_4n.json`, `combos_5n.json`,
 `combos.json`) spolu s celými objekty pro 10 osob, aby šly ceny rovnou porovnat.
+Už při skládání se vyřazují jednotky, které se do stropu 3 500 € nevejdou ani
+s nejlevnějším možným doplňkem; hotové varianty nad strop se zahazují také.
 Pro vizualizaci se navíc generuje širší sada s `--max-resort-km 25
 --max-unit-km 50 --out data/trip_search/combos_2027-02-01_wide`, ze které
 stránka bere varianty nad rámec základního filtru.

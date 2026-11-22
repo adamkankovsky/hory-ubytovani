@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 LOCAL_AIRBNB = ROOT / "data" / "trip_search" / "local_airbnb"
 LOCAL_BOOKING = ROOT / "data" / "trip_search" / "local_booking"
 BOOKING_ENRICHMENT = ROOT / "data" / "trip_search" / "booking_enrichment.json"
+PRICE_CAP = 3500.0
 
 BOOKING_AREAS = {
     "katschberg": "Katschberg – Aineck",
@@ -374,7 +375,7 @@ def parse_local_airbnb_unit(item: dict[str, Any], role: int) -> dict[str, Any] |
             if "total" in str(part.get("description") or "").lower():
                 price = part.get("amount")
                 break
-    if not price:
+    if not price or float(price) > PRICE_CAP:
         return None
     resort_name, resort_point, resort_km = nearest_resort(float(lat), float(lng))
     if resort_km > 25:
@@ -422,6 +423,8 @@ def parse_booking_offer(
     bedrooms = offer.get("bedrooms") or 0
     url = offer.get("link")
     if not price or not url or bedrooms < ROLE_BEDROOMS[role]:
+        return None
+    if float(price) > PRICE_CAP:
         return None
     title = offer.get("title") or "Booking"
     enrichment = BOOKING_ENRICHMENT_DATA.get(url) or {}

@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from local_units import (  # noqa: E402
     LOCAL_AIRBNB,
+    PRICE_CAP,
     RESORTS,
     distance_km,
     load_booking_role,
@@ -185,7 +186,15 @@ def build_pairs(
     result = []
     seen: set[frozenset[str]] = set()
     for left_role, right_role in PAIRS:
-        for left, right in product(grouped.get(str(left_role), []), grouped.get(str(right_role), [])):
+        left_units = grouped.get(str(left_role), [])
+        right_units = grouped.get(str(right_role), [])
+        if not left_units or not right_units:
+            continue
+        min_left = min(unit["price"] for unit in left_units)
+        min_right = min(unit["price"] for unit in right_units)
+        left_units = [unit for unit in left_units if unit["price"] + min_right <= PRICE_CAP]
+        right_units = [unit for unit in right_units if unit["price"] + min_left <= PRICE_CAP]
+        for left, right in product(left_units, right_units):
             if left["id"] == right["id"]:
                 continue
             if not within_resort(left, max_resort_km, allow_unknown):
@@ -203,8 +212,10 @@ def build_pairs(
             key = frozenset((left["id"], right["id"]))
             if key in seen:
                 continue
-            seen.add(key)
             total = left["price"] + right["price"]
+            if total > PRICE_CAP:
+                continue
+            seen.add(key)
             providers = {left["provider"], right["provider"]}
             resort_kms = [left.get("resort_km"), right.get("resort_km")]
             max_resort = (
@@ -245,14 +256,32 @@ def build_triples(
     result = []
     seen: set[tuple[str, ...]] = set()
     for pattern in TRIPLES:
+        role_lists = []
         lists = []
         for role in pattern:
             units = grouped.get(str(role), [])
-            ranked = sorted(
-                units,
-                key=lambda unit: unit["price"] + (unit.get("resort_km") or 20) * 20,
-            )
-            lists.append(ranked[:TRIPLE_CANDIDATES])
+            if not units:
+                break
+            others = [
+                min(unit["price"] for unit in grouped.get(str(other), []))
+                for other in pattern
+                if other != role
+            ]
+            budget = PRICE_CAP - sum(others)
+            role_lists.append([unit for unit in units if unit["price"] <= budget])
+        else:
+            if all(role_lists):
+                lists = [
+                    sorted(
+                        units,
+                        key=lambda unit: unit["price"] + (unit.get("resort_km") or 20) * 20,
+                    )[:TRIPLE_CANDIDATES]
+                    for units in role_lists
+                ]
+            else:
+                lists = []
+        if not lists:
+            continue
         for combo in product(*lists):
             ids = [unit["id"] for unit in combo]
             if len(set(ids)) < len(combo):
@@ -284,8 +313,10 @@ def build_triples(
                 road_flags.append(road is not None)
             if not allowed or not distances:
                 continue
-            seen.add(key)
             total = sum(unit["price"] for unit in combo)
+            if total > PRICE_CAP:
+                continue
+            seen.add(key)
             providers = {unit["provider"] for unit in combo}
             resort_kms = [unit.get("resort_km") for unit in combo]
             max_resort = (
@@ -329,6 +360,8 @@ def build_whole(
         if unit["provider"] == "Booking" and unit.get("lodging_kind") != "entire_home":
             continue
         if (unit["bedrooms"] or 0) > 10:
+            continue
+        if unit["price"] > PRICE_CAP:
             continue
         if not within_resort(unit, max_resort_km, allow_unknown):
             continue

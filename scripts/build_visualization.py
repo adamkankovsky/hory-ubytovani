@@ -21,12 +21,12 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from local_units import LOCAL_AIRBNB, RESORTS, distance_km  # noqa: E402
+from local_units import LOCAL_AIRBNB, PRICE_CAP, RESORTS, distance_km  # noqa: E402
 
 COMBOS = ROOT / "data" / "trip_search" / "combos_2027-02-01"
 COMBOS_WIDE = ROOT / "data" / "trip_search" / "combos_2027-02-01_wide"
 OUT = ROOT / "docs" / "data"
-DEFAULT_MAX_TOTAL = 3500
+DEFAULT_MAX_TOTAL = PRICE_CAP
 
 
 STAYS = {
