@@ -449,8 +449,11 @@ def parse_booking_offer(
         match = re.search(r"([\d.]+)\s*km from", str(offer.get("details") or ""))
         if match:
             resort_km = float(match.group(1))
+    details = str(offer.get("details") or "")
+    multi_unit = len(re.findall(r"\d+×", details)) > 1
     return {
         "provider": "Booking",
+        "multi_unit": multi_unit,
         "role": str(role),
         "id": f"booking:{url}:{title}:{role}",
         "title": title,

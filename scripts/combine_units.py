@@ -107,6 +107,7 @@ def compact(unit: dict[str, Any]) -> dict[str, Any]:
         "reviews": unit.get("reviews"),
         "location": unit.get("location"),
         "lodging_kind": unit.get("lodging_kind"),
+        "multi_unit": unit.get("multi_unit", False),
         "image": unit.get("image"),
     }
 

@@ -41,7 +41,7 @@ class VisualizationDataTests(unittest.TestCase):
     def test_split_matches_units(self) -> None:
         for option in self.data["options"]:
             roles = [str(unit["role"]) for unit in option["units"]]
-            if option["split"] == "celý objekt":
+            if option["split"] in {"celý objekt", "více pokojů"}:
                 self.assertEqual(roles, [str(ADULTS)])
             else:
                 self.assertIn(option["split"], PAIR_SPLITS)

@@ -94,6 +94,7 @@ def map_unit(unit: dict[str, Any], area: str, images: dict[str, str]) -> dict[st
         "rating": rating,
         "reviews": reviews,
         "location": unit.get("location"),
+        "multi_unit": bool(unit.get("multi_unit")),
         "type": unit.get("lodging_kind") if provider == "Booking" else "Airbnb",
     }
 
@@ -113,6 +114,8 @@ def build_option(item: dict[str, Any], stay: str, stay_info: dict[str, Any], ima
     units = [map_unit(unit, area, images) for unit in item["units"]]
     total = float(item["total"])
     split = "celý objekt" if item["split"] == str(ADULTS) else item["split"]
+    if split == "celý objekt" and any(unit.get("multi_unit") for unit in item["units"]):
+        split = "více pokojů"
     return {
         "id": item["id"],
         "stay": stay,

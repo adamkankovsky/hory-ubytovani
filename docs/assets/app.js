@@ -191,6 +191,7 @@
       </div>
       <div class="detail-units">${option.units.map(unitRow).join("")}</div>
       ${missingCoords ? "<p class='detail-meta' style='margin-top:12px'>Booking u některých jednotek neuvádí souřadnice; mapa je proto neukáže a vzdálenost může být „—“.</p>" : ""}
+      ${option.units.some((unit) => unit.multi_unit) ? "<p class='detail-meta' style='margin-top:12px'>Booking zde prodává kombinaci více pokojů v jednom domě; ověřte, že jde o jeden objekt.</p>" : ""}
       <div class="share-row">
         <button type="button" id="copyOptionLink">Kopírovat odkaz na kombinaci</button>
         <span id="copyFeedback" class="unit-meta"></span>
