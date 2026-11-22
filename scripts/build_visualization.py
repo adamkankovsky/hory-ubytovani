@@ -2,7 +2,7 @@
 """Staví statickou vizualizaci ubytování pro 10 osob.
 
 Vstupem jsou kombinace z `scripts/combine_units.py`
-(`data/trip_search/combos_2027-02-01/combos_4n.json` a `combos_5n.json`),
+(`data/trip_search/combos_2027-02-01/combos_5n.json`),
 výstupem `docs/data/pairs.json` a `docs/data/pairs.js` pro stránku v `docs/`.
 
 Ceny jsou za celý pobyt, vzdálenosti vzdušnou čarou. Na stránku jde pro každé
@@ -30,12 +30,6 @@ DEFAULT_MAX_TOTAL = PRICE_CAP
 
 
 STAYS = {
-    "4n": {
-        "label": "4 noci (1. 2. – 5. 2.)",
-        "check_in": "2027-02-01",
-        "check_out": "2027-02-05",
-        "nights": 4,
-    },
     "5n": {
         "label": "5 nocí (1. 2. – 6. 2.)",
         "check_in": "2027-02-01",
@@ -47,14 +41,12 @@ STAYS = {
 ADULTS = 10
 CZK_PER_EUR = 25
 NEAR_RESORT_KM = 15.0
-NEAR_UNIT_KM = 10.0
+NEAR_UNIT_KM = 1.0
 LIMIT_NEAR = 40
 LIMIT_FAR = 30
-TRIPLE_NEAR = 20
-TRIPLE_FAR = 10
 WHOLE_NEAR = 15
 WHOLE_FAR = 5
-LIMIT_PER_AREA = LIMIT_NEAR + LIMIT_FAR + TRIPLE_NEAR + TRIPLE_FAR + WHOLE_NEAR + WHOLE_FAR
+LIMIT_PER_AREA = LIMIT_NEAR + LIMIT_FAR + WHOLE_NEAR + WHOLE_FAR
 
 
 def nearest_point(area: str, lat: float | None, lng: float | None) -> dict[str, Any]:
@@ -154,7 +146,6 @@ def load_items(stay: str) -> list[dict[str, Any]]:
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
         items.extend(data["pairs"])
-        items.extend(data.get("triples") or [])
         items.extend(data["whole"])
     return items
 
@@ -186,11 +177,7 @@ def select_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         far = sorted((item for item in pool if not is_near(item)), key=option_score)[:far_limit]
         return near + far
 
-    return (
-        split_bucket(1, WHOLE_NEAR, WHOLE_FAR)
-        + split_bucket(2, LIMIT_NEAR, LIMIT_FAR)
-        + split_bucket(3, TRIPLE_NEAR, TRIPLE_FAR)
-    )
+    return split_bucket(1, WHOLE_NEAR, WHOLE_FAR) + split_bucket(2, LIMIT_NEAR, LIMIT_FAR)
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Staví vizualizaci ubytování pro 10 osob.")
@@ -221,16 +208,16 @@ def main() -> int:
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "assumptions": {
-            "check_in": STAYS["4n"]["check_in"],
-            "check_out": STAYS["4n"]["check_out"],
-            "nights": STAYS["4n"]["nights"],
+            "check_in": STAYS["5n"]["check_in"],
+            "check_out": STAYS["5n"]["check_out"],
+            "nights": STAYS["5n"]["nights"],
             "adults": ADULTS,
-            "split": "10 (celý objekt), dvojice 4+6, 5+5, 3+7, 2+8 nebo trojice 3+3+4, 2+4+4, 2+3+5, 2+2+6",
+            "split": "10 (celý objekt) nebo dvojice 4+6, 5+5, 3+7, 2+8",
             "bedrooms": "u dvojic alespoň 2–4 ložnice podle velikosti jednotky",
             "max_resort_km": NEAR_RESORT_KM,
             "max_unit_km": NEAR_UNIT_KM,
             "max_resort_km_supported": 25,
-            "max_unit_km_supported": 50,
+            "max_unit_km_supported": 1,
             "price_note": "Ceny jsou za celý pobyt podle data hledání; mohou se změnit.",
             "distance_note": "Vzdálenost k lanovce je silniční trasa (OSRM, auto); vzdálenost mezi jednotkami je vzdušnou čarou. V základu 15 km po silnici a 10 km mezi jednotkami, v UI lze rozšířit.",
             "budget_total": args.max_total,

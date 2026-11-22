@@ -12,14 +12,14 @@
   const stays = DATA.stays || {};
   const resortNames = Object.keys(resorts);
   const state = {
-    stay: "4n",
+    stay: "5n",
     resorts: new Set(resortNames),
     provider: "all",
     split: "all",
     sort: "recommended",
     budget: 3000,
     maxResort: 15,
-    maxUnits: 10,
+    maxUnits: 1,
     minRating: 0,
     minReviews: 0,
     requireReviews: false,
@@ -124,7 +124,7 @@
       if (state.split !== "all" && option.split !== state.split) return false;
       if (option.total > state.budget) return false;
       if (state.maxResort < 25 && (option.max_resort_km == null || option.max_resort_km > state.maxResort)) return false;
-      if (state.maxUnits < 50 && (option.max_unit_km == null || option.max_unit_km > state.maxUnits)) return false;
+      if (state.maxUnits < 1 && (option.max_unit_km == null || option.max_unit_km > state.maxUnits)) return false;
       if (state.only5k && option.czk_per_person > 5000) return false;
       if (!reviewPass(option.units)) return false;
       return true;
@@ -522,17 +522,6 @@
   }
 
   function initControls() {
-    const staySelect = $("stay");
-    const stayKeys = Object.keys(stays);
-    staySelect.innerHTML = stayKeys
-      .map((key) => `<option value="${escapeHtml(key)}">${escapeHtml(stays[key].label || key)}</option>`)
-      .join("");
-    staySelect.value = state.stay;
-    staySelect.addEventListener("change", () => {
-      state.stay = staySelect.value;
-      render();
-    });
-
     const resortChips = $("resortChips");
     resortChips.innerHTML =
       `<button type="button" class="resort-chip resort-chip--all" data-all="1" aria-pressed="true"><span class="dot"></span>Všechna</button>` +
@@ -653,18 +642,16 @@
     });
 
     $("reset").addEventListener("click", () => {
-      state.stay = "4n";
       state.provider = "all";
       state.split = "all";
       state.budget = 3000;
       state.maxResort = 15;
-      state.maxUnits = 10;
+      state.maxUnits = 1;
       state.minRating = 0;
       state.minReviews = 0;
       state.requireReviews = false;
       state.only5k = false;
       state.sort = "recommended";
-      staySelect.value = "4n";
       resortChipEls().forEach((chip) => chip.setAttribute("aria-pressed", "true"));
       state.resorts = new Set(resortNames);
       syncResortChips();
@@ -674,8 +661,8 @@
       budgetOut.textContent = formatEur(3000);
       maxResort.value = "15";
       maxResortOut.textContent = formatKm(15);
-      maxUnits.value = "10";
-      maxUnitsOut.textContent = formatKm(10);
+      maxUnits.value = "1";
+      maxUnitsOut.textContent = formatKm(1);
       minRating.value = "0";
       minRatingOut.textContent = "0 / 5";
       minReviews.value = "0";
@@ -692,10 +679,9 @@
   const sharedOption = optionFromLocation();
   if (sharedOption) {
     const sharedResort = Math.min(25, Math.max(15, Math.ceil(sharedOption.max_resort_km || 0)));
-    const sharedUnits = Math.min(50, Math.max(10, Math.ceil(sharedOption.max_unit_km || 0)));
+    const sharedUnits = Math.min(1, Math.max(0, sharedOption.max_unit_km || 1));
     const sharedBudget = Math.min(3500, Math.max(3000, Math.ceil(sharedOption.total / 100) * 100));
     state.selectedId = sharedOption.id;
-    state.stay = sharedOption.stay || "4n";
     state.provider = "all";
     state.split = "all";
     state.budget = sharedBudget;
@@ -706,7 +692,6 @@
     state.requireReviews = false;
     state.only5k = false;
     state.sort = "recommended";
-    $("stay").value = state.stay;
     $("provider").value = "all";
     $("split").value = "all";
     $("budget").value = String(sharedBudget);

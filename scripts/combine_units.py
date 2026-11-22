@@ -34,11 +34,11 @@ from local_units import (  # noqa: E402
 )
 
 PAIRS = [(4, 6), (5, 5), (3, 7), (2, 8)]
-TRIPLES = [(3, 3, 4), (2, 4, 4), (2, 3, 5), (2, 2, 6)]
+TRIPLES = []
 TRIPLE_CANDIDATES = 25
 WHOLE_ROLE = 10
 MAX_RESORT_KM = 15.0
-MAX_UNIT_KM = 10.0
+MAX_UNIT_KM = 1.0
 SAME_BUILDING_KM = 0.2
 
 STAYS = {

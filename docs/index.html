@@ -6,35 +6,31 @@
   <title>Hory: ubytování pro 10 osob</title>
   <meta name="description" content="Statická vizualizace ubytování pro 10 osob v rakouských lyžařských střediscích.">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="assets/style.css?v=20261122a">
+  <link rel="stylesheet" href="assets/style.css?v=20261122b">
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
       <p class="eyebrow">Statická vizualizace · data k 20. 11. 2026</p>
       <h1>Ubytování pro 10 osob</h1>
-      <p class="lead">Celé objekty, dvojice i trojice menších jednotek napříč Airbnb a Bookingem. V základu je každá jednotka do 15 km po silnici od nástupní stanice lanovky a ve dvojici do 10 km od sebe po silnici; filtry lze rozšířit.</p>
+      <p class="lead">Celé objekty a dvojice menších jednotek napříč Airbnb a Bookingem. Každá jednotka je do 15 km po silnici od nástupní stanice lanovky a dvojice musí být do 1 km od sebe.</p>
       <div class="hero-chips">
-        <span>1. 2.–5. 2. 2027</span>
-        <span>4 noci</span>
-        <span>1–3 jednotky</span>
+        <span>1. 2.–6. 2. 2027</span>
+        <span>5 nocí</span>
+        <span>1–2 jednotky</span>
         <span>10 osob</span>
-        <span>základ: ≤ 15 km a ≤ 10 km</span>
-        <span>lze rozšířit na 25 / 50 km</span>
+        <span>≤ 15 km k lanovce</span>
+        <span>≤ 1 km mezi jednotkami</span>
       </div>
     </div>
   </header>
 
   <main class="page">
     <section class="notice">
-      <strong>Jak číst data:</strong> ceny jsou za všechny jednotky dané varianty na 4 noci (nebo 5 nocí u přepnutého termínu). Vzdálenost k lanovce je silniční trasa (auto) podle OSRM, nikoli doba jízdy; vzdálenost mezi jednotkami je také silniční trasa (auto). Do výběru jdou jen varianty do 3 500 € celkem. Booking často neuvádí souřadnice ani počet recenzí; u Booking se vzdálenost bere z textu nabídky, takže nemusí odpovídat vzdálenosti k lanovce. Ověřte simultánní dostupnost a konečnou cenu.
+      <strong>Jak číst data:</strong> ceny jsou za všechny jednotky dané varianty na 5 nocí (1.–6. 2. 2027). Vzdálenost k lanovce je silniční trasa (auto) podle OSRM, nikoli doba jízdy; vzdálenost mezi jednotkami je také silniční trasa (auto). Do výběru jdou jen varianty do 3 500 € celkem a maximálně dvě jednotky. Booking často neuvádí souřadnice ani počet recenzí; u Booking se vzdálenost bere z textu nabídky, takže nemusí odpovídat vzdálenosti k lanovce. Ověřte simultánní dostupnost a konečnou cenu.
     </section>
 
     <section class="controls" aria-label="Filtry">
-      <div class="control">
-        <label for="stay">Termín</label>
-        <select id="stay"></select>
-      </div>
       <div class="control control-checks">
         <div class="control-label">Střediska <span id="resortSummary" class="control-note"></span></div>
         <div id="resortChips" class="check-grid" role="group" aria-label="Střediska"></div>
@@ -72,9 +68,9 @@
         <div class="range-hint"><span>3 km (v základu 15)</span><span>25 km</span></div>
       </div>
       <div class="control control-range">
-        <label for="maxUnits">Max. mezi jednotkami (po silnici) <output id="maxUnitsOut">10 km</output></label>
-        <input id="maxUnits" type="range" min="0" max="50" step="1" value="10">
-        <div class="range-hint"><span>0 km (v základu 10)</span><span>50 km</span></div>
+        <label for="maxUnits">Max. mezi jednotkami (po silnici) <output id="maxUnitsOut">1 km</output></label>
+        <input id="maxUnits" type="range" min="0" max="1" step="0.1" value="1">
+        <div class="range-hint"><span>0 km</span><span>1 km</span></div>
       </div>
       <div class="control control-range">
         <label for="minRating">Min. hodnocení <output id="minRatingOut">0 / 5</output></label>
@@ -133,8 +129,8 @@
       <h2>Metodika a omezení</h2>
       <ul>
         <li>Data: lokální Airbnb přes <code>pyairbnb</code> a lokální Booking přes headful Chromium; žádné placené API kredity.</li>
-        <li>Zahrnuté jsou celé objekty pro 10 osob, dvojice menších jednotek (4+6, 5+5, 3+7, 2+8) a trojice (3+3+4, 2+4+4, 2+3+5, 2+2+6). Každá jednotka má alespoň 1–4 ložnice podle velikosti skupiny (2 os. = 1, 3–5 = 2, 6–7 = 3, 8–10 = 4).</li>
-        <li>Filtr vzdáleností: v základu každá jednotka max. 15 km vzdušnou čarou od střediska a jednotky ve dvojici max. 10 km od sebe po silnici. V UI jde rozšířit až na 25 km od střediska a 50 km mezi jednotkami.</li>
+        <li>Zahrnuté jsou pouze celé objekty pro 10 osob a dvojice menších jednotek (4+6, 5+5, 3+7, 2+8); trojice se neskládají. Každá jednotka má alespoň 1–4 ložnice podle velikosti skupiny (2 os. = 1, 3–5 = 2, 6–7 = 3, 8–10 = 4).</li>
+        <li>Filtr vzdáleností: každá jednotka max. 15 km po silnici k nástupní stanici lanovky (lze rozšířit na 25 km) a dvojice max. 1 km od sebe po silnici.</li>
         <li>Střediska lze vybírat po jednom pomocí zaškrtávátek; „Všechna“ zapne nebo vypne celý výběr.</li>
         <li>Vzdálenost se počítá jako silniční trasa k nejbližší nástupní (dolní) stanici lanovky (OSRM); lanovky a jejich dolní stanice jsou z OpenStreetMap.</li>
         <li>Filtr recenzí vyžaduje, aby všechny jednotky měly dostatečné hodnocení a počet recenzí. Booking 0–10 se převádí na 0–5.</li>
@@ -149,7 +145,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-  <script src="data/pairs.js?v=20261122a"></script>
-  <script src="assets/app.js?v=20261122a"></script>
+  <script src="data/pairs.js?v=20261122b"></script>
+  <script src="assets/app.js?v=20261122b"></script>
 </body>
 </html>
