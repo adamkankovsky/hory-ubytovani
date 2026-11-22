@@ -422,7 +422,13 @@ def parse_booking_offer(
     price = offer.get("total_price")
     bedrooms = offer.get("bedrooms") or 0
     url = offer.get("link")
-    if not price or not url or bedrooms < ROLE_BEDROOMS[role]:
+    if not price or not url:
+        return None
+    # Booking u celých domů často uvádí jen část ložnic (prodává kombinaci
+    # pokojů), takže u entire_home věříme obsazenosti z vyhledávání.
+    lodging_kind = offer.get("lodging_kind")
+    minimum_bedrooms = 1 if lodging_kind == "entire_home" else ROLE_BEDROOMS[role]
+    if bedrooms < minimum_bedrooms:
         return None
     if float(price) > PRICE_CAP:
         return None

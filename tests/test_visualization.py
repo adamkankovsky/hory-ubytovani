@@ -56,7 +56,11 @@ class VisualizationDataTests(unittest.TestCase):
                 role = int(unit["role"])
                 self.assertIn(role, ROLE_BEDROOMS)
                 self.assertEqual(unit["capacity"], role)
-                self.assertGreaterEqual(unit["bedrooms"], ROLE_BEDROOMS[role])
+                if unit["provider"] == "Booking" and unit.get("type") == "entire_home":
+                    # Booking u celých domů často uvádí jen část ložnic.
+                    self.assertGreaterEqual(unit["bedrooms"], 1)
+                else:
+                    self.assertGreaterEqual(unit["bedrooms"], ROLE_BEDROOMS[role])
 
     def test_distance_filters(self) -> None:
         self.assertEqual(self.data["assumptions"]["max_resort_km"], MAX_RESORT_KM)
