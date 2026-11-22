@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:52:24+00:00",
+  "generated_at": "2026-11-22T16:07:59+00:00",
   "assumptions": {
     "check_in": "2027-02-01",
     "check_out": "2027-02-06",
@@ -1314,8 +1314,8 @@
       "area": "Dachstein West",
       "split": "5+5",
       "provider": "Booking",
-      "total": 1845.0,
-      "czk_per_person": 4612,
+      "total": 1835.0,
+      "czk_per_person": 4588,
       "total_bedrooms": 4,
       "max_resort_km": 20.47,
       "max_unit_km": 0.04,
@@ -1330,7 +1330,7 @@
           "id": "booking:https://www.booking.com/hotel/at/alpine-base-near-hallstatt.en-gb.html:Alpine base near Hallstatt:5",
           "title": "Alpine base near Hallstatt",
           "url": "https://www.booking.com/hotel/at/alpine-base-near-hallstatt.en-gb.html",
-          "price": 920.0,
+          "price": 910.0,
           "capacity": 5,
           "bedrooms": 2,
           "lat": 47.63704444348642,
@@ -1373,7 +1373,7 @@
           "type": "entire_home"
         }
       ],
-      "score": 2356.95
+      "score": 2346.95
     },
     {
       "id": "o0004",
@@ -1382,8 +1382,8 @@
       "area": "Dachstein West",
       "split": "5+5",
       "provider": "Booking",
-      "total": 2037.0,
-      "czk_per_person": 5092,
+      "total": 2027.0,
+      "czk_per_person": 5068,
       "total_bedrooms": 4,
       "max_resort_km": 20.47,
       "max_unit_km": 0.04,
@@ -1398,7 +1398,7 @@
           "id": "booking:https://www.booking.com/hotel/at/alpine-base-near-hallstatt.en-gb.html:Alpine base near Hallstatt:5",
           "title": "Alpine base near Hallstatt",
           "url": "https://www.booking.com/hotel/at/alpine-base-near-hallstatt.en-gb.html",
-          "price": 920.0,
+          "price": 910.0,
           "capacity": 5,
           "bedrooms": 2,
           "lat": 47.63704444348642,
@@ -1441,7 +1441,7 @@
           "type": "entire_home"
         }
       ],
-      "score": 2548.95
+      "score": 2538.95
     },
     {
       "id": "o0005",
@@ -1518,8 +1518,8 @@
       "area": "Dachstein West",
       "split": "5+5",
       "provider": "Booking",
-      "total": 2072.0,
-      "czk_per_person": 5180,
+      "total": 2062.0,
+      "czk_per_person": 5155,
       "total_bedrooms": 4,
       "max_resort_km": 20.47,
       "max_unit_km": 0.04,
@@ -1534,7 +1534,7 @@
           "id": "booking:https://www.booking.com/hotel/at/alpine-base-near-hallstatt.en-gb.html:Alpine base near Hallstatt:5",
           "title": "Alpine base near Hallstatt",
           "url": "https://www.booking.com/hotel/at/alpine-base-near-hallstatt.en-gb.html",
-          "price": 920.0,
+          "price": 910.0,
           "capacity": 5,
           "bedrooms": 2,
           "lat": 47.63704444348642,
@@ -1577,7 +1577,7 @@
           "type": "entire_home"
         }
       ],
-      "score": 2583.95
+      "score": 2573.95
     },
     {
       "id": "o0007",
@@ -1968,10 +1968,10 @@
       "stay": "5n",
       "share": "0c5aa2419d2a",
       "area": "Gastein",
-      "split": "4+6",
+      "split": "5+5",
       "provider": "Airbnb",
-      "total": 2090.0,
-      "czk_per_person": 5225,
+      "total": 2005.0,
+      "czk_per_person": 5012,
       "total_bedrooms": 6,
       "max_resort_km": 20.18,
       "max_unit_km": 0.33,
@@ -1982,12 +1982,12 @@
       "units": [
         {
           "provider": "Airbnb",
-          "role": "4",
+          "role": "5",
           "id": "52006813",
           "title": "Relaxation in the historic schoolhouse",
           "url": "https://www.airbnb.com/rooms/52006813",
-          "price": 745.0,
-          "capacity": 4,
+          "price": 835.0,
+          "capacity": 5,
           "bedrooms": 3,
           "lat": 46.9222,
           "lng": 12.9132,
@@ -2006,12 +2006,12 @@
         },
         {
           "provider": "Airbnb",
-          "role": "6",
+          "role": "5",
           "id": "1720943849253109438",
           "title": "Apartment with heart",
           "url": "https://www.airbnb.com/rooms/1720943849253109438",
-          "price": 1345.0,
-          "capacity": 6,
+          "price": 1170.0,
+          "capacity": 5,
           "bedrooms": 3,
           "lat": 46.9224,
           "lng": 12.9109,
@@ -2029,10 +2029,78 @@
           "type": "Airbnb"
         }
       ],
-      "score": 2596.15
+      "score": 2511.15
     },
     {
       "id": "o0014",
+      "stay": "5n",
+      "share": "eac716cc3e50",
+      "area": "Gastein",
+      "split": "4+6",
+      "provider": "Airbnb",
+      "total": 2699.0,
+      "czk_per_person": 6748,
+      "total_bedrooms": 5,
+      "max_resort_km": 0.86,
+      "max_unit_km": 0.45,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Airbnb",
+          "role": "4",
+          "id": "1295023393318561526",
+          "title": "ski and summer apartment",
+          "url": "https://www.airbnb.com/rooms/1295023393318561526",
+          "price": 799.0,
+          "capacity": 4,
+          "bedrooms": 2,
+          "lat": 47.1184,
+          "lng": 13.1332,
+          "resort": "Gastein",
+          "resort_point": {
+            "name": "ESL Bellevuealm",
+            "lat": 47.11641,
+            "lng": 13.1319
+          },
+          "resort_km": 0.66,
+          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1295023393318561526/original/05bf4499-f5fe-41ff-8d36-57e708387f72.jpeg",
+          "rating": 4.23,
+          "reviews": "13",
+          "location": "Apartment in Bad Gastein",
+          "type": "Airbnb"
+        },
+        {
+          "provider": "Airbnb",
+          "role": "6",
+          "id": "53180401",
+          "title": "Belle Epoque Apartment",
+          "url": "https://www.airbnb.com/rooms/53180401",
+          "price": 1900.0,
+          "capacity": 6,
+          "bedrooms": 3,
+          "lat": 47.11662,
+          "lng": 13.13556,
+          "resort": "Gastein",
+          "resort_point": {
+            "name": "ESL Bellevuealm",
+            "lat": 47.11641,
+            "lng": 13.1319
+          },
+          "resort_km": 0.86,
+          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-53180401/original/1b370394-e25c-4bf3-85a9-050545a77283.jpeg",
+          "rating": 4.75,
+          "reviews": "20",
+          "location": "Vacation home in Bad Gastein",
+          "type": "Airbnb"
+        }
+      ],
+      "score": 2722.75
+    },
+    {
+      "id": "o0015",
       "stay": "5n",
       "share": "0e0862c750a4",
       "area": "Gastein",
@@ -2076,7 +2144,7 @@
       "score": 2885.75
     },
     {
-      "id": "o0015",
+      "id": "o0016",
       "stay": "5n",
       "share": "d1f8e0a10a90",
       "area": "Gastein",
@@ -2144,7 +2212,7 @@
       "score": 3070.5
     },
     {
-      "id": "o0016",
+      "id": "o0017",
       "stay": "5n",
       "share": "232baf202164",
       "area": "Gastein",
@@ -2212,7 +2280,7 @@
       "score": 3207.35
     },
     {
-      "id": "o0017",
+      "id": "o0018",
       "stay": "5n",
       "share": "5428f913f4d5",
       "area": "Gastein",
@@ -2280,7 +2348,7 @@
       "score": 3554.3
     },
     {
-      "id": "o0018",
+      "id": "o0019",
       "stay": "5n",
       "share": "313e27f56f8d",
       "area": "Hochkönig",
@@ -2348,7 +2416,7 @@
       "score": 2810.1
     },
     {
-      "id": "o0019",
+      "id": "o0020",
       "stay": "5n",
       "share": "8eb049e79462",
       "area": "Hochkönig",
@@ -2392,7 +2460,7 @@
       "score": 3511.75
     },
     {
-      "id": "o0020",
+      "id": "o0021",
       "stay": "5n",
       "share": "ad60a8705c76",
       "area": "Katschberg – Aineck",
@@ -2427,7 +2495,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2460,7 +2528,7 @@
       "score": 2294.65
     },
     {
-      "id": "o0021",
+      "id": "o0022",
       "stay": "5n",
       "share": "733aaf7eb7b5",
       "area": "Katschberg – Aineck",
@@ -2519,7 +2587,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2528,7 +2596,7 @@
       "score": 2311.65
     },
     {
-      "id": "o0022",
+      "id": "o0023",
       "stay": "5n",
       "share": "8b771235f592",
       "area": "Katschberg – Aineck",
@@ -2563,7 +2631,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2596,7 +2664,7 @@
       "score": 2317.65
     },
     {
-      "id": "o0023",
+      "id": "o0024",
       "stay": "5n",
       "share": "0f05832d4306",
       "area": "Katschberg – Aineck",
@@ -2655,7 +2723,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2664,7 +2732,7 @@
       "score": 2340.65
     },
     {
-      "id": "o0024",
+      "id": "o0025",
       "stay": "5n",
       "share": "8a5c1aa0737e",
       "area": "Katschberg – Aineck",
@@ -2699,7 +2767,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2723,7 +2791,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2732,7 +2800,7 @@
       "score": 2363.0
     },
     {
-      "id": "o0025",
+      "id": "o0026",
       "stay": "5n",
       "share": "6ab7f44facba",
       "area": "Katschberg – Aineck",
@@ -2791,7 +2859,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2800,7 +2868,7 @@
       "score": 2363.65
     },
     {
-      "id": "o0026",
+      "id": "o0027",
       "stay": "5n",
       "share": "93b82cf527ae",
       "area": "Katschberg – Aineck",
@@ -2835,7 +2903,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2859,7 +2927,7 @@
           },
           "resort_km": 12.16,
           "image": "https://cf.bstatic.com/xdata/images/hotel/square240/113619509.webp?k=0b9090c03a18353373ebfe4b1ed354ef1a8933994bb787f33a9435960d378e62&o=",
-          "rating": 6.1,
+          "rating": 6.0,
           "reviews": null,
           "location": "Leoben",
           "type": "unknown"
@@ -2868,7 +2936,7 @@
       "score": 2438.0
     },
     {
-      "id": "o0027",
+      "id": "o0028",
       "stay": "5n",
       "share": "cba10bb7fcb3",
       "area": "Katschberg – Aineck",
@@ -2936,7 +3004,75 @@
       "score": 2793.35
     },
     {
-      "id": "o0028",
+      "id": "o0029",
+      "stay": "5n",
+      "share": "f5a3e799ebbf",
+      "area": "Katschberg – Aineck",
+      "split": "5+5",
+      "provider": "Airbnb",
+      "total": 3182.0,
+      "czk_per_person": 7955,
+      "total_bedrooms": 5,
+      "max_resort_km": 23.34,
+      "max_unit_km": 0.56,
+      "same_building": true,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Airbnb",
+          "role": "5",
+          "id": "1364973021649282770",
+          "title": "Central apartment with a view",
+          "url": "https://www.airbnb.com/rooms/1364973021649282770",
+          "price": 985.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 46.90695983591797,
+          "lng": 13.532254814496973,
+          "resort": "Katschberg – Aineck",
+          "resort_point": {
+            "name": "Sonnleitenlift",
+            "lat": 47.0466,
+            "lng": 13.60616
+          },
+          "resort_km": 23.19,
+          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1364973021649282770/original/9f21edde-dc2f-4d02-a674-3a820e36ade3.jpeg",
+          "rating": 4.8,
+          "reviews": "5",
+          "location": "Apartment in Gmünd",
+          "type": "Airbnb"
+        },
+        {
+          "provider": "Airbnb",
+          "role": "5",
+          "id": "869553177328605987",
+          "title": "Gh Alte Post - Top 7 Admiral",
+          "url": "https://www.airbnb.com/rooms/869553177328605987",
+          "price": 2197.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 46.9068,
+          "lng": 13.5348,
+          "resort": "Katschberg – Aineck",
+          "resort_point": {
+            "name": "Sonnleitenlift",
+            "lat": 47.0466,
+            "lng": 13.60616
+          },
+          "resort_km": 23.34,
+          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-869553177328605987/original/10d9960c-ec93-4170-9085-55f7f77c6abb.jpeg",
+          "rating": 5.0,
+          "reviews": "3",
+          "location": "Apartment in Gmünd",
+          "type": "Airbnb"
+        }
+      ],
+      "score": 3768.3
+    },
+    {
+      "id": "o0030",
       "stay": "5n",
       "share": "6923dba71c79",
       "area": "Kreischberg + Lachtal",
@@ -3004,279 +3140,7 @@
       "score": 2244.05
     },
     {
-      "id": "o0029",
-      "stay": "5n",
-      "share": "288f25167d9d",
-      "area": "Lungau",
-      "split": "2+8",
-      "provider": "Mix",
-      "total": 2369.0,
-      "czk_per_person": 5922,
-      "total_bedrooms": 6,
-      "max_resort_km": 13.5,
-      "max_unit_km": 0.81,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Booking",
-          "role": "2",
-          "id": "booking:https://www.booking.com/hotel/at/centro-7.en-gb.html:Centro 7 - Kristall Lungau:2",
-          "title": "Centro 7 - Kristall Lungau",
-          "url": "https://www.booking.com/hotel/at/centro-7.en-gb.html",
-          "price": 650.0,
-          "capacity": 2,
-          "bedrooms": 1,
-          "lat": 47.126708548554,
-          "lng": 13.809810418822,
-          "resort": "Lungau",
-          "resort_point": {
-            "name": "Samson-Sesselbahn",
-            "lat": 47.16929,
-            "lng": 13.69345
-          },
-          "resort_km": 12.85,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/339033870.webp?k=9b7cc5d32bfe896285d128c9d86258fb4ce7c8f253870d74624a20604103bad4&o=",
-          "rating": 9.2,
-          "reviews": null,
-          "location": "Tamsweg",
-          "type": "entire_home"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "8",
-          "id": "691003002533728757",
-          "title": "Large apartment in Tamsweg/Lungau (Austria)",
-          "url": "https://www.airbnb.com/rooms/691003002533728757",
-          "price": 1719.0,
-          "capacity": 8,
-          "bedrooms": 5,
-          "lat": 47.12884,
-          "lng": 13.8189,
-          "resort": "Lungau",
-          "resort_point": {
-            "name": "Samson-Sesselbahn",
-            "lat": 47.16929,
-            "lng": 13.69345
-          },
-          "resort_km": 13.5,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-691003002533728757/original/a14bd07c-efed-4898-a409-500f1af6289d.jpeg",
-          "rating": 5.0,
-          "reviews": "30",
-          "location": "Apartment in Tamsweg",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 2710.55
-    },
-    {
-      "id": "o0030",
-      "stay": "5n",
-      "share": "8b1dcedf211b",
-      "area": "Lungau",
-      "split": "2+8",
-      "provider": "Airbnb",
-      "total": 2537.0,
-      "czk_per_person": 6342,
-      "total_bedrooms": 6,
-      "max_resort_km": 13.5,
-      "max_unit_km": 0.82,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "2",
-          "id": "53307737",
-          "title": "Alpines Apartment in Tamsweg | Ski & Wandern",
-          "url": "https://www.airbnb.com/rooms/53307737",
-          "price": 818.0,
-          "capacity": 2,
-          "bedrooms": 1,
-          "lat": 47.12842,
-          "lng": 13.8112,
-          "resort": "Lungau",
-          "resort_point": {
-            "name": "Samson-Sesselbahn",
-            "lat": 47.16929,
-            "lng": 13.69345
-          },
-          "resort_km": 12.91,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTMzMDc3Mzc%3D/original/f51c1ea5-739e-4c5d-81d2-f5769c84ee87.jpeg",
-          "rating": 5.0,
-          "reviews": "11",
-          "location": "Condo in Tamsweg",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "8",
-          "id": "691003002533728757",
-          "title": "Large apartment in Tamsweg/Lungau (Austria)",
-          "url": "https://www.airbnb.com/rooms/691003002533728757",
-          "price": 1719.0,
-          "capacity": 8,
-          "bedrooms": 5,
-          "lat": 47.12884,
-          "lng": 13.8189,
-          "resort": "Lungau",
-          "resort_point": {
-            "name": "Samson-Sesselbahn",
-            "lat": 47.16929,
-            "lng": 13.69345
-          },
-          "resort_km": 13.5,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-691003002533728757/original/a14bd07c-efed-4898-a409-500f1af6289d.jpeg",
-          "rating": 5.0,
-          "reviews": "30",
-          "location": "Apartment in Tamsweg",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 2878.6
-    },
-    {
       "id": "o0031",
-      "stay": "5n",
-      "share": "924d01d491b7",
-      "area": "Lungau",
-      "split": "4+6",
-      "provider": "Airbnb",
-      "total": 2871.0,
-      "czk_per_person": 7178,
-      "total_bedrooms": 8,
-      "max_resort_km": 13.5,
-      "max_unit_km": 0.95,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "4",
-          "id": "53305805",
-          "title": "Cozy apartment in the center - Tamsweg",
-          "url": "https://www.airbnb.com/rooms/53305805",
-          "price": 1292.0,
-          "capacity": 4,
-          "bedrooms": 3,
-          "lat": 47.1283,
-          "lng": 13.80941,
-          "resort": "Lungau",
-          "resort_point": {
-            "name": "Samson-Sesselbahn",
-            "lat": 47.16929,
-            "lng": 13.69345
-          },
-          "resort_km": 13.04,
-          "image": "https://a0.muscache.com/im/pictures/bc3622cc-e051-494a-bc16-c93441a76d8f.jpg",
-          "rating": 4.7,
-          "reviews": "10",
-          "location": "Condo in Tamsweg",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "6",
-          "id": "691003002533728757",
-          "title": "Large apartment in Tamsweg/Lungau (Austria)",
-          "url": "https://www.airbnb.com/rooms/691003002533728757",
-          "price": 1579.0,
-          "capacity": 6,
-          "bedrooms": 5,
-          "lat": 47.12884,
-          "lng": 13.8189,
-          "resort": "Lungau",
-          "resort_point": {
-            "name": "Samson-Sesselbahn",
-            "lat": 47.16929,
-            "lng": 13.69345
-          },
-          "resort_km": 13.5,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-691003002533728757/original/a14bd07c-efed-4898-a409-500f1af6289d.jpeg",
-          "rating": 5.0,
-          "reviews": "30",
-          "location": "Apartment in Tamsweg",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 3213.25
-    },
-    {
-      "id": "o0032",
-      "stay": "5n",
-      "share": "4854dd6c1767",
-      "area": "Nassfeld",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 2206.0,
-      "czk_per_person": 5515,
-      "total_bedrooms": 4,
-      "max_resort_km": 4.16,
-      "max_unit_km": 0.02,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1115044765651052928",
-          "title": "Detached holiday home with a view of the Alps",
-          "url": "https://www.airbnb.com/rooms/1115044765651052928",
-          "price": 1103.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.6306,
-          "lng": 13.25042,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 4.14,
-          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1115044765651052928/original/5438bb84-3ca8-4b03-bb39-018921ab9b95.jpeg",
-          "rating": 5.0,
-          "reviews": "3",
-          "location": "Apartment in Jenig, Austria",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html:Das kleine Feriendorf:5",
-          "title": "Das kleine Feriendorf",
-          "url": "https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html",
-          "price": 1103.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.6308562,
-          "lng": 13.2500852,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 4.16,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/540225255.webp?k=7911574ae67ef49185e60b4c006c95eedd6350b8a4b473932ddb560cdc2ae7a4&o=",
-          "rating": 9.4,
-          "reviews": null,
-          "location": "Karnten",
-          "type": "entire_home"
-        }
-      ],
-      "score": 2310.1
-    },
-    {
-      "id": "o0033",
       "stay": "5n",
       "share": "09e354cd723e",
       "area": "Nassfeld",
@@ -3320,72 +3184,208 @@
       "score": 2354.0
     },
     {
-      "id": "o0034",
+      "id": "o0032",
       "stay": "5n",
-      "share": "83b0fe4ce54e",
+      "share": "a8f8d16d98e0",
       "area": "Nassfeld",
       "split": "5+5",
-      "provider": "Mix",
-      "total": 2228.0,
-      "czk_per_person": 5570,
-      "total_bedrooms": 5,
-      "max_resort_km": 9.13,
-      "max_unit_km": 0.11,
-      "same_building": true,
+      "provider": "Booking",
+      "total": 2513.0,
+      "czk_per_person": 6282,
+      "total_bedrooms": 4,
+      "max_resort_km": 4.16,
+      "max_unit_km": 0.58,
+      "same_building": false,
       "check_in": "2027-02-01",
       "check_out": "2027-02-06",
       "nights": 5,
       "units": [
         {
-          "provider": "Airbnb",
+          "provider": "Booking",
           "role": "5",
-          "id": "10275257",
-          "title": "Family-friendly apartment \"Buche\"",
-          "url": "https://www.airbnb.com/rooms/10275257",
-          "price": 1100.0,
+          "id": "booking:https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html:Das kleine Feriendorf:5",
+          "title": "Das kleine Feriendorf",
+          "url": "https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html",
+          "price": 1103.0,
           "capacity": 5,
-          "bedrooms": 3,
-          "lat": 46.64111,
-          "lng": 13.18547,
+          "bedrooms": 2,
+          "lat": 46.6308562,
+          "lng": 13.2500852,
           "resort": "Nassfeld",
           "resort_point": {
             "name": "Millennium-Express Sektion I",
             "lat": 46.61147,
             "lng": 13.27936
           },
-          "resort_km": 9.13,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTAyNzUyNTc=/original/5e22d420-098a-4123-b893-6afe54c73f79.jpeg",
-          "rating": 4.82,
-          "reviews": "62",
-          "location": "Apartment in Kirchbach, Austria",
-          "type": "Airbnb"
+          "resort_km": 4.16,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/540225255.webp?k=7911574ae67ef49185e60b4c006c95eedd6350b8a4b473932ddb560cdc2ae7a4&o=",
+          "rating": 9.4,
+          "reviews": null,
+          "location": "Karnten",
+          "type": "entire_home"
         },
         {
           "provider": "Booking",
           "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/haus-gartnerkofelblick-kirchbach1.en-gb.html:Haus Gartnerkofelblick inklusive Holiday-Card Sommer:5",
-          "title": "Haus Gartnerkofelblick inklusive Holiday-Card Sommer",
-          "url": "https://www.booking.com/hotel/at/haus-gartnerkofelblick-kirchbach1.en-gb.html",
-          "price": 1128.0,
+          "id": "booking:https://www.booking.com/hotel/at/apartment-nico.en-gb.html:Nico's Place:5",
+          "title": "Nico's Place",
+          "url": "https://www.booking.com/hotel/at/apartment-nico.en-gb.html",
+          "price": 1410.0,
           "capacity": 5,
           "bedrooms": 2,
-          "lat": 46.6418247381874,
-          "lng": 13.1863512772484,
+          "lat": 46.626957299999994,
+          "lng": 13.255202709192645,
           "resort": "Nassfeld",
           "resort_point": {
             "name": "Millennium-Express Sektion I",
             "lat": 46.61147,
             "lng": 13.27936
           },
-          "resort_km": 9.13,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/880130497.webp?k=b8875765c928ed19951bff69cbb0799ef20f290de7ce90abbda30d74f81fb55e&o=",
-          "rating": 9.7,
+          "resort_km": 2.52,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/772823133.webp?k=ec872380ce3025ef410f75abc50b095d22594b8f5129c1d414897d05f72b34e9&o=",
+          "rating": 9.9,
           "reviews": null,
-          "location": "Kirchbach",
+          "location": "Jenig",
           "type": "entire_home"
         }
       ],
-      "score": 2456.8
+      "score": 2619.9
+    },
+    {
+      "id": "o0033",
+      "stay": "5n",
+      "share": "1d9720bcd173",
+      "area": "Nassfeld",
+      "split": "4+6",
+      "provider": "Mix",
+      "total": 2604.0,
+      "czk_per_person": 6510,
+      "total_bedrooms": 5,
+      "max_resort_km": 4.16,
+      "max_unit_km": 0.8,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "4",
+          "id": "booking:https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html:Das kleine Feriendorf:4",
+          "title": "Das kleine Feriendorf",
+          "url": "https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html",
+          "price": 1080.0,
+          "capacity": 4,
+          "bedrooms": 2,
+          "lat": 46.6308562,
+          "lng": 13.2500852,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 4.16,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/540225255.webp?k=7911574ae67ef49185e60b4c006c95eedd6350b8a4b473932ddb560cdc2ae7a4&o=",
+          "rating": 9.4,
+          "reviews": null,
+          "location": "Karnten",
+          "type": "entire_home"
+        },
+        {
+          "provider": "Airbnb",
+          "role": "6",
+          "id": "1301041800081992180",
+          "title": "Log house near top ski resort",
+          "url": "https://www.airbnb.com/rooms/1301041800081992180",
+          "price": 1524.0,
+          "capacity": 6,
+          "bedrooms": 3,
+          "lat": 46.6289,
+          "lng": 13.2541,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 3.76,
+          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1301041800081992180/original/1c94d6b4-e34f-4b75-92a7-0bd906802967.jpeg",
+          "rating": null,
+          "reviews": null,
+          "location": "Chalet in Hermagor, Austria",
+          "type": "Airbnb"
+        }
+      ],
+      "score": 2712.0
+    },
+    {
+      "id": "o0034",
+      "stay": "5n",
+      "share": "d8e54535c048",
+      "area": "Nassfeld",
+      "split": "4+6",
+      "provider": "Mix",
+      "total": 2604.0,
+      "czk_per_person": 6510,
+      "total_bedrooms": 5,
+      "max_resort_km": 4.16,
+      "max_unit_km": 0.82,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "4",
+          "id": "booking:https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html:Das kleine Feriendorf:4",
+          "title": "Das kleine Feriendorf",
+          "url": "https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html",
+          "price": 1080.0,
+          "capacity": 4,
+          "bedrooms": 2,
+          "lat": 46.6308562,
+          "lng": 13.2500852,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 4.16,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/540225255.webp?k=7911574ae67ef49185e60b4c006c95eedd6350b8a4b473932ddb560cdc2ae7a4&o=",
+          "rating": 9.4,
+          "reviews": null,
+          "location": "Karnten",
+          "type": "entire_home"
+        },
+        {
+          "provider": "Airbnb",
+          "role": "6",
+          "id": "1301042721250030465",
+          "title": "Beautiful log house near top ski resort",
+          "url": "https://www.airbnb.com/rooms/1301042721250030465",
+          "price": 1524.0,
+          "capacity": 6,
+          "bedrooms": 3,
+          "lat": 46.6291,
+          "lng": 13.2541,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 3.77,
+          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1301042721250030465/original/5675af55-74af-4aed-a8c7-a26b00ad05ee.jpeg",
+          "rating": 4.25,
+          "reviews": "4",
+          "location": "Chalet in Jenig, Austria",
+          "type": "Airbnb"
+        }
+      ],
+      "score": 2712.1
     },
     {
       "id": "o0035",
@@ -3458,6 +3458,74 @@
     {
       "id": "o0036",
       "stay": "5n",
+      "share": "8423892035ef",
+      "area": "Nassfeld",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 2723.0,
+      "czk_per_person": 6808,
+      "total_bedrooms": 5,
+      "max_resort_km": 2.52,
+      "max_unit_km": 1.0,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/haus-schmiedl.en-gb.html:Haus Schmiedl:5",
+          "title": "Haus Schmiedl",
+          "url": "https://www.booking.com/hotel/at/haus-schmiedl.en-gb.html",
+          "price": 1313.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 46.6180134,
+          "lng": 13.2564093,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 1.9,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/937206570.webp?k=12a64526d88c88d0811adc9aeaeb9f71b6221dfdf79d2f3d9d2d9aac0580af75&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Rattendorf",
+          "type": "unknown"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/apartment-nico.en-gb.html:Nico's Place:5",
+          "title": "Nico's Place",
+          "url": "https://www.booking.com/hotel/at/apartment-nico.en-gb.html",
+          "price": 1410.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 46.626957299999994,
+          "lng": 13.255202709192645,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 2.52,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/772823133.webp?k=ec872380ce3025ef410f75abc50b095d22594b8f5129c1d414897d05f72b34e9&o=",
+          "rating": 9.9,
+          "reviews": null,
+          "location": "Jenig",
+          "type": "entire_home"
+        }
+      ],
+      "score": 2791.0
+    },
+    {
+      "id": "o0037",
+      "stay": "5n",
       "share": "c065143fcf44",
       "area": "Nassfeld",
       "split": "4+6",
@@ -3524,7 +3592,75 @@
       "score": 2825.7
     },
     {
-      "id": "o0037",
+      "id": "o0038",
+      "stay": "5n",
+      "share": "3868759b45c2",
+      "area": "Nassfeld",
+      "split": "4+6",
+      "provider": "Booking",
+      "total": 2751.0,
+      "czk_per_person": 6878,
+      "total_bedrooms": 5,
+      "max_resort_km": 4.16,
+      "max_unit_km": 0.39,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "4",
+          "id": "booking:https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html:Das kleine Feriendorf:4",
+          "title": "Das kleine Feriendorf",
+          "url": "https://www.booking.com/hotel/at/das-kleine-feriendorf-karnten.en-gb.html",
+          "price": 1080.0,
+          "capacity": 4,
+          "bedrooms": 2,
+          "lat": 46.6308562,
+          "lng": 13.2500852,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 4.16,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/540225255.webp?k=7911574ae67ef49185e60b4c006c95eedd6350b8a4b473932ddb560cdc2ae7a4&o=",
+          "rating": 9.4,
+          "reviews": null,
+          "location": "Karnten",
+          "type": "entire_home"
+        },
+        {
+          "provider": "Booking",
+          "role": "6",
+          "id": "booking:https://www.booking.com/hotel/at/chalet-marmotte-am-nassfeld.en-gb.html:Chalet Marmotte am Nassfeld:6",
+          "title": "Chalet Marmotte am Nassfeld",
+          "url": "https://www.booking.com/hotel/at/chalet-marmotte-am-nassfeld.en-gb.html",
+          "price": 1671.0,
+          "capacity": 6,
+          "bedrooms": 3,
+          "lat": 46.62911551376,
+          "lng": 13.2544975868469,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 2.73,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/793180460.webp?k=db971246b5bdd8700d0e8df524c5ef11f8b797a994f5cd2b2280fc3f87b9676f&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Hermagor",
+          "type": "entire_home"
+        }
+      ],
+      "score": 2856.95
+    },
+    {
+      "id": "o0039",
       "stay": "5n",
       "share": "2248ac798115",
       "area": "Nassfeld",
@@ -3592,7 +3728,7 @@
       "score": 2924.75
     },
     {
-      "id": "o0038",
+      "id": "o0040",
       "stay": "5n",
       "share": "a76dce3aa4b5",
       "area": "Nassfeld",
@@ -3636,7 +3772,7 @@
       "score": 2937.75
     },
     {
-      "id": "o0039",
+      "id": "o0041",
       "stay": "5n",
       "share": "4216de50d5f4",
       "area": "Nassfeld",
@@ -3704,7 +3840,7 @@
       "score": 2958.8
     },
     {
-      "id": "o0040",
+      "id": "o0042",
       "stay": "5n",
       "share": "028650ef5d0e",
       "area": "Nassfeld",
@@ -3748,75 +3884,7 @@
       "score": 3003.25
     },
     {
-      "id": "o0041",
-      "stay": "5n",
-      "share": "f884522400d5",
-      "area": "Nassfeld",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 2962.0,
-      "czk_per_person": 7405,
-      "total_bedrooms": 6,
-      "max_resort_km": 2.53,
-      "max_unit_km": 0.51,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/haus-schmiedl.en-gb.html:Haus Schmiedl:5",
-          "title": "Haus Schmiedl",
-          "url": "https://www.booking.com/hotel/at/haus-schmiedl.en-gb.html",
-          "price": 1313.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 46.6180134,
-          "lng": 13.2564093,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 1.9,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/937206570.webp?k=12a64526d88c88d0811adc9aeaeb9f71b6221dfdf79d2f3d9d2d9aac0580af75&o=",
-          "rating": null,
-          "reviews": null,
-          "location": "Rattendorf",
-          "type": "unknown"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1675715033150134159",
-          "title": "Lovely holiday home on park near ski resort",
-          "url": "https://www.airbnb.com/rooms/1675715033150134159",
-          "price": 1649.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 46.6226,
-          "lng": 13.2558,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 2.53,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1675715033150134159/original/1546b758-dfc2-40fa-bf05-052f4e232085.jpeg",
-          "rating": null,
-          "reviews": null,
-          "location": "Home in Rattendorf, Austria",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 3027.8
-    },
-    {
-      "id": "o0042",
+      "id": "o0043",
       "stay": "5n",
       "share": "a776a2f87dde",
       "area": "Nassfeld",
@@ -3832,30 +3900,6 @@
       "check_out": "2027-02-06",
       "nights": 5,
       "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1696011799841451512",
-          "title": "Nice chalet with sauna in the Carinthian Alps",
-          "url": "https://www.airbnb.com/rooms/1696011799841451512",
-          "price": 1533.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.6161,
-          "lng": 13.3039,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 5.1,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1696011799841451512/original/f74e8415-f3c6-4e3b-bc3d-8bdb140f91ec.jpeg",
-          "rating": null,
-          "reviews": null,
-          "location": "Chalet in Hermagor, Austria",
-          "type": "Airbnb"
-        },
         {
           "provider": "Airbnb",
           "role": "5",
@@ -3879,12 +3923,36 @@
           "reviews": null,
           "location": "Chalet in Watschig, Austria",
           "type": "Airbnb"
+        },
+        {
+          "provider": "Airbnb",
+          "role": "5",
+          "id": "1696011799841451512",
+          "title": "Nice chalet with sauna in the Carinthian Alps",
+          "url": "https://www.airbnb.com/rooms/1696011799841451512",
+          "price": 1533.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 46.6161,
+          "lng": 13.3039,
+          "resort": "Nassfeld",
+          "resort_point": {
+            "name": "Millennium-Express Sektion I",
+            "lat": 46.61147,
+            "lng": 13.27936
+          },
+          "resort_km": 5.1,
+          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1696011799841451512/original/f74e8415-f3c6-4e3b-bc3d-8bdb140f91ec.jpeg",
+          "rating": null,
+          "reviews": null,
+          "location": "Chalet in Hermagor, Austria",
+          "type": "Airbnb"
         }
       ],
       "score": 3194.2
     },
     {
-      "id": "o0043",
+      "id": "o0044",
       "stay": "5n",
       "share": "90e8a5cad2dd",
       "area": "Nassfeld",
@@ -3952,7 +4020,7 @@
       "score": 3223.5
     },
     {
-      "id": "o0044",
+      "id": "o0045",
       "stay": "5n",
       "share": "b00ecaafe73d",
       "area": "Nassfeld",
@@ -4020,7 +4088,7 @@
       "score": 3223.9
     },
     {
-      "id": "o0045",
+      "id": "o0046",
       "stay": "5n",
       "share": "c21546f1234a",
       "area": "Nassfeld",
@@ -4088,7 +4156,7 @@
       "score": 3224.2
     },
     {
-      "id": "o0046",
+      "id": "o0047",
       "stay": "5n",
       "share": "31f8933b1b34",
       "area": "Nassfeld",
@@ -4156,7 +4224,7 @@
       "score": 3224.45
     },
     {
-      "id": "o0047",
+      "id": "o0048",
       "stay": "5n",
       "share": "413606a55d81",
       "area": "Nassfeld",
@@ -4224,7 +4292,7 @@
       "score": 3224.5
     },
     {
-      "id": "o0048",
+      "id": "o0049",
       "stay": "5n",
       "share": "3ea6704ec53a",
       "area": "Nassfeld",
@@ -4292,7 +4360,7 @@
       "score": 3225.05
     },
     {
-      "id": "o0049",
+      "id": "o0050",
       "stay": "5n",
       "share": "83775e720de0",
       "area": "Nassfeld",
@@ -4360,7 +4428,7 @@
       "score": 3253.9
     },
     {
-      "id": "o0050",
+      "id": "o0051",
       "stay": "5n",
       "share": "f4aa8727dc6c",
       "area": "Nassfeld",
@@ -4428,7 +4496,7 @@
       "score": 3254.35
     },
     {
-      "id": "o0051",
+      "id": "o0052",
       "stay": "5n",
       "share": "261dc4581777",
       "area": "Nassfeld",
@@ -4496,7 +4564,7 @@
       "score": 3254.5
     },
     {
-      "id": "o0052",
+      "id": "o0053",
       "stay": "5n",
       "share": "ed58868db9ec",
       "area": "Nassfeld",
@@ -4564,153 +4632,17 @@
       "score": 3300.0
     },
     {
-      "id": "o0053",
-      "stay": "5n",
-      "share": "d02629c8a73c",
-      "area": "Nassfeld",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 3146.0,
-      "czk_per_person": 7865,
-      "total_bedrooms": 4,
-      "max_resort_km": 11.54,
-      "max_unit_km": 0.0,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1801824195040035122",
-          "title": "Beautiful chalet near the Nassfeld ski area",
-          "url": "https://www.airbnb.com/rooms/1801824195040035122",
-          "price": 1559.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.6366,
-          "lng": 13.3491,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 11.54,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1801824195040035122/original/ce610244-c596-4bf7-896e-e4a7adaef31e.jpeg",
-          "rating": null,
-          "reviews": null,
-          "location": "Home in Hermagor, Austria",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/obermoschach-9a.en-gb.html:Obermöschach 9A:5",
-          "title": "Obermöschach 9A",
-          "url": "https://www.booking.com/hotel/at/obermoschach-9a.en-gb.html",
-          "price": 1587.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.6366135641,
-          "lng": 13.3490649873,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 11.54,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/931629329.webp?k=3bb2cbfa3081133b45d94c90cd4f6334e4752d558473d7dd0102f1e70e364836&o=",
-          "rating": null,
-          "reviews": null,
-          "location": "Presseggersee",
-          "type": "unknown"
-        }
-      ],
-      "score": 3434.5
-    },
-    {
       "id": "o0054",
       "stay": "5n",
-      "share": "856fc7ac38df",
+      "share": "0d9b42e94958",
       "area": "Nassfeld",
-      "split": "5+5",
-      "provider": "Airbnb",
-      "total": 3175.0,
-      "czk_per_person": 7938,
-      "total_bedrooms": 5,
-      "max_resort_km": 11.54,
-      "max_unit_km": 0.09,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1801824195040035122",
-          "title": "Beautiful chalet near the Nassfeld ski area",
-          "url": "https://www.airbnb.com/rooms/1801824195040035122",
-          "price": 1559.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.6366,
-          "lng": 13.3491,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 11.54,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1801824195040035122/original/ce610244-c596-4bf7-896e-e4a7adaef31e.jpeg",
-          "rating": null,
-          "reviews": null,
-          "location": "Home in Hermagor, Austria",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1301040872953430353",
-          "title": "Comfortable chalet near Nassfeld with E-charger",
-          "url": "https://www.airbnb.com/rooms/1301040872953430353",
-          "price": 1616.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 46.6362,
-          "lng": 13.3483,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 11.45,
-          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1301040872953430353/original/0bc0f82c-47b9-43cc-8e63-e54877958d86.jpeg",
-          "rating": 4.67,
-          "reviews": "3",
-          "location": "Home in Obermöschach, Austria",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 3463.95
-    },
-    {
-      "id": "o0055",
-      "stay": "5n",
-      "share": "28dec5c0e4e3",
-      "area": "Nassfeld",
-      "split": "5+5",
+      "split": "4+6",
       "provider": "Mix",
-      "total": 3203.0,
-      "czk_per_person": 8008,
+      "total": 3165.0,
+      "czk_per_person": 7912,
       "total_bedrooms": 5,
-      "max_resort_km": 11.54,
-      "max_unit_km": 0.09,
+      "max_resort_km": 12.69,
+      "max_unit_km": 0.1,
       "same_building": true,
       "check_in": "2027-02-01",
       "check_out": "2027-02-06",
@@ -4718,169 +4650,57 @@
       "units": [
         {
           "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/obermoschach-9a.en-gb.html:Obermöschach 9A:5",
-          "title": "Obermöschach 9A",
-          "url": "https://www.booking.com/hotel/at/obermoschach-9a.en-gb.html",
-          "price": 1587.0,
-          "capacity": 5,
+          "role": "4",
+          "id": "booking:https://www.booking.com/hotel/at/luxus-apartments-edelweiss-enzian.en-gb.html:Apartments Edelweiß & Enzian - Gästehaus zum Fuchs:4",
+          "title": "Apartments Edelweiß & Enzian - Gästehaus zum Fuchs",
+          "url": "https://www.booking.com/hotel/at/luxus-apartments-edelweiss-enzian.en-gb.html",
+          "price": 965.0,
+          "capacity": 4,
           "bedrooms": 2,
-          "lat": 46.6366135641,
-          "lng": 13.3490649873,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 11.54,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/931629329.webp?k=3bb2cbfa3081133b45d94c90cd4f6334e4752d558473d7dd0102f1e70e364836&o=",
-          "rating": null,
-          "reviews": null,
-          "location": "Presseggersee",
-          "type": "unknown"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1301040872953430353",
-          "title": "Comfortable chalet near Nassfeld with E-charger",
-          "url": "https://www.airbnb.com/rooms/1301040872953430353",
-          "price": 1616.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 46.6362,
-          "lng": 13.3483,
-          "resort": "Nassfeld",
-          "resort_point": {
-            "name": "Millennium-Express Sektion I",
-            "lat": 46.61147,
-            "lng": 13.27936
-          },
-          "resort_km": 11.45,
-          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1301040872953430353/original/0bc0f82c-47b9-43cc-8e63-e54877958d86.jpeg",
-          "rating": 4.67,
-          "reviews": "3",
-          "location": "Home in Obermöschach, Austria",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 3491.95
-    },
-    {
-      "id": "o0056",
-      "stay": "5n",
-      "share": "85ebfd7a4f19",
-      "area": "Nassfeld",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 3206.0,
-      "czk_per_person": 8015,
-      "total_bedrooms": 4,
-      "max_resort_km": 12.64,
-      "max_unit_km": 0.09,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/the-old-school-house.en-gb.html:The Old School House:5",
-          "title": "The Old School House",
-          "url": "https://www.booking.com/hotel/at/the-old-school-house.en-gb.html",
-          "price": 1131.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.61324757517427,
-          "lng": 13.403459787368774,
+          "lat": 46.6135044,
+          "lng": 13.4034678,
           "resort": "Nassfeld",
           "resort_point": {
             "name": "6er-SB Garnitzen I \"La Prima\"",
             "lat": 46.56037,
             "lng": 13.31598
           },
-          "resort_km": 12.64,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/742488096.webp?k=909734b88ad466d91caeee73f0e81203c34ba6b2a02ad4839cae40474f7651a5&o=",
-          "rating": 9.7,
+          "resort_km": 8.92,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/255870265.webp?k=7d2b8e0e092224c2860fe482dd32ff357d5a83f8a9d0c9a35d1ab510d7a8f625&o=",
+          "rating": 9.5,
           "reviews": null,
           "location": "Hermagor",
           "type": "entire_home"
         },
         {
           "provider": "Airbnb",
-          "role": "5",
-          "id": "806125535099206182",
-          "title": "Alter Pfarrhof | 127 m² with Mountain Views",
-          "url": "https://www.airbnb.com/rooms/806125535099206182",
-          "price": 2075.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 46.6139,
-          "lng": 13.403,
+          "role": "6",
+          "id": "1806055022335942207",
+          "title": "Apartment in the Castle Park",
+          "url": "https://www.airbnb.com/rooms/1806055022335942207",
+          "price": 2200.0,
+          "capacity": 6,
+          "bedrooms": 3,
+          "lat": 46.6131,
+          "lng": 13.4023,
           "resort": "Nassfeld",
           "resort_point": {
             "name": "6er-SB Garnitzen I \"La Prima\"",
             "lat": 46.56037,
             "lng": 13.31598
           },
-          "resort_km": 12.61,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-806125535099206182/original/9844ff93-91e2-488e-9419-b10f3ccd5af0.jpeg",
-          "rating": 5.0,
-          "reviews": "6",
+          "resort_km": 12.69,
+          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1806055022335942207/original/bc66eeaf-4dbe-4281-8721-4c0c54fedb36.jpeg",
+          "rating": null,
+          "reviews": null,
           "location": "Apartment in Hermagor-Pressegger See, Austria",
           "type": "Airbnb"
         }
       ],
-      "score": 3522.45
+      "score": 3482.75
     },
     {
-      "id": "o0057",
-      "stay": "5n",
-      "share": "979e3869eeae",
-      "area": "Obertauern",
-      "split": "celý objekt",
-      "provider": "Booking",
-      "total": 2928.0,
-      "czk_per_person": 7320,
-      "total_bedrooms": 4,
-      "max_resort_km": 16.6,
-      "max_unit_km": 0.0,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Booking",
-          "role": "10",
-          "id": "booking:https://www.booking.com/hotel/at/haus-eberl-mandling.en-gb.html:Haus Eberl - Apartments:10",
-          "title": "Haus Eberl - Apartments",
-          "url": "https://www.booking.com/hotel/at/haus-eberl-mandling.en-gb.html",
-          "price": 2928.0,
-          "capacity": 10,
-          "bedrooms": 4,
-          "lat": null,
-          "lng": null,
-          "resort": "Obertauern",
-          "resort_point": {
-            "name": "Achenrainbahn",
-            "lat": 47.24167,
-            "lng": 13.57085
-          },
-          "resort_km": 16.6,
-          "image": null,
-          "rating": null,
-          "reviews": null,
-          "location": "Radstadt",
-          "type": "entire_home"
-        }
-      ],
-      "score": 3343.0
-    },
-    {
-      "id": "o0058",
+      "id": "o0055",
       "stay": "5n",
       "share": "237872283fcd",
       "area": "Schladming 4 Berge",
@@ -4948,7 +4768,7 @@
       "score": 3039.1
     },
     {
-      "id": "o0059",
+      "id": "o0056",
       "stay": "5n",
       "share": "6ab90c020c95",
       "area": "Schladming 4 Berge",
@@ -4992,75 +4812,7 @@
       "score": 3291.25
     },
     {
-      "id": "o0060",
-      "stay": "5n",
-      "share": "a00e76698658",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Airbnb",
-      "total": 1426.0,
-      "czk_per_person": 3565,
-      "total_bedrooms": 4,
-      "max_resort_km": 24.26,
-      "max_unit_km": -0.0,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1761024305616425591",
-          "title": "Alte Brummi two-bedroom apartment",
-          "url": "https://www.airbnb.com/rooms/1761024305616425591",
-          "price": 686.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.5652,
-          "lng": 14.2416,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Spechtenseelift",
-            "lat": 47.56145,
-            "lng": 14.08324
-          },
-          "resort_km": 24.26,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1761024305616425591/original/b733562a-582e-4efa-ab14-b746c94a2808.jpeg",
-          "rating": null,
-          "reviews": null,
-          "location": "Apartment in Liezen",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1369751412951331317",
-          "title": "Apartman Liezen Zentrum",
-          "url": "https://www.airbnb.com/rooms/1369751412951331317",
-          "price": 740.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.5653,
-          "lng": 14.2416,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Spechtenseelift",
-            "lat": 47.56145,
-            "lng": 14.08324
-          },
-          "resort_km": 24.26,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-1369751412951331317/original/b63f2546-4337-4cd3-a063-e76517165d33.jpeg",
-          "rating": 5.0,
-          "reviews": "10",
-          "location": "Apartment in Liezen",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 2032.5
-    },
-    {
-      "id": "o0061",
+      "id": "o0057",
       "stay": "5n",
       "share": "1765311ba908",
       "area": "Tauplitz / Schneebären",
@@ -5104,7 +4856,7 @@
       "score": 2300.25
     },
     {
-      "id": "o0062",
+      "id": "o0058",
       "stay": "5n",
       "share": "830bc4399121",
       "area": "Tauplitz / Schneebären",
@@ -5148,82 +4900,14 @@
       "score": 2517.25
     },
     {
-      "id": "o0063",
-      "stay": "5n",
-      "share": "886befe837a7",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Airbnb",
-      "total": 2102.0,
-      "czk_per_person": 5255,
-      "total_bedrooms": 4,
-      "max_resort_km": 20.02,
-      "max_unit_km": 0.04,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "51886877",
-          "title": "Vacation at the waterfall",
-          "url": "https://www.airbnb.com/rooms/51886877",
-          "price": 1050.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.49003,
-          "lng": 13.95884,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Kulmlift",
-            "lat": 47.54808,
-            "lng": 13.99421
-          },
-          "resort_km": 19.98,
-          "image": "https://a0.muscache.com/im/pictures/f3765c04-5f84-46db-8b48-77022506413c.jpg",
-          "rating": 4.6,
-          "reviews": "15",
-          "location": "Apartment in Salza",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "22883538",
-          "title": "Stay on the Salza at the foot of the Grimming",
-          "url": "https://www.airbnb.com/rooms/22883538",
-          "price": 1052.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.48972,
-          "lng": 13.95864,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Kulmlift",
-            "lat": 47.54808,
-            "lng": 13.99421
-          },
-          "resort_km": 20.02,
-          "image": "https://a0.muscache.com/im/pictures/de6f4b82-4fb9-4c4b-8cb5-9aca1e1e9176.jpg",
-          "rating": 4.8,
-          "reviews": "30",
-          "location": "Apartment in Salza",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 2602.7
-    },
-    {
-      "id": "o0064",
+      "id": "o0059",
       "stay": "5n",
       "share": "5608206061ae",
       "area": "Tauplitz / Schneebären",
       "split": "5+5",
       "provider": "Mix",
-      "total": 2598.0,
-      "czk_per_person": 6495,
+      "total": 2603.0,
+      "czk_per_person": 6508,
       "total_bedrooms": 4,
       "max_resort_km": 6.27,
       "max_unit_km": 0.01,
@@ -5238,7 +4922,7 @@
           "id": "booking:https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html:Ferienwohnung Grimmingblick:5",
           "title": "Ferienwohnung Grimmingblick",
           "url": "https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html",
-          "price": 1244.0,
+          "price": 1249.0,
           "capacity": 5,
           "bedrooms": 2,
           "lat": 47.557141,
@@ -5281,10 +4965,10 @@
           "type": "Airbnb"
         }
       ],
-      "score": 2754.8
+      "score": 2759.8
     },
     {
-      "id": "o0065",
+      "id": "o0060",
       "stay": "5n",
       "share": "7559fd828e54",
       "area": "Tauplitz / Schneebären",
@@ -5352,7 +5036,7 @@
       "score": 2793.4
     },
     {
-      "id": "o0066",
+      "id": "o0061",
       "stay": "5n",
       "share": "4d8a1ff86c33",
       "area": "Tauplitz / Schneebären",
@@ -5420,75 +5104,7 @@
       "score": 2824.6
     },
     {
-      "id": "o0067",
-      "stay": "5n",
-      "share": "39e8c1b22e81",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Airbnb",
-      "total": 2569.0,
-      "czk_per_person": 6422,
-      "total_bedrooms": 5,
-      "max_resort_km": 10.65,
-      "max_unit_km": 0.52,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "711352356740009616",
-          "title": "House Mountain View",
-          "url": "https://www.airbnb.com/rooms/711352356740009616",
-          "price": 1240.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.5699,
-          "lng": 13.8917,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 10.65,
-          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-711352356740009616/original/cd9e577f-04a9-46f5-a91f-9b39626b6643.jpeg",
-          "rating": 5.0,
-          "reviews": "14",
-          "location": "Home in Obersdorf",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "1442659242242230893",
-          "title": "Vacation home at Birke",
-          "url": "https://www.airbnb.com/rooms/1442659242242230893",
-          "price": 1329.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 47.5681,
-          "lng": 13.896,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 10.18,
-          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1442659242242230893/original/5aea4bc7-f1fb-4b4c-a1ce-ae352d677731.jpeg",
-          "rating": 4.5,
-          "reviews": "6",
-          "location": "Apartment in Obersdorf",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 2837.85
-    },
-    {
-      "id": "o0068",
+      "id": "o0062",
       "stay": "5n",
       "share": "ead225454270",
       "area": "Tauplitz / Schneebären",
@@ -5556,7 +5172,7 @@
       "score": 2889.6
     },
     {
-      "id": "o0069",
+      "id": "o0063",
       "stay": "5n",
       "share": "5d65d30029ab",
       "area": "Tauplitz / Schneebären",
@@ -5624,7 +5240,7 @@
       "score": 2942.25
     },
     {
-      "id": "o0070",
+      "id": "o0064",
       "stay": "5n",
       "share": "913e3b56169b",
       "area": "Tauplitz / Schneebären",
@@ -5692,7 +5308,7 @@
       "score": 2959.4
     },
     {
-      "id": "o0071",
+      "id": "o0065",
       "stay": "5n",
       "share": "132b0868cc1c",
       "area": "Tauplitz / Schneebären",
@@ -5760,75 +5376,7 @@
       "score": 2967.4
     },
     {
-      "id": "o0072",
-      "stay": "5n",
-      "share": "f4f12d6336ed",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 2896.0,
-      "czk_per_person": 7240,
-      "total_bedrooms": 4,
-      "max_resort_km": 3.27,
-      "max_unit_km": 0.13,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/alpine-chalet-ulla-6b.en-gb.html:Alpine Chalet Ulla Top 3 by AA Holiday Homes:5",
-          "title": "Alpine Chalet Ulla Top 3 by AA Holiday Homes",
-          "url": "https://www.booking.com/hotel/at/alpine-chalet-ulla-6b.en-gb.html",
-          "price": 1323.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.553550329461,
-          "lng": 13.9597553470826,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Kulmlift",
-            "lat": 47.54808,
-            "lng": 13.99421
-          },
-          "resort_km": 3.15,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/266444496.webp?k=3f12038207a7a76567f9784697a3d719fca8a9b551fdd58a743cee54b213a556&o=",
-          "rating": 9.3,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "entire_home"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "22133986",
-          "title": "Alpine Apartment Ulla 3 - Bad Mitterndorf",
-          "url": "https://www.airbnb.com/rooms/22133986",
-          "price": 1573.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.5529,
-          "lng": 13.9597,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Kulmlift",
-            "lat": 47.54808,
-            "lng": 13.99421
-          },
-          "resort_km": 3.27,
-          "image": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-22133986/original/dfcc0ed1-8d05-4283-adcf-93fb8d204bb3.jpeg",
-          "rating": 5.0,
-          "reviews": "7",
-          "location": "Apartment in Bad Mitterndorf",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 2978.4
-    },
-    {
-      "id": "o0073",
+      "id": "o0066",
       "stay": "5n",
       "share": "b8bf1c9766ef",
       "area": "Tauplitz / Schneebären",
@@ -5896,75 +5444,7 @@
       "score": 3116.3
     },
     {
-      "id": "o0074",
-      "stay": "5n",
-      "share": "6fbf24245bd5",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 2891.0,
-      "czk_per_person": 7228,
-      "total_bedrooms": 4,
-      "max_resort_km": 9.44,
-      "max_unit_km": 0.29,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/apartment-dominique-by-fis-fun-in-styria.en-gb.html:Apartment Dominique by FiS - Fun in Styria:5",
-          "title": "Apartment Dominique by FiS - Fun in Styria",
-          "url": "https://www.booking.com/hotel/at/apartment-dominique-by-fis-fun-in-styria.en-gb.html",
-          "price": 1413.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.56628401193592,
-          "lng": 13.914368377909842,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 4.88,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603528885.webp?k=8d2f21bffbeacdb60a3cb5f6d467e22654edf88ecaf130093ce0953919618386&o=",
-          "rating": null,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "entire_home"
-        },
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "51803254",
-          "title": "Haus Max",
-          "url": "https://www.airbnb.com/rooms/51803254",
-          "price": 1478.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.56869,
-          "lng": 13.91296,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 9.44,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-51803254/original/bb92d136-6ec0-4f04-94c2-0f701409027a.jpeg",
-          "rating": 4.82,
-          "reviews": "38",
-          "location": "Home in Sonnenalm",
-          "type": "Airbnb"
-        }
-      ],
-      "score": 3128.45
-    },
-    {
-      "id": "o0075",
+      "id": "o0067",
       "stay": "5n",
       "share": "f5d7455dd0b7",
       "area": "Tauplitz / Schneebären",
@@ -6032,75 +5512,7 @@
       "score": 3154.75
     },
     {
-      "id": "o0076",
-      "stay": "5n",
-      "share": "f52442c27e2d",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Booking",
-      "total": 2997.0,
-      "czk_per_person": 7492,
-      "total_bedrooms": 5,
-      "max_resort_km": 6.27,
-      "max_unit_km": 0.52,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html:Ferienwohnung Grimmingblick:5",
-          "title": "Ferienwohnung Grimmingblick",
-          "url": "https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html",
-          "price": 1244.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.557141,
-          "lng": 13.926459,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 6.27,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/783465687.webp?k=a3a276c28acdec3c3a0da27214f34986c87e6205c63cd89e15112182b9b1bcb2&o=",
-          "rating": 9.3,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "entire_home"
-        },
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/wohnung-katalin.en-gb.html:Wohnung Katalin:5",
-          "title": "Wohnung Katalin",
-          "url": "https://www.booking.com/hotel/at/wohnung-katalin.en-gb.html",
-          "price": 1753.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 47.560476,
-          "lng": 13.9312975,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 4.01,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/612551556.webp?k=531cc8f10bea9bb41888b954f64e2db9514deb0ba9b855d891fbc3377ad01afb&o=",
-          "rating": 9.0,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "entire_home"
-        }
-      ],
-      "score": 3156.35
-    },
-    {
-      "id": "o0077",
+      "id": "o0068",
       "stay": "5n",
       "share": "04d4955b2d9d",
       "area": "Tauplitz / Schneebären",
@@ -6168,7 +5580,7 @@
       "score": 3157.85
     },
     {
-      "id": "o0078",
+      "id": "o0069",
       "stay": "5n",
       "share": "f0a8e3f805a5",
       "area": "Tauplitz / Schneebären",
@@ -6236,7 +5648,75 @@
       "score": 3159.1
     },
     {
-      "id": "o0079",
+      "id": "o0070",
+      "stay": "5n",
+      "share": "f52442c27e2d",
+      "area": "Tauplitz / Schneebären",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 3002.0,
+      "czk_per_person": 7505,
+      "total_bedrooms": 5,
+      "max_resort_km": 6.27,
+      "max_unit_km": 0.52,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html:Ferienwohnung Grimmingblick:5",
+          "title": "Ferienwohnung Grimmingblick",
+          "url": "https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html",
+          "price": 1249.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.557141,
+          "lng": 13.926459,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 6.27,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/783465687.webp?k=a3a276c28acdec3c3a0da27214f34986c87e6205c63cd89e15112182b9b1bcb2&o=",
+          "rating": 9.3,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "entire_home"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/wohnung-katalin.en-gb.html:Wohnung Katalin:5",
+          "title": "Wohnung Katalin",
+          "url": "https://www.booking.com/hotel/at/wohnung-katalin.en-gb.html",
+          "price": 1753.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 47.560476,
+          "lng": 13.9312975,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.01,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/612551556.webp?k=531cc8f10bea9bb41888b954f64e2db9514deb0ba9b855d891fbc3377ad01afb&o=",
+          "rating": 9.0,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "entire_home"
+        }
+      ],
+      "score": 3161.35
+    },
+    {
+      "id": "o0071",
       "stay": "5n",
       "share": "237b19862d54",
       "area": "Tauplitz / Schneebären",
@@ -6304,7 +5784,7 @@
       "score": 3161.4
     },
     {
-      "id": "o0080",
+      "id": "o0072",
       "stay": "5n",
       "share": "c7dd27d8201f",
       "area": "Tauplitz / Schneebären",
@@ -6372,7 +5852,7 @@
       "score": 3172.2
     },
     {
-      "id": "o0081",
+      "id": "o0073",
       "stay": "5n",
       "share": "2018eac3003e",
       "area": "Tauplitz / Schneebären",
@@ -6440,7 +5920,7 @@
       "score": 3201.7
     },
     {
-      "id": "o0082",
+      "id": "o0074",
       "stay": "5n",
       "share": "054670d4ea22",
       "area": "Tauplitz / Schneebären",
@@ -6508,7 +5988,7 @@
       "score": 3202.7
     },
     {
-      "id": "o0083",
+      "id": "o0075",
       "stay": "5n",
       "share": "2d781cd78ca0",
       "area": "Tauplitz / Schneebären",
@@ -6576,7 +6056,7 @@
       "score": 3202.7
     },
     {
-      "id": "o0084",
+      "id": "o0076",
       "stay": "5n",
       "share": "72095a1c9c86",
       "area": "Tauplitz / Schneebären",
@@ -6644,7 +6124,7 @@
       "score": 3232.9
     },
     {
-      "id": "o0085",
+      "id": "o0077",
       "stay": "5n",
       "share": "89abe6aa417a",
       "area": "Tauplitz / Schneebären",
@@ -6712,7 +6192,7 @@
       "score": 3233.9
     },
     {
-      "id": "o0086",
+      "id": "o0078",
       "stay": "5n",
       "share": "21f31b1e9c43",
       "area": "Tauplitz / Schneebären",
@@ -6780,7 +6260,7 @@
       "score": 3242.5
     },
     {
-      "id": "o0087",
+      "id": "o0079",
       "stay": "5n",
       "share": "f040b2ea3b9f",
       "area": "Tauplitz / Schneebären",
@@ -6848,14 +6328,14 @@
       "score": 3249.15
     },
     {
-      "id": "o0088",
+      "id": "o0080",
       "stay": "5n",
       "share": "4bdf88b2f85a",
       "area": "Tauplitz / Schneebären",
       "split": "4+6",
       "provider": "Booking",
-      "total": 3090.0,
-      "czk_per_person": 7725,
+      "total": 3095.0,
+      "czk_per_person": 7738,
       "total_bedrooms": 5,
       "max_resort_km": 6.27,
       "max_unit_km": 0.52,
@@ -6870,7 +6350,7 @@
           "id": "booking:https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html:Ferienwohnung Grimmingblick:4",
           "title": "Ferienwohnung Grimmingblick",
           "url": "https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html",
-          "price": 1132.0,
+          "price": 1137.0,
           "capacity": 4,
           "bedrooms": 2,
           "lat": 47.557141,
@@ -6913,10 +6393,10 @@
           "type": "entire_home"
         }
       ],
-      "score": 3249.35
+      "score": 3254.35
     },
     {
-      "id": "o0089",
+      "id": "o0081",
       "stay": "5n",
       "share": "96d8f642e071",
       "area": "Tauplitz / Schneebären",
@@ -6984,7 +6464,7 @@
       "score": 3266.1
     },
     {
-      "id": "o0090",
+      "id": "o0082",
       "stay": "5n",
       "share": "ff9564793b9c",
       "area": "Tauplitz / Schneebären",
@@ -7052,75 +6532,7 @@
       "score": 3283.2
     },
     {
-      "id": "o0091",
-      "stay": "5n",
-      "share": "1f17d4ffdc67",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 3059.0,
-      "czk_per_person": 7648,
-      "total_bedrooms": 4,
-      "max_resort_km": 9.44,
-      "max_unit_km": 0.29,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "51803254",
-          "title": "Haus Max",
-          "url": "https://www.airbnb.com/rooms/51803254",
-          "price": 1478.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.56869,
-          "lng": 13.91296,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 9.44,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-51803254/original/bb92d136-6ec0-4f04-94c2-0f701409027a.jpeg",
-          "rating": 4.82,
-          "reviews": "38",
-          "location": "Home in Sonnenalm",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41117.en-gb.html:Apartments in Bad Mitterndorf - Steiermark 41117:5",
-          "title": "Apartments in Bad Mitterndorf - Steiermark 41117",
-          "url": "https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41117.en-gb.html",
-          "price": 1581.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.5662635,
-          "lng": 13.9142305,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 4.89,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/713825413.webp?k=e3bb1c0140f1c28c1c5d220d2b90fb70021cb02d9c7be7b3b2b2dad5a9324a60&o=",
-          "rating": null,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "entire_home"
-        }
-      ],
-      "score": 3296.45
-    },
-    {
-      "id": "o0092",
+      "id": "o0083",
       "stay": "5n",
       "share": "45aee1e9cdf8",
       "area": "Tauplitz / Schneebären",
@@ -7188,14 +6600,14 @@
       "score": 3297.9
     },
     {
-      "id": "o0093",
+      "id": "o0084",
       "stay": "5n",
       "share": "fcca82fdcf29",
       "area": "Tauplitz / Schneebären",
       "split": "2+8",
       "provider": "Booking",
-      "total": 3180.0,
-      "czk_per_person": 7950,
+      "total": 3155.0,
+      "czk_per_person": 7888,
       "total_bedrooms": 6,
       "max_resort_km": 5.88,
       "max_unit_km": 0.81,
@@ -7210,7 +6622,7 @@
           "id": "booking:https://www.booking.com/hotel/at/sunside-apartments-bad-mitterndorf1.en-gb.html:Sunside Apartments:2",
           "title": "Sunside Apartments",
           "url": "https://www.booking.com/hotel/at/sunside-apartments-bad-mitterndorf1.en-gb.html",
-          "price": 643.0,
+          "price": 618.0,
           "capacity": 2,
           "bedrooms": 1,
           "lat": 47.556809104148,
@@ -7253,10 +6665,10 @@
           "type": "unknown"
         }
       ],
-      "score": 3331.05
+      "score": 3306.05
     },
     {
-      "id": "o0094",
+      "id": "o0085",
       "stay": "5n",
       "share": "72ca22210e79",
       "area": "Tauplitz / Schneebären",
@@ -7324,7 +6736,7 @@
       "score": 3335.7
     },
     {
-      "id": "o0095",
+      "id": "o0086",
       "stay": "5n",
       "share": "66eb31549c54",
       "area": "Tauplitz / Schneebären",
@@ -7392,75 +6804,7 @@
       "score": 3340.5
     },
     {
-      "id": "o0096",
-      "stay": "5n",
-      "share": "5cfe9bad7eb8",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 3114.0,
-      "czk_per_person": 7785,
-      "total_bedrooms": 4,
-      "max_resort_km": 9.44,
-      "max_unit_km": 0.51,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "51803254",
-          "title": "Haus Max",
-          "url": "https://www.airbnb.com/rooms/51803254",
-          "price": 1478.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.56869,
-          "lng": 13.91296,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 9.44,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-51803254/original/bb92d136-6ec0-4f04-94c2-0f701409027a.jpeg",
-          "rating": 4.82,
-          "reviews": "38",
-          "location": "Home in Sonnenalm",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html:Bungalow Irmgard:5",
-          "title": "Bungalow Irmgard",
-          "url": "https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html",
-          "price": 1636.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.56492235493819,
-          "lng": 13.916850686073303,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 4.75,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603551536.webp?k=86766f82cfcdc6d626875e135ec55ac09278c93d2e37c5137cc4c9504b41ad41&o=",
-          "rating": 7.0,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "unknown"
-        }
-      ],
-      "score": 3352.55
-    },
-    {
-      "id": "o0097",
+      "id": "o0087",
       "stay": "5n",
       "share": "0c08bb8cbf98",
       "area": "Tauplitz / Schneebären",
@@ -7528,7 +6872,7 @@
       "score": 3367.7
     },
     {
-      "id": "o0098",
+      "id": "o0088",
       "stay": "5n",
       "share": "a8b8033c827d",
       "area": "Tauplitz / Schneebären",
@@ -7596,75 +6940,7 @@
       "score": 3370.65
     },
     {
-      "id": "o0099",
-      "stay": "5n",
-      "share": "086c0ffc4d02",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 3139.0,
-      "czk_per_person": 7848,
-      "total_bedrooms": 5,
-      "max_resort_km": 9.44,
-      "max_unit_km": 0.2,
-      "same_building": false,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "51803254",
-          "title": "Haus Max",
-          "url": "https://www.airbnb.com/rooms/51803254",
-          "price": 1478.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.56869,
-          "lng": 13.91296,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 9.44,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-51803254/original/bb92d136-6ec0-4f04-94c2-0f701409027a.jpeg",
-          "rating": 4.82,
-          "reviews": "38",
-          "location": "Home in Sonnenalm",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/haus-andra-c-bad-mitterndorf.en-gb.html:Haus André by FiS - für 8 Personen:5",
-          "title": "Haus André by FiS - für 8 Personen",
-          "url": "https://www.booking.com/hotel/at/haus-andra-c-bad-mitterndorf.en-gb.html",
-          "price": 1661.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 47.567506731598264,
-          "lng": 13.910912275314331,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 5.09,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603551789.webp?k=7e945455991780f240a633f703bb05b69dda7b996da8b68b7d8fee865512c704&o=",
-          "rating": null,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "unknown"
-        }
-      ],
-      "score": 3376.0
-    },
-    {
-      "id": "o0100",
+      "id": "o0089",
       "stay": "5n",
       "share": "834acc2363a4",
       "area": "Tauplitz / Schneebären",
@@ -7732,7 +7008,7 @@
       "score": 3383.95
     },
     {
-      "id": "o0101",
+      "id": "o0090",
       "stay": "5n",
       "share": "cb66dc66fc58",
       "area": "Tauplitz / Schneebären",
@@ -7800,7 +7076,7 @@
       "score": 3396.7
     },
     {
-      "id": "o0102",
+      "id": "o0091",
       "stay": "5n",
       "share": "34acb05edaf1",
       "area": "Tauplitz / Schneebären",
@@ -7868,75 +7144,7 @@
       "score": 3401.85
     },
     {
-      "id": "o0103",
-      "stay": "5n",
-      "share": "facf2cac6d2e",
-      "area": "Tauplitz / Schneebären",
-      "split": "5+5",
-      "provider": "Mix",
-      "total": 3170.0,
-      "czk_per_person": 7925,
-      "total_bedrooms": 5,
-      "max_resort_km": 9.44,
-      "max_unit_km": 0.19,
-      "same_building": true,
-      "check_in": "2027-02-01",
-      "check_out": "2027-02-06",
-      "nights": 5,
-      "units": [
-        {
-          "provider": "Airbnb",
-          "role": "5",
-          "id": "51803254",
-          "title": "Haus Max",
-          "url": "https://www.airbnb.com/rooms/51803254",
-          "price": 1478.0,
-          "capacity": 5,
-          "bedrooms": 2,
-          "lat": 47.56869,
-          "lng": 13.91296,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 9.44,
-          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-51803254/original/bb92d136-6ec0-4f04-94c2-0f701409027a.jpeg",
-          "rating": 4.82,
-          "reviews": "38",
-          "location": "Home in Sonnenalm",
-          "type": "Airbnb"
-        },
-        {
-          "provider": "Booking",
-          "role": "5",
-          "id": "booking:https://www.booking.com/hotel/at/haus-erika-bad-mitterndorf.en-gb.html:Haus Erika:5",
-          "title": "Haus Erika",
-          "url": "https://www.booking.com/hotel/at/haus-erika-bad-mitterndorf.en-gb.html",
-          "price": 1692.0,
-          "capacity": 5,
-          "bedrooms": 3,
-          "lat": 47.5679008,
-          "lng": 13.9106828,
-          "resort": "Tauplitz / Schneebären",
-          "resort_point": {
-            "name": "Mitterstein",
-            "lat": 47.58017,
-            "lng": 13.97605
-          },
-          "resort_km": 5.09,
-          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603552361.webp?k=23985eaf46e3af88ae498cbcfb5dcb591cfd5e61a4ed436f911edb32835dd1b2&o=",
-          "rating": 8.0,
-          "reviews": null,
-          "location": "Bad Mitterndorf",
-          "type": "unknown"
-        }
-      ],
-      "score": 3406.95
-    },
-    {
-      "id": "o0104",
+      "id": "o0092",
       "stay": "5n",
       "share": "0d7c10e05e80",
       "area": "Tauplitz / Schneebären",
@@ -8004,7 +7212,483 @@
       "score": 3422.9
     },
     {
-      "id": "o0105",
+      "id": "o0093",
+      "stay": "5n",
+      "share": "364303da197a",
+      "area": "Tauplitz / Schneebären",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 3297.0,
+      "czk_per_person": 8242,
+      "total_bedrooms": 5,
+      "max_resort_km": 5.09,
+      "max_unit_km": 0.53,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html:Bungalow Irmgard:5",
+          "title": "Bungalow Irmgard",
+          "url": "https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html",
+          "price": 1636.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.56492235493819,
+          "lng": 13.916850686073303,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.75,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603551536.webp?k=86766f82cfcdc6d626875e135ec55ac09278c93d2e37c5137cc4c9504b41ad41&o=",
+          "rating": 7.0,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/haus-andra-c-bad-mitterndorf.en-gb.html:Haus André by FiS - für 8 Personen:5",
+          "title": "Haus André by FiS - für 8 Personen",
+          "url": "https://www.booking.com/hotel/at/haus-andra-c-bad-mitterndorf.en-gb.html",
+          "price": 1661.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 47.567506731598264,
+          "lng": 13.910912275314331,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 5.09,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603551789.webp?k=7e945455991780f240a633f703bb05b69dda7b996da8b68b7d8fee865512c704&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        }
+      ],
+      "score": 3426.9
+    },
+    {
+      "id": "o0094",
+      "stay": "5n",
+      "share": "57607c803661",
+      "area": "Tauplitz / Schneebären",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 3328.0,
+      "czk_per_person": 8320,
+      "total_bedrooms": 4,
+      "max_resort_km": 4.89,
+      "max_unit_km": 0.24,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41117.en-gb.html:Apartments in Bad Mitterndorf - Steiermark 41117:5",
+          "title": "Apartments in Bad Mitterndorf - Steiermark 41117",
+          "url": "https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41117.en-gb.html",
+          "price": 1581.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.5662635,
+          "lng": 13.9142305,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.89,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/713825413.webp?k=e3bb1c0140f1c28c1c5d220d2b90fb70021cb02d9c7be7b3b2b2dad5a9324a60&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "entire_home"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/holiday-home-in-bad-mitterndorf-steiermark-41124.en-gb.html:Holiday home in Bad Mitterndorf - Steiermark 41124:5",
+          "title": "Holiday home in Bad Mitterndorf - Steiermark 41124",
+          "url": "https://www.booking.com/hotel/at/holiday-home-in-bad-mitterndorf-steiermark-41124.en-gb.html",
+          "price": 1747.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.5649421,
+          "lng": 13.9168137,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.76,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/497998089.webp?k=37bb65341e638753bfa6fd764201a75567f517c7278ebae6b2f7ccf83c6d09b8&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        }
+      ],
+      "score": 3451.45
+    },
+    {
+      "id": "o0095",
+      "stay": "5n",
+      "share": "a8ba3554393a",
+      "area": "Tauplitz / Schneebären",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 3328.0,
+      "czk_per_person": 8320,
+      "total_bedrooms": 5,
+      "max_resort_km": 5.09,
+      "max_unit_km": 0.57,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html:Bungalow Irmgard:5",
+          "title": "Bungalow Irmgard",
+          "url": "https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html",
+          "price": 1636.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.56492235493819,
+          "lng": 13.916850686073303,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.75,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603551536.webp?k=86766f82cfcdc6d626875e135ec55ac09278c93d2e37c5137cc4c9504b41ad41&o=",
+          "rating": 7.0,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/haus-erika-bad-mitterndorf.en-gb.html:Haus Erika:5",
+          "title": "Haus Erika",
+          "url": "https://www.booking.com/hotel/at/haus-erika-bad-mitterndorf.en-gb.html",
+          "price": 1692.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 47.5679008,
+          "lng": 13.9106828,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 5.09,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603552361.webp?k=23985eaf46e3af88ae498cbcfb5dcb591cfd5e61a4ed436f911edb32835dd1b2&o=",
+          "rating": 8.0,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        }
+      ],
+      "score": 3458.1
+    },
+    {
+      "id": "o0096",
+      "stay": "5n",
+      "share": "7e4a940dd4a4",
+      "area": "Tauplitz / Schneebären",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 3353.0,
+      "czk_per_person": 8382,
+      "total_bedrooms": 6,
+      "max_resort_km": 5.09,
+      "max_unit_km": 0.05,
+      "same_building": true,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/haus-andra-c-bad-mitterndorf.en-gb.html:Haus André by FiS - für 8 Personen:5",
+          "title": "Haus André by FiS - für 8 Personen",
+          "url": "https://www.booking.com/hotel/at/haus-andra-c-bad-mitterndorf.en-gb.html",
+          "price": 1661.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 47.567506731598264,
+          "lng": 13.910912275314331,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 5.09,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603551789.webp?k=7e945455991780f240a633f703bb05b69dda7b996da8b68b7d8fee865512c704&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/haus-erika-bad-mitterndorf.en-gb.html:Haus Erika:5",
+          "title": "Haus Erika",
+          "url": "https://www.booking.com/hotel/at/haus-erika-bad-mitterndorf.en-gb.html",
+          "price": 1692.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 47.5679008,
+          "lng": 13.9106828,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 5.09,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603552361.webp?k=23985eaf46e3af88ae498cbcfb5dcb591cfd5e61a4ed436f911edb32835dd1b2&o=",
+          "rating": 8.0,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        }
+      ],
+      "score": 3480.5
+    },
+    {
+      "id": "o0097",
+      "stay": "5n",
+      "share": "5addfee5fc8c",
+      "area": "Tauplitz / Schneebären",
+      "split": "4+6",
+      "provider": "Booking",
+      "total": 3330.0,
+      "czk_per_person": 8325,
+      "total_bedrooms": 5,
+      "max_resort_km": 6.27,
+      "max_unit_km": 0.52,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "4",
+          "id": "booking:https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html:Ferienwohnung Grimmingblick:4",
+          "title": "Ferienwohnung Grimmingblick",
+          "url": "https://www.booking.com/hotel/at/ferienwohnung-grimmingblick.en-gb.html",
+          "price": 1137.0,
+          "capacity": 4,
+          "bedrooms": 2,
+          "lat": 47.557141,
+          "lng": 13.926459,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 6.27,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/783465687.webp?k=a3a276c28acdec3c3a0da27214f34986c87e6205c63cd89e15112182b9b1bcb2&o=",
+          "rating": 9.3,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "entire_home"
+        },
+        {
+          "provider": "Booking",
+          "role": "6",
+          "id": "booking:https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41123.en-gb.html:Apartments in Bad Mitterndorf - Steiermark 41123:6",
+          "title": "Apartments in Bad Mitterndorf - Steiermark 41123",
+          "url": "https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41123.en-gb.html",
+          "price": 2193.0,
+          "capacity": 6,
+          "bedrooms": 3,
+          "lat": 47.560476,
+          "lng": 13.9312975,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.01,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/444224976.webp?k=cf61f417700f5fa729e68b02d6512d9b9e19391dca8da54ba636d5a3640444b1&o=",
+          "rating": 8.5,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "entire_home"
+        }
+      ],
+      "score": 3489.35
+    },
+    {
+      "id": "o0098",
+      "stay": "5n",
+      "share": "4b8f623b9212",
+      "area": "Tauplitz / Schneebären",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 3383.0,
+      "czk_per_person": 8458,
+      "total_bedrooms": 4,
+      "max_resort_km": 4.76,
+      "max_unit_km": 0.0,
+      "same_building": true,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html:Bungalow Irmgard:5",
+          "title": "Bungalow Irmgard",
+          "url": "https://www.booking.com/hotel/at/bungalow-irmgard.en-gb.html",
+          "price": 1636.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.56492235493819,
+          "lng": 13.916850686073303,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.75,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/603551536.webp?k=86766f82cfcdc6d626875e135ec55ac09278c93d2e37c5137cc4c9504b41ad41&o=",
+          "rating": 7.0,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/holiday-home-in-bad-mitterndorf-steiermark-41124.en-gb.html:Holiday home in Bad Mitterndorf - Steiermark 41124:5",
+          "title": "Holiday home in Bad Mitterndorf - Steiermark 41124",
+          "url": "https://www.booking.com/hotel/at/holiday-home-in-bad-mitterndorf-steiermark-41124.en-gb.html",
+          "price": 1747.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.5649421,
+          "lng": 13.9168137,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.76,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/497998089.webp?k=37bb65341e638753bfa6fd764201a75567f517c7278ebae6b2f7ccf83c6d09b8&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        }
+      ],
+      "score": 3502.0
+    },
+    {
+      "id": "o0099",
+      "stay": "5n",
+      "share": "1ece7e5f2e5a",
+      "area": "Tauplitz / Schneebären",
+      "split": "5+5",
+      "provider": "Booking",
+      "total": 3375.0,
+      "czk_per_person": 8438,
+      "total_bedrooms": 5,
+      "max_resort_km": 5.09,
+      "max_unit_km": 0.28,
+      "same_building": false,
+      "check_in": "2027-02-01",
+      "check_out": "2027-02-06",
+      "nights": 5,
+      "units": [
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41117.en-gb.html:Apartments in Bad Mitterndorf - Steiermark 41117:5",
+          "title": "Apartments in Bad Mitterndorf - Steiermark 41117",
+          "url": "https://www.booking.com/hotel/at/apartments-in-bad-mitterndorf-steiermark-41117.en-gb.html",
+          "price": 1581.0,
+          "capacity": 5,
+          "bedrooms": 2,
+          "lat": 47.5662635,
+          "lng": 13.9142305,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 4.89,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/713825413.webp?k=e3bb1c0140f1c28c1c5d220d2b90fb70021cb02d9c7be7b3b2b2dad5a9324a60&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "entire_home"
+        },
+        {
+          "provider": "Booking",
+          "role": "5",
+          "id": "booking:https://www.booking.com/hotel/at/holiday-home-in-bad-mitterndorf-steiermark-41125.en-gb.html:Holiday home in Bad Mitterndorf - Steiermark 41125:5",
+          "title": "Holiday home in Bad Mitterndorf - Steiermark 41125",
+          "url": "https://www.booking.com/hotel/at/holiday-home-in-bad-mitterndorf-steiermark-41125.en-gb.html",
+          "price": 1794.0,
+          "capacity": 5,
+          "bedrooms": 3,
+          "lat": 47.5675058262,
+          "lng": 13.9109087024,
+          "resort": "Tauplitz / Schneebären",
+          "resort_point": {
+            "name": "Mitterstein",
+            "lat": 47.58017,
+            "lng": 13.97605
+          },
+          "resort_km": 5.09,
+          "image": "https://cf.bstatic.com/xdata/images/hotel/square240/444224164.webp?k=39b28134f55e94e2b53cfe68557e48303bf486a1d0b9cc5926d74f0a737b1a1d&o=",
+          "rating": null,
+          "reviews": null,
+          "location": "Bad Mitterndorf",
+          "type": "unknown"
+        }
+      ],
+      "score": 3503.65
+    },
+    {
+      "id": "o0100",
       "stay": "5n",
       "share": "405ad0f2a157",
       "area": "Tauplitz / Schneebären",
@@ -8072,7 +7756,7 @@
       "score": 3507.65
     },
     {
-      "id": "o0106",
+      "id": "o0101",
       "stay": "5n",
       "share": "be81b9598646",
       "area": "Tauplitz / Schneebären",
@@ -8116,7 +7800,7 @@
       "score": 3639.0
     },
     {
-      "id": "o0107",
+      "id": "o0102",
       "stay": "5n",
       "share": "ecdb7c46ed4d",
       "area": "Tauplitz / Schneebären",
@@ -8184,7 +7868,7 @@
       "score": 3775.6
     },
     {
-      "id": "o0108",
+      "id": "o0103",
       "stay": "5n",
       "share": "a1271cb474c0",
       "area": "Tauplitz / Schneebären",

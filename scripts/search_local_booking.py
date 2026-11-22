@@ -72,8 +72,10 @@ def _start_headful(self) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Lokální Booking hledání.")
     parser.add_argument("--areas", default="", help="Čárkami oddělený seznam oblastí (výchozí vše).")
+    parser.add_argument("--stays", default="", help="Termíny: 4n,5n (výchozí oba).")
     args = parser.parse_args()
     selected = [item.strip() for item in args.areas.split(",") if item.strip()] or list(AREAS)
+    stays = [item.strip() for item in args.stays.split(",") if item.strip()] or list(STAYS)
     if not browser_module.playwright_available():
         print("Chybí Playwright. Nainstaluj: pip install 'viajante[browser]' && playwright install chromium")
         return 2
@@ -82,7 +84,8 @@ def main() -> int:
     for key in selected:
         location, lat, lng = AREAS[key]
         for adults, rooms in OCCUPANCIES:
-            for label, (check_in, check_out) in STAYS.items():
+            for label in stays:
+                check_in, check_out = STAYS[label]
                 report = viajante.search_hotels(
                     [
                         viajante.HotelQuery(

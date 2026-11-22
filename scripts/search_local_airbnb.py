@@ -50,8 +50,10 @@ STAYS = {
 def main() -> int:
     parser = argparse.ArgumentParser(description="Lokální Airbnb hledání.")
     parser.add_argument("--areas", default="", help="Čárkami oddělený seznam oblastí (výchozí vše).")
+    parser.add_argument("--stays", default="", help="Termíny: 4n,5n (výchozí oba).")
     args = parser.parse_args()
     selected = [item.strip() for item in args.areas.split(",") if item.strip()] or list(AREAS)
+    stays = [item.strip() for item in args.stays.split(",") if item.strip()] or list(STAYS)
     OUT.mkdir(parents=True, exist_ok=True)
     padding = 0.25
     for area in selected:
@@ -65,7 +67,8 @@ def main() -> int:
             "sw_long": min(lngs) - padding,
         }
         for adults, min_bedrooms in ROLES.items():
-            for label, (check_in, check_out) in STAYS.items():
+            for label in stays:
+                check_in, check_out = STAYS[label]
                 rooms = pyairbnb.search_first_page(
                     check_in=check_in,
                     check_out=check_out,
